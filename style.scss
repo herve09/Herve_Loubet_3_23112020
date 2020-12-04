@@ -1,9 +1,18 @@
+$primary-color: #9356dc;
+$second-Color: #FF79DA;
+$tertiaire-color: #99E2D0;
+
+$marge: 0 1rem 1rem 1rem;
+$loader-border: 5px soldid $primary-color;
+
+
 body {
-  margin: 0;
-  padding: 0;
-  width: 375px;
-  background: rgba(46, 241, 95, 0.514);
-  font-size: 3rem;
+    margin: 0;
+    padding: 0;
+    width: 375px;
+    background: rgba(46, 241, 95, 0.514);
+    
+        font-size: 3rem;
 }
 
 /*! container loader
@@ -101,4 +110,3 @@ header {
     100% { transform: rotate(360deg);}
 }
 **/
-/*# sourceMappingURL=style.css.map */
