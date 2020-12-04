@@ -3,7 +3,60 @@ body {
   padding: 0;
   width: 375px;
   background: rgba(46, 241, 95, 0.514);
-  font-size: 3rem;
+  font-size: 1.2rem;
+}
+
+.logo {
+  margin-top: 1rem;
+}
+
+.logo img {
+  display: block;
+  margin: auto;
+}
+
+.info {
+  text-align: center;
+}
+
+.tire-geolocalisation {
+  margin-top: 0.5rem;
+  background-color: #eee6e6;
+  padding: 20px;
+  border-top: 2px solid #8a8989;
+}
+
+.tire-geolocalisation span {
+  font-weight: bold;
+  margin-left: 1.5rem;
+}
+
+.titre-reservez {
+  font-size: 1.7rem;
+}
+
+.titre-decouvrez {
+  font-size: 1.4rem;
+}
+
+.bouton-commander {
+  display: inline-block;
+  width: 50%;
+  height: 4rem;
+  border-radius: 3rem;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#9356dc), to(#FF79DA));
+  background-image: linear-gradient(#9356dc, #FF79DA);
+  -webkit-transition-duration: 1s;
+          transition-duration: 1s;
+}
+
+.bouton-commander a {
+  color: #fff;
+  padding-top: 5rem;
+  padding: 1rem;
+  font-family: roboto;
+  text-align: center;
+  text-decoration: none;
 }
 
 /*! container loader

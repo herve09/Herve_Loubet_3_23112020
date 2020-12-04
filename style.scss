@@ -1,10 +1,10 @@
 $primary-color: #9356dc;
-$second-Color: #FF79DA;
+$second-color: #FF79DA;
 $tertiaire-color: #99E2D0;
 
 $marge: 0 1rem 1rem 1rem;
 $loader-border: 5px soldid $primary-color;
-
+$taille-font: 1.2rem;
 
 body {
     margin: 0;
@@ -12,9 +12,66 @@ body {
     width: 375px;
     background: rgba(46, 241, 95, 0.514);
     
-        font-size: 3rem;
+        font-size: $taille-font;
 }
 
+.logo {
+    margin-top: 1rem;
+  
+  
+    
+    img{
+        display: block;
+        margin: auto;
+        
+    }
+    
+    
+}
+
+.info {
+    text-align: center;
+}
+.tire-geolocalisation {
+    margin-top: 0.5rem;
+    
+    background-color: rgb(238, 230, 230); padding: 20px;
+    border-top: 2px solid rgb(138, 137, 137);
+
+    span{
+        font-weight: bold;
+        margin-left: 1.5rem;
+    }
+}
+.titre-reservez, {
+ font-size: $taille-font + 0.5;
+}
+
+.titre-decouvrez {
+    font-size: $taille-font + 0.2;
+}
+
+.bouton-commander  {
+    display: inline-block;
+    width: 50%;
+    height: 4rem;
+    border-radius: 3rem;
+    
+    background-image: linear-gradient($primary-color, $second-color);
+
+    transition-duration: 1s;
+
+    a{
+        
+        color: #fff;
+    padding-top: 5rem;
+    padding: 1rem;
+    font-family: roboto;
+    text-align: center;
+    text-decoration: none;
+    }
+
+}
 /*! container loader
 .container-loader {
     background-color: red;
