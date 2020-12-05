@@ -4,7 +4,7 @@ $tertiaire-color: #99E2D0;
 
 $marge: 0 1rem 1rem 1rem;
 $loader-border: 5px soldid $primary-color;
-$taille-font: 1.2rem;
+
 
 body {
     margin: 0;
@@ -12,9 +12,12 @@ body {
     width: 375px;
     background: rgba(46, 241, 95, 0.514);
     
-        font-size: $taille-font;
+        font-size: 1.2rem;
 }
 
+a {
+    text-decoration: none;
+}
 .logo {
     margin-top: 1rem;
   
@@ -44,32 +47,64 @@ body {
     }
 }
 .titre-reservez, {
- font-size: $taille-font + 0.5;
+ font-size: 1.5rem;
 }
 
 .titre-decouvrez {
-    font-size: $taille-font + 0.2;
+    font-size: 1.5rem;
 }
 
 .bouton-commander  {
-    display: inline-block;
-    width: 50%;
-    height: 4rem;
+    display: block;
+    margin: auto;
+    width: 60%;
+    height: 2.5rem;
     border-radius: 3rem;
-    
     background-image: linear-gradient($primary-color, $second-color);
-
     transition-duration: 1s;
-
-    a{
-        
-        color: #fff;
-    padding-top: 5rem;
-    padding: 1rem;
-    font-family: roboto;
     text-align: center;
-    text-decoration: none;
+ vertical-align: center;
+ padding-top: 1rem;
+    
+    a {
+        font-size: 2rem;
+ color: #fff;
+     
+   
     }
+
+} 
+
+/** fonctionnement**/
+
+.fonctionnement, .aside {
+    margin: $marge; 
+    padding-top: 3rem;
+   
+    p {
+        font-size: 1.2rem;
+        margin-top: 2rem;
+    }
+
+    span {
+       
+        
+        background-color: red;
+        border-radius: 50%;
+        color: #ffffff;
+        padding: 5px 9px 5px 10px;
+        
+    }
+
+    .fas {
+        margin-right: 10px;
+        margin-left: 10px;
+    }
+}
+
+.article-restaurant {
+
+
 
 }
 /*! container loader
