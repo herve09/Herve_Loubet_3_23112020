@@ -6,12 +6,13 @@ $tertiaire-color: #99E2D0;
 $marge-base: 1rem 1rem 1rem 1rem;
 $loader-border: 5px soldid $primary-color;
 $color-blanc: #ffffff;
+$shadow-gris: 0 4px 0 #cac8c891;
 
 body {
     margin: 0;
     padding: 0;
     width: 375px;
-    background: rgba(46, 241, 95, 0.514);
+    background: $color-blanc;
     
         font-size: 1.2rem;
 }
@@ -19,6 +20,7 @@ body {
 a {
     text-decoration: none;
 }
+
 .logo {
     margin: $marge-base;
   
@@ -55,6 +57,7 @@ a {
 
 .titre-decouvrez {
     font-size: 1.3rem;
+    color: grey;
 }
 
 .bouton-commander  {
@@ -81,13 +84,13 @@ a {
 
 /** fonctionnement***/
 
-.fonctionnement, .aside {
+.fonctionnement {
     margin: $marge-base; 
     padding-top: 3rem;
    
     p {
-        font-size: 1.2rem;
-        margin-top: 2rem;
+        font-size: 1.3rem;
+        margin-top: 0.5rem;
     }
 
     .ordre {
@@ -104,6 +107,30 @@ a {
         margin-right: 10px;
         margin-left: 10px;
         font-size: 1.5rem;
+         &:hover{
+          color: $primary-color;
+         }
+    }
+}
+
+.choix-menu, .choix-restaurant, .choix-deguster {
+    box-shadow: rgb(233, 229, 229);
+    box-shadow: 0px 3px 0px rgb(224, 223, 223); 
+    border-bottom: 3px solid transparent; /**voir si utile**/
+   border-radius: 0 0 0 2rem;
+    padding-bottom: 0.2rem;
+    margin-top: 3rem;
+}
+
+/** aside ilage restaurant **/
+
+aside {
+    margin-top: 5rem;
+
+    article {
+        box-shadow: $shadow-gris;
+        border-radius: 1.5rem;
+        margin-bottom: 2rem;
     }
 }
 
@@ -118,22 +145,24 @@ a {
 
     img {
         width: 100%;
+        height: 11rem;
         overflow: hidden;
+        border-radius: 1.5rem 1.5rem 0 0;
        
     }
 
     .nouveau { 
         display: block;
-        margin-top: -13rem; /*ne fonctionne pas */
-        margin-left: 14rem;
+        
+        margin-left: 14.5rem;
         background-color: $tertiaire-color;
-        ;
-        width: 7rem;
-        height: 3rem;
+        
+        width: 6rem;
+        
         position: absolute;
-        margin-top: 2rem;
-       margin-right: 25rem;
-       color: red;
+        margin-top: -10rem;
+       
+       color: #39a98d;
        text-align: center;
        vertical-align: middle;
        font-size: 1.5rem;
@@ -143,16 +172,64 @@ a {
 
 
 
-.descriptif-restaurant i {
-    margin-top: 1rem;
+.descriptif-restaurant {
+    color: black;
     margin-right: 2rem;
+    padding-bottom: 0.5rem;
+    margin-left: 1rem;
+
+    h4 {
+        margin-block-end: 0;
+        
+    }
+
+    i {
+        font-size: 3rem;
+        float: right;
+        margin-top: -5rem;
+/** coeur rempli
+        &:hover {
+        background-image: linear-gradient($primary-color; $second-color);
+        background-clip: text; 
+        -webkit-text-fill-color: transparent;
+        -webkit-background-clip: text;
+        font-weight: 900;
+        transition-duration: 1s;
+
+    }**/
+
+    .far {
+        &:hover {
+        background-color: $primary-color;
+        cursor: pointer;
+        transition-property: background;
+        transition-timing-function: linear;
+        transition-duration: 2s;
+    }
+}
+    }
 }
 
 
 footer {
-    background-color: rgb(47, 48, 47);
+    background-color: #353535;
     color: $color-blanc;
+margin-left: -1rem;
+margin-right: -1rem;
 
+h2{
+    margin: $marge-base;
+    padding-top: 1rem;
+    padding-bottom: 1.1rem;
+}
+    ul {
+        list-style-type: none;
+    }
+
+    li {
+        padding-bottom: 1rem;
+        text-decoration: none;
+    }
 }
 /***  container loader
 .container-loader {

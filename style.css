@@ -2,7 +2,7 @@ body {
   margin: 0;
   padding: 0;
   width: 375px;
-  background: rgba(46, 241, 95, 0.514);
+  background: #ffffff;
   font-size: 1.2rem;
 }
 
@@ -43,6 +43,7 @@ a {
 
 .titre-decouvrez {
   font-size: 1.3rem;
+  color: grey;
 }
 
 .bouton-commander {
@@ -67,59 +68,136 @@ a {
 }
 
 /** fonctionnement***/
-.fonctionnement, .aside {
+.fonctionnement {
   margin: 1rem 1rem 1rem 1rem;
   padding-top: 3rem;
 }
 
-.fonctionnement p, .aside p {
-  font-size: 1.2rem;
-  margin-top: 2rem;
+.fonctionnement p {
+  font-size: 1.3rem;
+  margin-top: 0.5rem;
 }
 
-.fonctionnement .ordre, .aside .ordre {
+.fonctionnement .ordre {
   background-color: #9356dc;
   border-radius: 50%;
   color: #ffffff;
   padding: 5px 9px 5px 10px;
 }
 
-.fonctionnement .fas, .aside .fas {
+.fonctionnement .fas {
   margin-right: 10px;
   margin-left: 10px;
   font-size: 1.5rem;
 }
 
+.fonctionnement .fas:hover {
+  color: #9356dc;
+}
+
+.choix-menu, .choix-restaurant, .choix-deguster {
+  -webkit-box-shadow: #e9e5e5;
+          box-shadow: #e9e5e5;
+  -webkit-box-shadow: 0px 3px 0px #e0dfdf;
+          box-shadow: 0px 3px 0px #e0dfdf;
+  border-bottom: 3px solid transparent;
+  /**voir si utile**/
+  border-radius: 0 0 0 2rem;
+  padding-bottom: 0.2rem;
+  margin-top: 3rem;
+}
+
+/** aside ilage restaurant **/
+aside {
+  margin-top: 5rem;
+}
+
+aside article {
+  -webkit-box-shadow: 0 4px 0 #cac8c891;
+          box-shadow: 0 4px 0 #cac8c891;
+  border-radius: 1.5rem;
+  margin-bottom: 2rem;
+}
+
 .img-restaurant img {
   width: 100%;
+  height: 11rem;
   overflow: hidden;
+  border-radius: 1.5rem 1.5rem 0 0;
 }
 
 .img-restaurant .nouveau {
   display: block;
-  margin-top: -13rem;
-  /*ne fonctionne pas */
-  margin-left: 14rem;
+  margin-left: 14.5rem;
   background-color: #99E2D0;
-  width: 7rem;
-  height: 3rem;
+  width: 6rem;
   position: absolute;
-  margin-top: 2rem;
-  margin-right: 25rem;
-  color: red;
+  margin-top: -10rem;
+  color: #39a98d;
   text-align: center;
   vertical-align: middle;
   font-size: 1.5rem;
 }
 
-.descriptif-restaurant i {
-  margin-top: 1rem;
+.descriptif-restaurant {
+  color: black;
   margin-right: 2rem;
+  padding-bottom: 0.5rem;
+  margin-left: 1rem;
+}
+
+.descriptif-restaurant h4 {
+  -webkit-margin-after: 0;
+          margin-block-end: 0;
+}
+
+.descriptif-restaurant i {
+  font-size: 3rem;
+  float: right;
+  margin-top: -5rem;
+  /** coeur rempli
+        &:hover {
+        background-image: linear-gradient($primary-color; $second-color);
+        background-clip: text; 
+        -webkit-text-fill-color: transparent;
+        -webkit-background-clip: text;
+        font-weight: 900;
+        transition-duration: 1s;
+
+    }**/
+}
+
+.descriptif-restaurant i .far:hover {
+  background-color: #9356dc;
+  cursor: pointer;
+  -webkit-transition-property: background;
+  transition-property: background;
+  -webkit-transition-timing-function: linear;
+          transition-timing-function: linear;
+  -webkit-transition-duration: 2s;
+          transition-duration: 2s;
 }
 
 footer {
-  background-color: #2f302f;
+  background-color: #353535;
   color: #ffffff;
+  margin-left: -1rem;
+  margin-right: -1rem;
+}
+
+footer h2 {
+  margin: 1rem 1rem 1rem 1rem;
+  padding-top: 1rem;
+  padding-bottom: 1.1rem;
+}
+
+footer ul {
+  list-style-type: none;
+}
+
+footer li {
+  padding-bottom: 1rem;
+  text-decoration: none;
 }
 
 /***  container loader
