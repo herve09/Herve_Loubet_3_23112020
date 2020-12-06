@@ -11,7 +11,7 @@ a {
 }
 
 .logo {
-  margin-top: 1rem;
+  margin: 1rem 1rem 1rem 1rem;
 }
 
 .logo img {
@@ -21,33 +21,35 @@ a {
 
 .info {
   text-align: center;
+  margin: 1rem 1rem 1rem 1rem;
+  /** margin: $marge-base; ne fonctionne pas **/
 }
 
-.tire-geolocalisation {
+.titre-geolocalisation {
   margin-top: 0.5rem;
   background-color: #eee6e6;
   padding: 20px;
   border-top: 2px solid #8a8989;
 }
 
-.tire-geolocalisation span {
+.titre-geolocalisation span {
   font-weight: bold;
   margin-left: 1.5rem;
 }
 
 .titre-reservez {
-  font-size: 1.5rem;
+  font-size: 2rem;
 }
 
 .titre-decouvrez {
-  font-size: 1.5rem;
+  font-size: 1.3rem;
 }
 
 .bouton-commander {
   display: block;
   margin: auto;
   width: 60%;
-  height: 2.5rem;
+  height: 3rem;
   border-radius: 3rem;
   background-image: -webkit-gradient(linear, left top, left bottom, from(#9356dc), to(#FF79DA));
   background-image: linear-gradient(#9356dc, #FF79DA);
@@ -60,12 +62,13 @@ a {
 
 .bouton-commander a {
   font-size: 2rem;
-  color: #fff;
+  color: #ffffff;
+  height: 4.5rem;
 }
 
 /** fonctionnement***/
 .fonctionnement, .aside {
-  margin: 0 1rem 1rem 1rem;
+  margin: 1rem 1rem 1rem 1rem;
   padding-top: 3rem;
 }
 
@@ -74,8 +77,8 @@ a {
   margin-top: 2rem;
 }
 
-.fonctionnement span, .aside span {
-  background-color: red;
+.fonctionnement .ordre, .aside .ordre {
+  background-color: #9356dc;
   border-radius: 50%;
   color: #ffffff;
   padding: 5px 9px 5px 10px;
@@ -84,9 +87,42 @@ a {
 .fonctionnement .fas, .aside .fas {
   margin-right: 10px;
   margin-left: 10px;
+  font-size: 1.5rem;
 }
 
-/*! container loader
+.img-restaurant img {
+  width: 100%;
+  overflow: hidden;
+}
+
+.img-restaurant .nouveau {
+  display: block;
+  margin-top: -13rem;
+  /*ne fonctionne pas */
+  margin-left: 14rem;
+  background-color: #99E2D0;
+  width: 7rem;
+  height: 3rem;
+  position: absolute;
+  margin-top: 2rem;
+  margin-right: 25rem;
+  color: red;
+  text-align: center;
+  vertical-align: middle;
+  font-size: 1.5rem;
+}
+
+.descriptif-restaurant i {
+  margin-top: 1rem;
+  margin-right: 2rem;
+}
+
+footer {
+  background-color: #2f302f;
+  color: #ffffff;
+}
+
+/***  container loader
 .container-loader {
     background-color: red;
     overflow: hidden;
@@ -112,9 +148,7 @@ a {
 
 
 
-footer{
-    background-color: green;
-}
+
 
 /* **
 .lodae-grand {
