@@ -2,7 +2,7 @@ $primary-color: #9356dc;
 $second-color: #FF79DA;
 $tertiaire-color: #99E2D0;
 
-
+@import "libs/mixins.scss";
 $marge-base: 1rem 1rem 1rem 1rem;
 $loader-border: 5px soldid $primary-color;
 $color-blanc: #ffffff;
@@ -36,20 +36,37 @@ a {
 }
 
 .info {
-    text-align: center;
+    
     margin: $marge-base; /** margin: $marge-base; ne fonctionne pas **/
 }
 .titre-geolocalisation {
     margin-top: 0.5rem;
-    
-    background-color: rgb(238, 230, 230); padding: 20px;
+    text-align: center;
+    background-color: rgb(238, 230, 230); 
+    padding: 20px;
     border-top: 2px solid rgb(138, 137, 137);
+    background-color: rgb(246, 250, 9);
+   
+    p {
+        font-weight: bold;
+        text-align: center; 
+        background-color: red;
+    }
 
     span{
         font-weight: bold;
-        margin-left: 1.5rem;
+        background-color: violet;
+        
+    }
+    .site-search {
+        border: transparent;
+        font-size: 1.4rem;
+       background-color: blue;
+        
     }
 }
+
+
 .titre-reservez, {
  font-size: 2rem;
  
@@ -90,9 +107,11 @@ a {
    
     p {
         font-size: 1.3rem;
-        margin-top: 0.5rem;
+      /**  margin-top: 0.5rem;**/
     }
-
+ span {
+     margin-right: 15px;
+ }
     .ordre {
        
         
@@ -114,8 +133,9 @@ a {
 }
 
 .choix-menu, .choix-restaurant, .choix-deguster {
-    box-shadow: rgb(233, 229, 229);
-    box-shadow: 0px 3px 0px rgb(224, 223, 223); 
+   
+   /** box-shadow: 0px 3px 0px rgb(145, 144, 144); ***/
+   @include ombre-portee;
     border-bottom: 3px solid transparent; /**voir si utile**/
    border-radius: 0 0 0 2rem;
     padding-bottom: 0.2rem;

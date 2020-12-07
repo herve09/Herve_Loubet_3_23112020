@@ -20,21 +20,34 @@ a {
 }
 
 .info {
-  text-align: center;
   margin: 1rem 1rem 1rem 1rem;
   /** margin: $marge-base; ne fonctionne pas **/
 }
 
 .titre-geolocalisation {
   margin-top: 0.5rem;
+  text-align: center;
   background-color: #eee6e6;
   padding: 20px;
   border-top: 2px solid #8a8989;
+  background-color: #f6fa09;
+}
+
+.titre-geolocalisation p {
+  font-weight: bold;
+  text-align: center;
+  background-color: red;
 }
 
 .titre-geolocalisation span {
   font-weight: bold;
-  margin-left: 1.5rem;
+  background-color: violet;
+}
+
+.titre-geolocalisation .site-search {
+  border: transparent;
+  font-size: 1.4rem;
+  background-color: blue;
 }
 
 .titre-reservez {
@@ -75,7 +88,11 @@ a {
 
 .fonctionnement p {
   font-size: 1.3rem;
-  margin-top: 0.5rem;
+  /**  margin-top: 0.5rem;**/
+}
+
+.fonctionnement span {
+  margin-right: 15px;
 }
 
 .fonctionnement .ordre {
@@ -96,10 +113,9 @@ a {
 }
 
 .choix-menu, .choix-restaurant, .choix-deguster {
-  -webkit-box-shadow: #e9e5e5;
-          box-shadow: #e9e5e5;
-  -webkit-box-shadow: 0px 3px 0px #e0dfdf;
-          box-shadow: 0px 3px 0px #e0dfdf;
+  /** box-shadow: 0px 3px 0px rgb(145, 144, 144); **/
+  -webkit-box-shadow: 0px 3px 0px #919090;
+          box-shadow: 0px 3px 0px #919090;
   border-bottom: 3px solid transparent;
   /**voir si utile**/
   border-radius: 0 0 0 2rem;
