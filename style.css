@@ -20,43 +20,49 @@ a {
 }
 
 .info {
-  margin: 1rem 1rem 1rem 1rem;
-  /** margin: $marge-base; ne fonctionne pas **/
+  border-top: 3px solid #b4b4b4;
+  /** *  margin: $marge-base; margin: $marge-base; ne fonctionne pas **/
 }
 
 .titre-geolocalisation {
   margin-top: 0.5rem;
   text-align: center;
   background-color: #eee6e6;
-  padding: 20px;
-  border-top: 2px solid #8a8989;
-  background-color: #f6fa09;
+  padding-top: 10px;
+  padding-bottom: 10px;
 }
 
 .titre-geolocalisation p {
-  font-weight: bold;
-  text-align: center;
-  background-color: red;
+  /**
+        font-weight: bold;
+        
+        background-color: red;**/
+}
+
+.titre-geolocalisation .iconemap {
+  margin-left: 70px;
 }
 
 .titre-geolocalisation span {
   font-weight: bold;
-  background-color: violet;
+  padding-left: 20px;
 }
 
 .titre-geolocalisation .site-search {
   border: transparent;
   font-size: 1.4rem;
-  background-color: blue;
+  width: 80%;
 }
 
 .titre-reservez {
   font-size: 2rem;
+  text-align: center;
 }
 
 .titre-decouvrez {
   font-size: 1.3rem;
   color: grey;
+  text-align: center;
 }
 
 .bouton-commander {
@@ -88,23 +94,25 @@ a {
 
 .fonctionnement p {
   font-size: 1.3rem;
-  /**  margin-top: 0.5rem;**/
-}
-
-.fonctionnement span {
-  margin-right: 15px;
+  /**  margin-top: 0.5rem;****/
 }
 
 .fonctionnement .ordre {
   background-color: #9356dc;
   border-radius: 50%;
   color: #ffffff;
-  padding: 5px 9px 5px 10px;
+  top: -5px;
+  left: -15px;
+  height: 30px;
+  width: 30px;
+  position: absolute;
+  line-height: 30px;
+  text-align: center;
 }
 
 .fonctionnement .fas {
-  margin-right: 10px;
-  margin-left: 10px;
+  margin-right: 15px;
+  margin-left: 25px;
   font-size: 1.5rem;
 }
 
@@ -112,20 +120,23 @@ a {
   color: #9356dc;
 }
 
-.choix-menu, .choix-restaurant, .choix-deguster {
-  /** box-shadow: 0px 3px 0px rgb(145, 144, 144); **/
-  -webkit-box-shadow: 0px 3px 0px #919090;
-          box-shadow: 0px 3px 0px #919090;
-  border-bottom: 3px solid transparent;
-  /**voir si utile**/
-  border-radius: 0 0 0 2rem;
+.choix {
+  /** box-shadow: 0px 3px 0px rgb(145, 144, 144); 
+   
+    border-bottom: 3px solid transparent; /**voir si utile**/
+  /*** border-radius: 0 0 0 2rem;***/
   padding-bottom: 0.2rem;
   margin-top: 3rem;
+  position: relative;
+  height: 50px;
+  margin-left: 10px;
+  -webkit-box-shadow: 0 3px 0 #e0dfdf;
+          box-shadow: 0 3px 0 #e0dfdf;
 }
 
 /** aside ilage restaurant **/
 aside {
-  margin-top: 5rem;
+  margin: 1rem 1rem 1rem 1rem;
 }
 
 aside article {
@@ -133,6 +144,10 @@ aside article {
           box-shadow: 0 4px 0 #cac8c891;
   border-radius: 1.5rem;
   margin-bottom: 2rem;
+}
+
+.img-restaurant {
+  position: relative;
 }
 
 .img-restaurant img {
@@ -144,11 +159,11 @@ aside article {
 
 .img-restaurant .nouveau {
   display: block;
-  margin-left: 14.5rem;
   background-color: #99E2D0;
-  width: 6rem;
   position: absolute;
-  margin-top: -10rem;
+  top: 22px;
+  right: 18px;
+  padding: 5px;
   color: #39a98d;
   text-align: center;
   vertical-align: middle;
@@ -171,6 +186,8 @@ aside article {
   font-size: 3rem;
   float: right;
   margin-top: -5rem;
+  -webkit-transition: color 1s;
+  transition: color 1s;
   /** coeur rempli
         &:hover {
         background-image: linear-gradient($primary-color; $second-color);
@@ -179,134 +196,42 @@ aside article {
         -webkit-background-clip: text;
         font-weight: 900;
         transition-duration: 1s;
-
-    }**/
+}**/
 }
 
-.descriptif-restaurant i .far:hover {
+.descriptif-restaurant i:hover {
+  color: #9356dc;
   background-color: #9356dc;
-  cursor: pointer;
-  -webkit-transition-property: background;
-  transition-property: background;
-  -webkit-transition-timing-function: linear;
-          transition-timing-function: linear;
-  -webkit-transition-duration: 2s;
-          transition-duration: 2s;
 }
 
 footer {
   background-color: #353535;
   color: #ffffff;
-  margin-left: -1rem;
-  margin-right: -1rem;
+  top: 0;
+  left: 0;
 }
 
 footer h2 {
-  margin: 1rem 1rem 1rem 1rem;
   padding-top: 1rem;
-  padding-bottom: 1.1rem;
+  margin-left: 1rem;
 }
 
 footer ul {
   list-style-type: none;
+  -webkit-padding-start: 15px;
+          padding-inline-start: 15px;
 }
 
 footer li {
-  padding-bottom: 1rem;
+  padding-bottom: 2rem;
   text-decoration: none;
 }
 
-/***  container loader
-.container-loader {
-    background-color: red;
-    overflow: hidden;
-    position: relative;
-    justify-content: center;
-    align-items: center;
-}
- 
-.loader-grand {
-    width: 300px;
-    height: 300px;
-    border: 8px solid yellow;
-    border-top: 8px solid grey;
-    border-radius: 50%;
-    position: absolute;
-    margin: auto;
-    left: 0;
-    right: 0;
-    top: 0;
-    bottom: 0;
-
+footer li a {
+  color: #ffffff;
 }
 
-
-
-
-
-/* **
-.lodae-grand {
-    background-color: #fff;
-    width: 350px;
-    height: 350px;
-    border: $loader-border;
+footer li i {
+  padding-right: 1rem;
 }
-
-
-header {
-    width: 350px;
-    background-color: black;
-}
-.bloc-loader {
-   
-    width: 300px;
-    height: 300px;
-    background-color: rgb(248, 4, 57);
-    font-size: 50px;
-    text-align: center;
-    vertical-align: middle;
-}  
-
-    .loader {
-        width: 50px;
-        height: 50px;
-        display: inline-block;
-        vertical-align: middle;
-        position: relative;
-        background-color: peru;
-    }
-
-    .loader-rond {
-        border-radius: 50px;
-        border: 6px solid rgba(147, 86, 220, 0.6);
-
-    }
-}
-
-.loader-rond:after {
-    content: "";
-    position: absolute;
-    top: -6px;
-    left: -6px;
-    bottom: -6px;
-    right: -6px;
-    border-radius: 50%;
-    border: 6px solid transparent;
-    border-top-color: $primary-color;
-    -webkit-animation: rotation 1s linear infinite;
-    animation: rotation 1s linear infinite;
-}
-
-@-webkit-keyframes rotation {
-    0% { transform: rotate(0deg);}
-
-    100% { transform: rotate(360deg);}
-}
-
-@keyframes rotation {
-    0% { transform: rotate(0deg);}
-
-    100% { transform: rotate(360deg);}
-}
-**/
 /*# sourceMappingURL=style.css.map */
