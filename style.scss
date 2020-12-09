@@ -11,7 +11,8 @@ $shadow-gris: 0 4px 0 #cac8c891;
 body {
     margin: 0;
     padding: 0;
-    width: 375px;
+    max-width: 375px;
+    width: 100%;
     background: $color-blanc;
     
         font-size: 1.2rem;
@@ -79,6 +80,7 @@ a {
 .titre-reservez {
  font-size: 2rem;
  text-align: center;
+ font-weight: bold;
  
 }
 
@@ -95,7 +97,7 @@ a {
     height: 3rem;
     border-radius: 3rem;
     background-image: linear-gradient($primary-color, $second-color);
-    transition-duration: 1s;
+    
     text-align: center;
  vertical-align: center;
  padding-top: 1rem;
@@ -166,17 +168,25 @@ a {
 
 aside {
     margin: $marge-base;
+    padding-top: 4rem;
 
     article {
-        box-shadow: $shadow-gris;
+       
         border-radius: 1.5rem;
         margin-bottom: 2rem;
+        
     }
 }
 
 .article-restaurant {
-
-
+    
+    
+   
+p {
+    
+    padding-bottom: 2rem;
+    box-shadow: $shadow-gris;
+}
 
 }
 
@@ -233,7 +243,7 @@ aside {
     i {
         font-size: 3rem;
         float: right;
-        margin-top: -5rem;
+        margin-top: -7rem;
 
         transition: color 1s;
         
@@ -294,4 +304,81 @@ h2{
             padding-right: 1rem;
         }
     }
+}
+
+
+
+@media all and (min-width: 375px) and (max-width: 780px) {
+    
+    body {
+        max-width: 100%;
+        font-size: 1.5rem;
+    }
+
+
+    .info {
+
+        .site-search, .iconemap {
+            font-size: 2.2rem;
+        }
+
+        .titre-decouvrez {
+            font-size: 1.8rem;
+        }
+
+        .bouton-commander {
+           
+            height: 5rem;
+            font-size: 3rem;
+        }
+    }
+    
+    .img-restaurant {
+
+        img {
+            height: 20rem;
+        }
+    }
+}
+
+@media all and (min-width: 781px) and (max-width: 1280px) {
+    body {
+        max-width: 1280px;
+        font-size: 1.6rem;
+        background-color: red;
+    }
+
+    .info {
+
+        .titre-reservez {
+            font-size: 2.3rem;
+        }
+        .titre-decouvrez {
+            font-size: 1.8rem;
+        }
+
+        .bouton-commander {
+            font-size: 3rem;
+        }
+    }
+
+    
+    article {
+        display: flex;
+        flex-wrap: wrap;
+   justify-content: space-between;
+    
+
+        a {
+            width: 49%;
+        }/****/
+        .img-restaurant {
+            width: 100%;
+           
+            img {
+               
+            }
+        }
+    
+}
 }
