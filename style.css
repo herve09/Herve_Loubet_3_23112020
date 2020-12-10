@@ -4,6 +4,7 @@ body {
   max-width: 375px;
   width: 100%;
   background: #ffffff;
+  font-family: Roboto;
   font-size: 1.2rem;
 }
 
@@ -11,8 +12,19 @@ a {
   text-decoration: none;
 }
 
+h1 {
+  font-family: Shrikhand;
+  font-size: 2.2rem;
+}
+
+h2 {
+  font-family: Shrikhand;
+  font-size: 2rem;
+}
+
 .logo {
   margin: 1rem 1rem 1rem 1rem;
+  position: relative;
 }
 
 .logo img {
@@ -120,7 +132,7 @@ a {
   color: #9356dc;
 }
 
-.choix {
+.titre-choix {
   /** box-shadow: 0px 3px 0px rgb(145, 144, 144); 
    
     border-bottom: 3px solid transparent; /**voir si utile**/
@@ -209,6 +221,18 @@ aside article {
   background-color: #9356dc;
 }
 
+/*******fiin index*****/
+/**********************/
+/***********************/
+/**retour dans menu**/
+.retour {
+  position: absolute;
+  top: 10px;
+}
+
+/********fin menu**************/
+/*****************************/
+/*****************************/
 footer {
   background-color: #353535;
   color: #ffffff;
@@ -240,7 +264,10 @@ footer li i {
   padding-right: 1rem;
 }
 
-@media all and (min-width: 375px) and (max-width: 780px) {
+/***********responsive*******************/
+/***********responsive*******************/
+/***********responsive*******************/
+@media all and (min-width: 375px) and (max-width: 900px) {
   body {
     max-width: 100%;
     font-size: 1.5rem;
@@ -260,11 +287,15 @@ footer li i {
   }
 }
 
-@media all and (min-width: 781px) and (max-width: 1280px) {
+/**-----fin index----780----------------------**/
+/**------------------------**/
+/***********responsive*******************/
+/***********responsive*******************/
+/***********responsive*******************/
+@media all and (min-width: 901px) and (max-width: 1280px) {
   body {
     max-width: 1280px;
     font-size: 1.6rem;
-    background-color: red;
   }
   .info .titre-reservez {
     font-size: 2.3rem;
@@ -275,15 +306,26 @@ footer li i {
   .info .bouton-commander {
     font-size: 3rem;
   }
+  .choix {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    margin-right: 2rem;
+  }
+  .choix .titre-choix {
+    margin-right: 1rem;
+  }
   article {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
     /****/
   }
   article a {
@@ -292,5 +334,11 @@ footer li i {
   article .img-restaurant {
     width: 100%;
   }
+  article .img-restaurant img {
+    height: 20rem;
+  }
 }
+
+/**-----fin index----1280----------------------**/
+/**------------------------**/
 /*# sourceMappingURL=style.css.map */

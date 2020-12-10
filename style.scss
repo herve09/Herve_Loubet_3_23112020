@@ -14,6 +14,7 @@ body {
     max-width: 375px;
     width: 100%;
     background: $color-blanc;
+    font-family: Roboto;
     
         font-size: 1.2rem;
 }
@@ -22,9 +23,21 @@ a {
     text-decoration: none;
 }
 
+h1 {
+    font-family: Shrikhand;
+    font-size: 2.2rem;
+}
+
+h2 {
+    font-family: Shrikhand;
+    font-size: 2rem;
+}
 .logo {
     margin: $marge-base;
+  position: relative;
+
   
+
   
     
     img{
@@ -150,7 +163,7 @@ a {
     }
 }
 
-.choix {
+.titre-choix {
    
    /** box-shadow: 0px 3px 0px rgb(145, 144, 144); 
    
@@ -272,7 +285,21 @@ p {
 }
     }
 }
+/*******fiin index*****/
+/**********************/
+/***********************/ 
+/**retour dans menu**/
+.retour {
+    position: absolute;
+    top: 10px;
+}
 
+
+
+
+/********fin menu**************/
+/*****************************/
+/*****************************/
 
 footer {
     background-color: #353535;
@@ -307,8 +334,11 @@ h2{
 }
 
 
+/***********responsive*******************/
+/***********responsive*******************/
+/***********responsive*******************/
 
-@media all and (min-width: 375px) and (max-width: 780px) {
+@media all and (min-width: 375px) and (max-width: 900px) {
     
     body {
         max-width: 100%;
@@ -341,11 +371,18 @@ h2{
     }
 }
 
-@media all and (min-width: 781px) and (max-width: 1280px) {
+/**-----fin index----780----------------------**/
+/**------------------------**/
+
+/***********responsive*******************/
+/***********responsive*******************/
+/***********responsive*******************/
+
+@media all and (min-width: 901px) and (max-width: 1280px) {
     body {
         max-width: 1280px;
         font-size: 1.6rem;
-        background-color: red;
+       
     }
 
     .info {
@@ -362,11 +399,20 @@ h2{
         }
     }
 
-    
+    .choix {
+        display: flex;
+        justify-content: space-between;
+        margin-right: 2rem;
+
+        .titre-choix {
+            margin-right: 1rem;
+        }
+    }    
+
     article {
         display: flex;
         flex-wrap: wrap;
-   justify-content: space-between;
+   justify-content: space-around;
     
 
         a {
@@ -376,9 +422,13 @@ h2{
             width: 100%;
            
             img {
-               
+               height: 20rem;
             }
         }
     
 }
 }
+
+
+/**-----fin index----1280----------------------**/
+/**------------------------**/
