@@ -12,14 +12,38 @@ a {
   text-decoration: none;
 }
 
-h1 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-family: Shrikhand;
+  font-weight: bold;
+}
+
+h1 {
   font-size: 2.2rem;
 }
 
 h2 {
-  font-family: Shrikhand;
   font-size: 2rem;
+}
+
+h3 {
+  font-size: 1.8rem;
+}
+
+h4 {
+  font-size: 1.6rem;
+}
+
+h5 {
+  font-size: 1.4rem;
+}
+
+h6 {
+  font-size: 1rem;
 }
 
 .logo {
@@ -34,7 +58,7 @@ h2 {
 
 .info {
   border-top: 3px solid #b4b4b4;
-  /** *  margin: $marge-base; margin: $marge-base; ne fonctionne pas **/
+  /*** *  margin: $marge-base; margin: $marge-base; ne fonctionne pas **/
 }
 
 .titre-geolocalisation {
@@ -43,17 +67,11 @@ h2 {
   background-color: #eee6e6;
   padding-top: 10px;
   padding-bottom: 10px;
-}
-
-.titre-geolocalisation p {
   /**
-        font-weight: bold;
-        
-        background-color: red;**/
-}
-
-.titre-geolocalisation .iconemap {
-  margin-left: 70px;
+    .iconemap {
+        margin-left: 70px;
+    }
+**/
 }
 
 .titre-geolocalisation span {
@@ -88,7 +106,7 @@ h2 {
   background-image: -webkit-gradient(linear, left top, left bottom, from(#9356dc), to(#FF79DA));
   background-image: linear-gradient(#9356dc, #FF79DA);
   text-align: center;
-  vertical-align: center;
+  /** vertical-align: middle; **/
   padding-top: 1rem;
 }
 
@@ -140,7 +158,7 @@ h2 {
   padding-bottom: 0.2rem;
   margin-top: 3rem;
   position: relative;
-  height: 50px;
+  height: 3.5rem;
   margin-left: 10px;
   -webkit-box-shadow: 0 3px 0 #e0dfdf;
           box-shadow: 0 3px 0 #e0dfdf;
@@ -183,7 +201,7 @@ aside article {
   padding: 5px;
   color: #39a98d;
   text-align: center;
-  vertical-align: middle;
+  /**  vertical-align: middle; **/
   font-size: 1.5rem;
 }
 
@@ -224,15 +242,115 @@ aside article {
 /*******fiin index*****/
 /**********************/
 /***********************/
-/**retour dans menu**/
-.retour {
-  position: absolute;
-  top: 10px;
+/**retour dans menu***/
+.logo-menu {
+  top: 5px;
+  margin: auto;
+  width: 100%;
 }
 
-/********fin menu**************/
+.logo-menu .fa-arrow-left {
+  top: 1rem;
+  font-size: 2rem;
+  position: relative;
+  left: 2rem;
+  color: #000000;
+}
+
+.logo-menu img {
+  position: absolute;
+  top: 1rem;
+  left: 5rem;
+}
+
+figure {
+  margin: 0;
+  padding-top: 2rem;
+}
+
+figure .img-menu {
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  overflow: hidden;
+  vertical-align: middle;
+  height: 10rem;
+  width: 100%;
+}
+
+figure img {
+  width: 100%;
+  height: 10rem;
+}
+
+section {
+  margin: 1rem 1rem 1rem 1rem;
+}
+
+section .fa-heart {
+  margin-left: 60px;
+}
+
+section .menu-categorie {
+  font-size: 1.8rem;
+  border-bottom: 3px solid #99E2D0;
+  width: 3rem;
+}
+
+section ul {
+  list-style-type: none;
+  -webkit-margin-before: 0;
+          margin-block-start: 0;
+  -webkit-margin-after: 0;
+          margin-block-end: 0;
+  -webkit-margin-start: 0px;
+          margin-inline-start: 0px;
+  -webkit-margin-end: 0px;
+          margin-inline-end: 0px;
+  -webkit-padding-start: 0;
+          padding-inline-start: 0;
+}
+
+section ul p {
+  height: 5rem;
+}
+
+section ul .descriptif-choix {
+  font-size: 1rem;
+}
+
+section .titre_choix {
+  font-size: 1rem;
+}
+
+section .prix {
+  padding-left: 3.5rem;
+  padding-right: 2rem;
+}
+
+section .coche {
+  background-color: #99E2D0;
+  position: absolute;
+  width: 3.5rem;
+  height: 3.5rem;
+  top: 0;
+  right: 0;
+  border-radius: 0 1rem 1rem 0;
+}
+
+section .coche .fa-check-circle {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  color: #99E2D0;
+  background-color: #fff;
+  border-radius: 50%;
+}
+
+/********fin page menu*************/
 /*****************************/
-/*****************************/
+/****************************/
 footer {
   background-color: #353535;
   color: #ffffff;
@@ -272,9 +390,6 @@ footer li i {
     max-width: 100%;
     font-size: 1.5rem;
   }
-  .info .site-search, .info .iconemap {
-    font-size: 2.2rem;
-  }
   .info .titre-decouvrez {
     font-size: 1.8rem;
   }
@@ -287,11 +402,10 @@ footer li i {
   }
 }
 
-/**-----fin index----780----------------------**/
-/**------------------------**/
-/***********responsive*******************/
-/***********responsive*******************/
-/***********responsive*******************/
+/** -fin index 780 **/
+/**  **/
+/** *********responsive***************** **/
+/** *********responsive***************** **/
 @media all and (min-width: 901px) and (max-width: 1280px) {
   body {
     max-width: 1280px;
@@ -326,7 +440,6 @@ footer li i {
         flex-wrap: wrap;
     -ms-flex-pack: distribute;
         justify-content: space-around;
-    /****/
   }
   article a {
     width: 49%;
@@ -338,7 +451,4 @@ footer li i {
     height: 20rem;
   }
 }
-
-/**-----fin index----1280----------------------**/
-/**------------------------**/
 /*# sourceMappingURL=style.css.map */
