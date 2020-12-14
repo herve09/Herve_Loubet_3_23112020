@@ -11,7 +11,7 @@ $shadow-gris: 0 4px 0 #cac8c891;
 /** loader***/
 /** loader**/
 
-.section_loader {
+.section-loader {
     background-color: #1abc9c;
     height: 500px;
     line-height: 500px;
@@ -26,14 +26,14 @@ position: relative;
 
 }
 
-.loader_rond {
+.loader-rond {
     border-radius: 60px;
     border: 8px solid $primary-color;
     margin-left: 3rem;
 
 }
 
-.loader_rond:after {
+.loader-rond:after {
 content: "";
 position: absolute;
 top: -8px;
@@ -95,11 +95,11 @@ h3 {
 }
 
 h4 {
-    font-size: 1.6rem;
+    font-size: 1.4rem;
 }
 
 h5 {
-    font-size: 1.4rem;
+    font-size: 1.2rem;
 
 }
 
@@ -323,18 +323,19 @@ aside {
 
     }
 
-    i {
+    .fa-heart {
         font-size: 3rem;
         float: right;
         margin-top: -7rem;
-
+        position: absolute;
+        right: 3rem;
         transition: color 1s;
 
 
 
         &:hover {
             color: $primary-color;
-            background-color: $primary-color;
+            
 
         }
 
