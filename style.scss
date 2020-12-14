@@ -49,7 +49,15 @@ border-top-color: $second-color;
 
 @keyframes rotation {
     0% { transform: rotate(0deg); }
-    100% { transform: rotate(360deg);}
+    100% { transform: rotate(360deg);
+    }
+}
+
+@keyframes section-loader {
+    0%{ scale: 1;}
+    100%{ scale: 0;
+    display: none;
+}
 }
 /** fin loader **/
 /** fin loader **/
@@ -330,7 +338,7 @@ aside {
         position: absolute;
         right: 3rem;
         background-clip: text;
-      /**  transition: color 1s;**/
+      transition: color 1s;
 
 
 

@@ -56,6 +56,26 @@
   }
 }
 
+@-webkit-keyframes section-loader {
+  0% {
+    scale: 1;
+  }
+  100% {
+    scale: 0;
+    display: none;
+  }
+}
+
+@keyframes section-loader {
+  0% {
+    scale: 1;
+  }
+  100% {
+    scale: 0;
+    display: none;
+  }
+}
+
 /** fin loader **/
 /** fin loader **/
 body {
@@ -284,7 +304,8 @@ aside article {
   position: absolute;
   right: 3rem;
   background-clip: text;
-  /**  transition: color 1s;**/
+  -webkit-transition: color 1s;
+  transition: color 1s;
 }
 
 .descriptif-restaurant .fa-heart:hover {
