@@ -283,21 +283,13 @@ aside article {
   margin-top: -7rem;
   position: absolute;
   right: 3rem;
-  -webkit-transition: color 1s;
-  transition: color 1s;
-  /** coeur rempli
-        &:hover {
-        background-image: linear-gradient($primary-color; $second-color);
-        background-clip: text; 
-        -webkit-text-fill-color: transparent;
-        -webkit-background-clip: text;
-        font-weight: 900;
-        transition-duration: 1s;
-}**/
+  background-clip: text;
+  /**  transition: color 1s;**/
 }
 
 .descriptif-restaurant .fa-heart:hover {
   color: #9356dc;
+  background-color: #9356dc;
 }
 
 /*******fiin index*****/

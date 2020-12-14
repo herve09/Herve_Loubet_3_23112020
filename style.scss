@@ -329,26 +329,20 @@ aside {
         margin-top: -7rem;
         position: absolute;
         right: 3rem;
-        transition: color 1s;
+        background-clip: text;
+      /**  transition: color 1s;**/
 
 
 
         &:hover {
             color: $primary-color;
-            
+           
+           background-color:  $primary-color;
+
 
         }
 
-        /** coeur rempli
-        &:hover {
-        background-image: linear-gradient($primary-color; $second-color);
-        background-clip: text; 
-        -webkit-text-fill-color: transparent;
-        -webkit-background-clip: text;
-        font-weight: 900;
-        transition-duration: 1s;
-}**/
-
+      
        
     }
 }
