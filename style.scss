@@ -15,6 +15,7 @@ $shadow-gris: 0 4px 0 #cac8c891;
     background-color: #1abc9c;
     height: 500px;
     line-height: 500px;
+    
 }
 
 .loader {
@@ -22,7 +23,8 @@ $shadow-gris: 0 4px 0 #cac8c891;
     height: 60px;
     display: inline-block;
     vertical-align: middle;
-position: relative;
+    position: relative;
+    animation: section-loader 13s;
 
 }
 
@@ -34,31 +36,40 @@ position: relative;
 }
 
 .loader-rond:after {
-content: "";
-position: absolute;
-top: -8px;
-left: -8px;
-bottom: -8px;
-right: -8px;
-border-radius: 70px;
-border: 8px solid transparent;
-border-top-color: $second-color;
--webkit-animation: rotation 1s linear infinite;
-        animation: rotation 1s linear infinite;
+    content: "";
+    position: absolute;
+    top: -8px;
+    left: -8px;
+    bottom: -8px;
+    right: -8px;
+    border-radius: 70px;
+    border: 8px solid transparent;
+    border-top-color: $second-color;
+    -webkit-animation: rotation 1s linear infinite;
+    animation: rotation 1s linear infinite;
 }
 
 @keyframes rotation {
-    0% { transform: rotate(0deg); }
-    100% { transform: rotate(360deg);
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
     }
 }
 
 @keyframes section-loader {
-    0%{ scale: 1;}
-    100%{ scale: 0;
-    display: none;
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+        display: none;
+    }
 }
-}
+
 /** fin loader **/
 /** fin loader **/
 body {
@@ -146,8 +157,8 @@ h6 {
     padding-bottom: 10px;
 
 
-    
-/**
+
+    /**
     .iconemap {
         margin-left: 70px;
     }
@@ -191,6 +202,7 @@ h6 {
     text-align: center;
     /** vertical-align: middle; **/
     padding-top: 1rem;
+    box-shadow: 0 5px 8px grey;
 
     a {
         font-size: 2rem;
@@ -312,7 +324,7 @@ aside {
 
         color: #39a98d;
         text-align: center;
-      /**  vertical-align: middle; **/
+        /**  vertical-align: middle; **/
         font-size: 1.5rem;
 
     }
@@ -321,6 +333,8 @@ aside {
 
 
 .descriptif-restaurant {
+    display: block; /****/ 
+    position: relative;
     color: black;
     margin-right: 2rem;
     padding-bottom: 0.5rem;
@@ -331,29 +345,61 @@ aside {
 
     }
 
-    .fa-heart {
+   
+}
+
+.coeur {
+    position: absolute;
+    top: 10px;
+    right: 0px;
+    font-size: 2.5rem;
+
+     
+
+
+.fas, .far {
+   position: absolute;
+   top: 0;
+   right: 0;
+}
+
+.fas {
+    color: $primary-color;
+    opacity: 0;
+    font-size: 2.52rem;
+    
+    &:hover {
+        opacity: 1;
+        
+    }
+}
+
+
+    
+
+
+
+}
+ /***
+    .fas .far {
         font-size: 3rem;
         float: right;
         margin-top: -7rem;
         position: absolute;
         right: 3rem;
         background-clip: text;
-      transition: color 1s;
+        transition: color 1s;
 
 
 
         &:hover {
-            color: $primary-color;
-           
-           background-color:  $primary-color;
+            .fas {display: none;}
+          .far {display: block;}
 
 
         }
-
-      
-       
     }
-}
+}**/
 
 /*******fiin index*****/
 /**********************/
@@ -381,29 +427,29 @@ aside {
     }
 
 }
- 
+
 figure {
     margin: 0;
     padding-top: 2rem;
-    
 
 
-.img-menu {
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    overflow: hidden;
-    vertical-align: middle;
-    height: 10rem;
-    width: 100%;
-}
+
+    .img-menu {
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        overflow: hidden;
+        vertical-align: middle;
+        height: 10rem;
+        width: 100%;
+    }
 
 
-img {
-    width: 100%;
-    height: 10rem;
-}
+    img {
+        width: 100%;
+        height: 10rem;
+    }
 
 
 }
@@ -432,7 +478,7 @@ section {
 
         p {
             height: 5rem;
-           
+
         }
 
         .descriptif-choix {
@@ -440,12 +486,11 @@ section {
         }
     }
 
-   
 
-    .titre_choix, 
-    {
+
+    .titre_choix {
         font-size: 1rem;
-
+box-shadow: 0 6px 0 #cac8c891;
     }
 
     .prix {
@@ -453,7 +498,7 @@ section {
         padding-right: 2rem;
     }
 
-    .coche  {
+    .coche {
         background-color: $tertiaire-color;
         position: absolute;
         width: 3.5rem;
@@ -467,140 +512,154 @@ section {
             top: 1rem;
             right: 1rem;
             color: $tertiaire-color;
-            background-color: #fff;
             border-radius: 50%;
+            animation: rotation 1s 1;
+           
+        }
+        .fa-check-circle::before {
+                
+            color: #ffffff;
         }
     }
 }
-    /********fin page menu*************/
-    /*****************************/
-    /****************************/
 
-    footer {
-        background-color: #353535;
-        color: $color-blanc;
-        top: 0;
-        left: 0;
+@keyframes rotation {
+    0% {
+        transform: rotate(0deg);
+    }
 
-        h2 {
+    100% {
+        transform: rotate(360deg);
+    }
+}
+/********fin page menu*************/
+/*****************************/
+/****************************/
 
-            padding-top: 1rem;
-            margin-left: 1rem;
+footer {
+    background-color: #353535;
+    color: $color-blanc;
+    top: 0;
+    left: 0;
+
+    h2 {
+
+        padding-top: 1rem;
+        margin-left: 1rem;
+    }
+
+    ul {
+        list-style-type: none;
+        padding-inline-start: 15px;
+    }
+
+    li {
+        padding-bottom: 2rem;
+        text-decoration: none;
+
+
+
+        a {
+            color: #ffffff;
         }
 
-        ul {
-            list-style-type: none;
-            padding-inline-start: 15px;
+        i {
+            padding-right: 1rem;
         }
-
-        li {
-            padding-bottom: 2rem;
-            text-decoration: none;
+    }
+}
 
 
+/***********responsive*******************/
+/***********responsive*******************/
+/***********responsive*******************/
 
-            a {
-                color: #ffffff;
-            }
+@media all and (min-width: 375px) and (max-width: 900px) {
 
-            i {
-                padding-right: 1rem;
-            }
-        }
+    body {
+        max-width: 100%;
+        font-size: 1.5rem;
     }
 
 
-    /***********responsive*******************/
-    /***********responsive*******************/
-    /***********responsive*******************/
+    .info {
 
-    @media all and (min-width: 375px) and (max-width: 900px) {
 
-        body {
-            max-width: 100%;
-            font-size: 1.5rem;
+
+        .titre-decouvrez {
+            font-size: 1.8rem;
         }
 
+        .bouton-commander {
 
-        .info {
+            height: 5rem;
+            font-size: 3rem;
+        }
+    }
 
-           
+    .img-restaurant {
 
-            .titre-decouvrez {
-                font-size: 1.8rem;
-            }
+        img {
+            height: 20rem;
+        }
+    }
+}
 
-            .bouton-commander {
+/** -fin index 780 **/
+/**  **/
 
-                height: 5rem;
-                font-size: 3rem;
-            }
+/** *********responsive***************** **/
+/** *********responsive***************** **/
+
+@media all and (min-width: 901px) and (max-width: 1280px) {
+    body {
+        max-width: 1280px;
+        font-size: 1.6rem;
+
+    }
+
+    .info {
+
+        .titre-reservez {
+            font-size: 2.3rem;
+        }
+
+        .titre-decouvrez {
+            font-size: 1.8rem;
+        }
+
+        .bouton-commander {
+            font-size: 3rem;
+        }
+    }
+
+    .choix {
+        display: flex;
+        justify-content: space-between;
+        margin-right: 2rem;
+
+        .titre-choix {
+            margin-right: 1rem;
+        }
+    }
+
+    article {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+
+
+        a {
+            width: 49%;
         }
 
         .img-restaurant {
+            width: 100%;
 
             img {
                 height: 20rem;
             }
         }
+
     }
-
-    /** -fin index 780 **/
-    /**  **/
-
-    /** *********responsive***************** **/
-    /** *********responsive***************** **/
-   
-     @media all and (min-width: 901px) and (max-width: 1280px) {
-        body {
-            max-width: 1280px;
-            font-size: 1.6rem;
-
-        }
-
-        .info {
-
-            .titre-reservez {
-                font-size: 2.3rem;
-            }
-
-            .titre-decouvrez {
-                font-size: 1.8rem;
-            }
-
-            .bouton-commander {
-                font-size: 3rem;
-            }
-        }
-
-        .choix {
-            display: flex;
-            justify-content: space-between;
-            margin-right: 2rem;
-
-            .titre-choix {
-                margin-right: 1rem;
-            }
-        }
-
-        article {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-around;
-
-
-            a {
-                width: 49%;
-            }
-            
-            .img-restaurant {
-                width: 100%;
-
-                img {
-                    height: 20rem;
-                }
-            }
-
-        }
-     }
-    
+}

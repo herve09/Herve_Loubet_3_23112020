@@ -12,6 +12,8 @@
   display: inline-block;
   vertical-align: middle;
   position: relative;
+  -webkit-animation: section-loader 13s;
+          animation: section-loader 13s;
 }
 
 .loader-rond {
@@ -58,20 +60,20 @@
 
 @-webkit-keyframes section-loader {
   0% {
-    scale: 1;
+    opacity: 1;
   }
   100% {
-    scale: 0;
+    opacity: 0;
     display: none;
   }
 }
 
 @keyframes section-loader {
   0% {
-    scale: 1;
+    opacity: 1;
   }
   100% {
-    scale: 0;
+    opacity: 0;
     display: none;
   }
 }
@@ -188,6 +190,8 @@ h6 {
   text-align: center;
   /** vertical-align: middle; **/
   padding-top: 1rem;
+  -webkit-box-shadow: 0 5px 8px grey;
+          box-shadow: 0 5px 8px grey;
 }
 
 .bouton-commander a {
@@ -286,6 +290,9 @@ aside article {
 }
 
 .descriptif-restaurant {
+  display: block;
+  /****/
+  position: relative;
   color: black;
   margin-right: 2rem;
   padding-bottom: 0.5rem;
@@ -297,22 +304,49 @@ aside article {
           margin-block-end: 0;
 }
 
-.descriptif-restaurant .fa-heart {
-  font-size: 3rem;
-  float: right;
-  margin-top: -7rem;
+.coeur {
   position: absolute;
-  right: 3rem;
-  background-clip: text;
-  -webkit-transition: color 1s;
-  transition: color 1s;
+  top: 10px;
+  right: 0px;
+  font-size: 2.5rem;
 }
 
-.descriptif-restaurant .fa-heart:hover {
+.coeur .fas, .coeur .far {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.coeur .fas {
   color: #9356dc;
-  background-color: #9356dc;
+  opacity: 0;
+  font-size: 2.52rem;
 }
 
+.coeur .fas:hover {
+  opacity: 1;
+}
+
+/***
+    .fas .far {
+        font-size: 3rem;
+        float: right;
+        margin-top: -7rem;
+        position: absolute;
+        right: 3rem;
+        background-clip: text;
+        transition: color 1s;
+
+
+
+        &:hover {
+            .fas {display: none;}
+          .far {display: block;}
+
+
+        }
+    }
+}**/
 /*******fiin index*****/
 /**********************/
 /***********************/
@@ -396,6 +430,8 @@ section ul .descriptif-choix {
 
 section .titre_choix {
   font-size: 1rem;
+  -webkit-box-shadow: 0 6px 0 #cac8c891;
+          box-shadow: 0 6px 0 #cac8c891;
 }
 
 section .prix {
@@ -418,8 +454,24 @@ section .coche .fa-check-circle {
   top: 1rem;
   right: 1rem;
   color: #99E2D0;
-  background-color: #fff;
   border-radius: 50%;
+  -webkit-animation: rotation 1s 1;
+          animation: rotation 1s 1;
+}
+
+section .coche .fa-check-circle::before {
+  color: #ffffff;
+}
+
+@keyframes rotation {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
 }
 
 /********fin page menu*************/
