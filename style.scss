@@ -15,16 +15,17 @@ $shadow-gris: 0 4px 0 #cac8c891;
     background-color: #1abc9c;
     height: 500px;
     line-height: 500px;
+    animation: delete 0s linear 3s forwards;
     
 }
-
+ 
 .loader {
     width: 60px;
     height: 60px;
     display: inline-block;
     vertical-align: middle;
     position: relative;
-    animation: section-loader 13s;
+    
 
 }
 
@@ -34,7 +35,7 @@ $shadow-gris: 0 4px 0 #cac8c891;
     margin-left: 3rem;
 
 }
-
+ 
 .loader-rond:after {
     content: "";
     position: absolute;
@@ -45,10 +46,10 @@ $shadow-gris: 0 4px 0 #cac8c891;
     border-radius: 70px;
     border: 8px solid transparent;
     border-top-color: $second-color;
-    -webkit-animation: rotation 1s linear infinite;
-    animation: rotation 1s linear infinite;
+    -webkit-animation: rotation 4s linear 0.1s;
+    animation: rotation 4s linear 0.1s;
 }
-
+ 
 @keyframes rotation {
     0% {
         transform: rotate(0deg);
@@ -56,19 +57,23 @@ $shadow-gris: 0 4px 0 #cac8c891;
 
     100% {
         transform: rotate(360deg);
+        
     }
-}
 
-@keyframes section-loader {
+  }
+
+  
+  @keyframes delete {
     0% {
-        opacity: 1;
+        transform:translate(0);
     }
-
     100% {
-        opacity: 0;
-        display: none;
+    transform:translate(99999px);
+     
     }
-}
+  }
+ 
+  
 
 /** fin loader **/
 /** fin loader **/
@@ -523,15 +528,6 @@ box-shadow: 0 6px 0 #cac8c891;
     }
 }
 
-@keyframes rotation {
-    0% {
-        transform: rotate(0deg);
-    }
-
-    100% {
-        transform: rotate(360deg);
-    }
-}
 /********fin page menu*************/
 /*****************************/
 /****************************/
