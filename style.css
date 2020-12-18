@@ -442,54 +442,64 @@ section ul p {
 }
 
 section ul .descriptif-choix {
-  font-size: 1rem;
+  font-size: 1.2rem;
+  font-weight: 600;
   width: 100%;
   position: relative;
+  overflow: hidden;
+  /**
+            .prix-choix {
+                animation: reduction 0.5s linear 0;
+            }
+**/
 }
 
 section ul .descriptif-choix .choix-detail {
   display: block;
-  width: 40%;
+  width: 80%;
   background-color: #0d8a4f;
-  overflow: hidden;
+  height: 3.5rem;
   white-space: nowrap;
   text-overflow: ellipsis;
-  word-wrap: break-word;
-  white-space: nowrap;
+  overflow: hidden;
+}
+
+section ul .descriptif-choix .choix-detail:hover {
+  width: 60%;
+}
+
+section ul .descriptif-choix .choix-detail .accompagnement-plat {
+  font-size: 1.2rem;
+  font-weight: 100;
+  color: red;
 }
 
 section ul .descriptif-choix .prix {
-  top: 9px;
-  right: 0;
+  font-size: 1.3rem;
+  font-weight: 600;
+  top: 15px;
+  right: 17px;
   position: absolute;
-  width: 20%;
   background-color: #d7ee0c;
 }
 
-section .titre-choix {
-  font-size: 1rem;
-  -webkit-box-shadow: 0 6px 0 #cac8c891;
-          box-shadow: 0 6px 0 #cac8c891;
+section ul .descriptif-choix .prix:hover {
+  -webkit-animation: deplacement 0.5s linear 0;
+          animation: deplacement 0.5s linear 0;
 }
 
-section .prix {
-  position: absolute;
-  top: 12px;
-  right: 10px;
-}
-
-section .coche {
+section ul .descriptif-choix .coche {
   background-color: #99E2D0;
   position: absolute;
   width: 3.5rem;
   height: 3.5rem;
-  top: 0;
-  right: 0;
+  top: -15px;
+  right: -63px;
   border-radius: 0 1rem 1rem 0;
   overflow: hidden;
 }
 
-section .coche .fa-check-circle {
+section ul .descriptif-choix .coche .fa-check-circle {
   position: absolute;
   top: 1rem;
   right: 1rem;
@@ -499,8 +509,36 @@ section .coche .fa-check-circle {
           animation: rotation 1s 1;
 }
 
-section .coche .fa-check-circle::before {
+section ul .descriptif-choix .coche .fa-check-circle::before {
   color: #ffffff;
+}
+
+/**** animation ***/
+@-webkit-keyframes deplacement {
+  0% {
+    -webkit-transform: translatey(60px);
+            transform: translatey(60px);
+  }
+  100% {
+    -webkit-transform: translatey(-60px);
+            transform: translatey(-60px);
+  }
+}
+@keyframes deplacement {
+  0% {
+    -webkit-transform: translatey(60px);
+            transform: translatey(60px);
+  }
+  100% {
+    -webkit-transform: translatey(-60px);
+            transform: translatey(-60px);
+  }
+}
+
+.titre-choix {
+  font-size: 1rem;
+  -webkit-box-shadow: 0 6px 0 #cac8c891;
+          box-shadow: 0 6px 0 #cac8c891;
 }
 
 /********fin page menu*************/

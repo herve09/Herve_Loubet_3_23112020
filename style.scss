@@ -18,6 +18,7 @@ $shadow-gris: 0 4px 0 #cac8c891;
     height: 100%;
     line-height: 100%;
     animation: delete 0s linear 3s forwards;
+    
     position: fixed;
     z-index: 100;
     top: 0;
@@ -65,15 +66,15 @@ $shadow-gris: 0 4px 0 #cac8c891;
 @keyframes rotation {
     0% {
         transform: rotate(0deg);
+        
     }
     
     100% {
         transform: rotate(360deg);
-
+        
     }
 
 }
-
 
 @keyframes delete {
     0% {
@@ -504,75 +505,110 @@ section {
         }
 
         .descriptif-choix {
-            font-size: 1rem;
+            font-size: 1.2rem;
+            font-weight: 600;
             width: 100%;
             position: relative;
 
-
-
+            overflow: hidden;
+            
 
             .choix-detail {
                 display: block;
-                width: 40%;
+                width: 80%;
                 background-color: rgb(13, 138, 79);
-
-                overflow: hidden;
-                white-space: nowrap;
+                height: 3.5rem;
+                
+               white-space: nowrap;
                 text-overflow: ellipsis;
-                word-wrap: break-word;
-                white-space: nowrap;
-            }
+                overflow: hidden;
+               
 
+                &:hover {
+                    width: 60%;
+
+                   
+                   
+                }
+
+                .accompagnement-plat {
+                    font-size: 1.2rem;
+                    font-weight: 100;
+                    color: red;
+                }
+            }
+/**
+            .prix-choix {
+                animation: reduction 0.5s linear 0;
+            }
+**/
             .prix {
-                top: 9px;
-                right: 0;
+                font-size: 1.3rem;
+                font-weight: 600;
+                top: 15px;
+                right: 17px;
                 position: absolute;
-                width: 20%;
+                
                 background-color: rgb(215, 238, 12);
 
+                &:hover {
+                    animation: deplacement 0.5s linear 0;
+                }
 
             }
+
+            .coche {
+                background-color: $tertiaire-color;
+                position: absolute;
+                width: 3.5rem;
+                height: 3.5rem;
+                top: -15px;
+                right: -63px;
+                border-radius: 0 1rem 1rem 0;
+                overflow: hidden;
+                .fa-check-circle {
+                    position: absolute;
+                    top: 1rem;
+                    right: 1rem;
+                    color: $tertiaire-color;
+                    border-radius: 50%;
+                    animation: rotation 1s 1;
+        
+                }
+        
+                .fa-check-circle::before {
+        
+                    color: #ffffff;
+                }
+            }
+        }
         }
     }
 
+/**** animation ***/
+@keyframes deplacement {
+     0% {
+         transform: translatey(60px);
+     }
+     100%{
+         transform: translatey(-60px)
+        }
 
+   
+   
+   
+
+
+}
 
     .titre-choix {
         font-size: 1rem;
         box-shadow: 0 6px 0 #cac8c891;
     }
 
-    .prix {
-        position: absolute;
-        top: 12px;
-        right: 10px;
-    }
+    
 
-    .coche {
-        background-color: $tertiaire-color;
-        position: absolute;
-        width: 3.5rem;
-        height: 3.5rem;
-        top: 0;
-        right: 0;
-        border-radius: 0 1rem 1rem 0;
-        overflow: hidden;
-        .fa-check-circle {
-            position: absolute;
-            top: 1rem;
-            right: 1rem;
-            color: $tertiaire-color;
-            border-radius: 50%;
-            animation: rotation 1s 1;
-
-        }
-
-        .fa-check-circle::before {
-
-            color: #ffffff;
-        }
-    }
-}
+ 
 
 
 /********fin page menu*************/
