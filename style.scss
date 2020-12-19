@@ -12,22 +12,23 @@ $shadow-gris: 0 4px 0 #cac8c891;
 /** loader**/
 
 .section-loader {
-    
+
     background-color: #fafcfb;
     width: 100%;
     height: 100%;
     line-height: 100%;
     animation: delete 0s linear 3s forwards;
-    
+
     position: fixed;
     z-index: 100;
     top: 0;
     left: 0;
-     p{
-         position: absolute;
-         top: 100px;
-         margin-left: 150px;
-     }
+
+    p {
+        position: absolute;
+        top: 100px;
+        margin-left: 150px;
+    }
 
 }
 
@@ -66,12 +67,12 @@ $shadow-gris: 0 4px 0 #cac8c891;
 @keyframes rotation {
     0% {
         transform: rotate(0deg);
-        
+
     }
-    
+
     100% {
         transform: rotate(360deg);
-        
+
     }
 
 }
@@ -80,9 +81,10 @@ $shadow-gris: 0 4px 0 #cac8c891;
     0% {
         transform: translate(0);
     }
+
     100% {
-    transform: translate(99999px);
-     
+        transform: translate(99999px);
+
     }
 }
 
@@ -491,6 +493,11 @@ section {
         width: 3rem;
     }
 
+    .block-menu {
+        margin-top: 100px;
+        animation: block-menu 3s forwards;
+    }
+
     ul {
         list-style-type: none;
         margin-block-start: 0;
@@ -504,6 +511,11 @@ section {
 
         }
 
+        li {
+            display: inline-flex;
+            width: 100% ;
+        }
+/**conteneur descriptif du plat **/
         .descriptif-choix {
             font-size: 1.2rem;
             font-weight: 600;
@@ -511,24 +523,23 @@ section {
             position: relative;
 
             overflow: hidden;
-            
+
 
             .choix-detail {
                 display: block;
                 width: 80%;
                 background-color: rgb(13, 138, 79);
                 height: 3.5rem;
-                
-               white-space: nowrap;
+
+                white-space: nowrap;
                 text-overflow: ellipsis;
                 overflow: hidden;
-               
+
 
                 &:hover {
                     width: 60%;
 
-                   
-                   
+
                 }
 
                 .accompagnement-plat {
@@ -537,78 +548,97 @@ section {
                     color: red;
                 }
             }
-/**
-            .prix-choix {
-                animation: reduction 0.5s linear 0;
-            }
-**/
-            .prix {
-                font-size: 1.3rem;
-                font-weight: 600;
-                top: 15px;
-                right: 17px;
-                position: absolute;
+
+
+ /** conteneur prix + bouton coche **/
+            .prix-coche {
+                position: initial;
+         display: flex;
+                flex-wrap: nowrap;
+                top: 0;
+                right: 0;
                 
-                background-color: rgb(215, 238, 12);
 
-                &:hover {
-                    animation: deplacement 0.5s linear 0;
-                }
-
-            }
-
-            .coche {
-                background-color: $tertiaire-color;
-                position: absolute;
-                width: 3.5rem;
-                height: 3.5rem;
-                top: -15px;
-                right: -63px;
-                border-radius: 0 1rem 1rem 0;
-                overflow: hidden;
-                .fa-check-circle {
+                .prix {
+                    font-size: 1.3rem;
+                    font-weight: 600;
+                    top: 15px;
+                    right: 15px;
                     position: absolute;
-                    top: 1rem;
-                    right: 1rem;
-                    color: $tertiaire-color;
-                    border-radius: 50%;
-                    animation: rotation 1s 1;
-        
+
+                    background-color: rgb(215, 238, 12);
+                    animation: deplacement 1s 1;
+
+                   &:hover {
+                       color: red;
+                   }
                 }
-        
-                .fa-check-circle::before {
-        
-                    color: #ffffff;
+
+                }
+
+                .coche {
+                    background-color: $tertiaire-color;
+                    position: absolute;
+                    width: 3.5rem;
+                    height: 3.5rem;
+                    top: 0px;
+                    right: -35px;
+                    border-radius: 0 1rem 1rem 0;
+                    overflow: hidden;
+                    animation: deplacement 1s 1;
+
+                    .fa-check-circle {
+                        position: absolute;
+                        top: 20px;
+                        right: 1rem;
+                        color: $tertiaire-color;
+                        border-radius: 50%;
+                        animation: rotation 1s 1;
+
+                    }
+
+                    .fa-check-circle::before {
+
+                        color: #ffffff;
+                    }
                 }
             }
-        }
         }
     }
 
-/**** animation ***/
+/*** animation affichage menu montant ***/
+
+@keyframes block-menu {
+    0% {
+        transform: translatey(0);
+    }
+
+    100% {
+        transform: translatey(-50px);
+    }
+}
+/**** animation prix + coche***/
 @keyframes deplacement {
-     0% {
-         transform: translatey(60px);
-     }
-     100%{
-         transform: translatey(-60px)
-        }
+    0% {
+        transform: translatex(0px);
 
-   
-   
-   
+        
+    }
 
-
+    100% {
+        transform: translatex(-50px);
+        
+    }
 }
 
-    .titre-choix {
-        font-size: 1rem;
-        box-shadow: 0 6px 0 #cac8c891;
-    }
+.titre-choix {
+    font-size: 1rem;
+    box-shadow: 0 6px 0 #cac8c891;
+}
 
-    
 
- 
+
+
 
 
 /********fin page menu*************/
@@ -742,3 +772,4 @@ footer {
 
     }
 }
+

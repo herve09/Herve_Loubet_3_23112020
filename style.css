@@ -423,6 +423,12 @@ section .menu-categorie {
   width: 3rem;
 }
 
+section .block-menu {
+  margin-top: 100px;
+  -webkit-animation: block-menu 3s forwards;
+          animation: block-menu 3s forwards;
+}
+
 section ul {
   list-style-type: none;
   -webkit-margin-before: 0;
@@ -435,10 +441,18 @@ section ul {
           margin-inline-end: 0px;
   -webkit-padding-start: 0;
           padding-inline-start: 0;
+  /**conteneur descriptif du plat **/
 }
 
 section ul p {
   height: 5rem;
+}
+
+section ul li {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  width: 100%;
 }
 
 section ul .descriptif-choix {
@@ -447,11 +461,7 @@ section ul .descriptif-choix {
   width: 100%;
   position: relative;
   overflow: hidden;
-  /**
-            .prix-choix {
-                animation: reduction 0.5s linear 0;
-            }
-**/
+  /** conteneur prix + bouton coche **/
 }
 
 section ul .descriptif-choix .choix-detail {
@@ -474,18 +484,30 @@ section ul .descriptif-choix .choix-detail .accompagnement-plat {
   color: red;
 }
 
-section ul .descriptif-choix .prix {
+section ul .descriptif-choix .prix-coche {
+  position: initial;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  top: 0;
+  right: 0;
+}
+
+section ul .descriptif-choix .prix-coche .prix {
   font-size: 1.3rem;
   font-weight: 600;
   top: 15px;
-  right: 17px;
+  right: 15px;
   position: absolute;
   background-color: #d7ee0c;
+  -webkit-animation: deplacement 1s 1;
+          animation: deplacement 1s 1;
 }
 
-section ul .descriptif-choix .prix:hover {
-  -webkit-animation: deplacement 0.5s linear 0;
-          animation: deplacement 0.5s linear 0;
+section ul .descriptif-choix .prix-coche .prix:hover {
+  color: red;
 }
 
 section ul .descriptif-choix .coche {
@@ -493,15 +515,17 @@ section ul .descriptif-choix .coche {
   position: absolute;
   width: 3.5rem;
   height: 3.5rem;
-  top: -15px;
-  right: -63px;
+  top: 0px;
+  right: -35px;
   border-radius: 0 1rem 1rem 0;
   overflow: hidden;
+  -webkit-animation: deplacement 1s 1;
+          animation: deplacement 1s 1;
 }
 
 section ul .descriptif-choix .coche .fa-check-circle {
   position: absolute;
-  top: 1rem;
+  top: 20px;
   right: 1rem;
   color: #99E2D0;
   border-radius: 50%;
@@ -513,25 +537,47 @@ section ul .descriptif-choix .coche .fa-check-circle::before {
   color: #ffffff;
 }
 
-/**** animation ***/
-@-webkit-keyframes deplacement {
+/*** animation affichage menu montant ***/
+@-webkit-keyframes block-menu {
   0% {
-    -webkit-transform: translatey(60px);
-            transform: translatey(60px);
+    -webkit-transform: translatey(0);
+            transform: translatey(0);
   }
   100% {
-    -webkit-transform: translatey(-60px);
-            transform: translatey(-60px);
+    -webkit-transform: translatey(-50px);
+            transform: translatey(-50px);
+  }
+}
+@keyframes block-menu {
+  0% {
+    -webkit-transform: translatey(0);
+            transform: translatey(0);
+  }
+  100% {
+    -webkit-transform: translatey(-50px);
+            transform: translatey(-50px);
+  }
+}
+
+/**** animation prix + coche***/
+@-webkit-keyframes deplacement {
+  0% {
+    -webkit-transform: translatex(0px);
+            transform: translatex(0px);
+  }
+  100% {
+    -webkit-transform: translatex(-50px);
+            transform: translatex(-50px);
   }
 }
 @keyframes deplacement {
   0% {
-    -webkit-transform: translatey(60px);
-            transform: translatey(60px);
+    -webkit-transform: translatex(0px);
+            transform: translatex(0px);
   }
   100% {
-    -webkit-transform: translatey(-60px);
-            transform: translatey(-60px);
+    -webkit-transform: translatex(-50px);
+            transform: translatex(-50px);
   }
 }
 
