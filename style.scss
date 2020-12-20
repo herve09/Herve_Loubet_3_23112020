@@ -427,6 +427,11 @@ aside {
 
 /*******fiin index*****/
 /**********************/
+
+
+
+
+
 /***********************/
 /**debut page menu***/
 .logo-menu {
@@ -515,6 +520,7 @@ section {
             display: inline-flex;
             width: 100% ;
         }
+
 /**conteneur descriptif du plat **/
         .descriptif-choix {
             font-size: 1.2rem;
@@ -523,7 +529,8 @@ section {
             position: relative;
 
             overflow: hidden;
-
+            
+           
 
             .choix-detail {
                 display: block;
@@ -535,12 +542,13 @@ section {
                 text-overflow: ellipsis;
                 overflow: hidden;
 
-
+ 
                 &:hover {
                     width: 60%;
-
-
-                }
+                    
+                   
+                    }
+                    
 
                 .accompagnement-plat {
                     font-size: 1.2rem;
@@ -552,13 +560,15 @@ section {
 
  /** conteneur prix + bouton coche **/
             .prix-coche {
-                position: initial;
+                position: absolute;
          display: flex;
                 flex-wrap: nowrap;
                 top: 0;
                 right: 0;
-                
-
+              
+                &:hover {
+                    transform: translatex(-60px);
+                }
                 .prix {
                     font-size: 1.3rem;
                     font-weight: 600;
@@ -567,11 +577,8 @@ section {
                     position: absolute;
 
                     background-color: rgb(215, 238, 12);
-                    animation: deplacement 1s 1;
-
-                   &:hover {
-                       color: red;
-                   }
+                   /** animation: deplacement 1s 1;**/
+                   
                 }
 
                 }
@@ -582,10 +589,10 @@ section {
                     width: 3.5rem;
                     height: 3.5rem;
                     top: 0px;
-                    right: -35px;
+                    right: -60px;
                     border-radius: 0 1rem 1rem 0;
                     overflow: hidden;
-                    animation: deplacement 1s 1;
+                   /** animation: deplacement 1s 1;**/
 
                     .fa-check-circle {
                         position: absolute;
@@ -593,7 +600,7 @@ section {
                         right: 1rem;
                         color: $tertiaire-color;
                         border-radius: 50%;
-                        animation: rotation 1s 1;
+                      /**  animation: rotation 1s 1; **/
 
                     }
 
@@ -617,7 +624,7 @@ section {
         transform: translatey(-50px);
     }
 }
-/**** animation prix + coche***/
+/** animation prix + coche
 @keyframes deplacement {
     0% {
         transform: translatex(0px);
@@ -629,7 +636,7 @@ section {
         transform: translatex(-50px);
         
     }
-}
+}***/
 
 .titre-choix {
     font-size: 1rem;

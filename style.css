@@ -485,7 +485,7 @@ section ul .descriptif-choix .choix-detail .accompagnement-plat {
 }
 
 section ul .descriptif-choix .prix-coche {
-  position: initial;
+  position: absolute;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -495,6 +495,11 @@ section ul .descriptif-choix .prix-coche {
   right: 0;
 }
 
+section ul .descriptif-choix .prix-coche:hover {
+  -webkit-transform: translatex(-60px);
+          transform: translatex(-60px);
+}
+
 section ul .descriptif-choix .prix-coche .prix {
   font-size: 1.3rem;
   font-weight: 600;
@@ -502,12 +507,7 @@ section ul .descriptif-choix .prix-coche .prix {
   right: 15px;
   position: absolute;
   background-color: #d7ee0c;
-  -webkit-animation: deplacement 1s 1;
-          animation: deplacement 1s 1;
-}
-
-section ul .descriptif-choix .prix-coche .prix:hover {
-  color: red;
+  /** animation: deplacement 1s 1;**/
 }
 
 section ul .descriptif-choix .coche {
@@ -516,11 +516,10 @@ section ul .descriptif-choix .coche {
   width: 3.5rem;
   height: 3.5rem;
   top: 0px;
-  right: -35px;
+  right: -60px;
   border-radius: 0 1rem 1rem 0;
   overflow: hidden;
-  -webkit-animation: deplacement 1s 1;
-          animation: deplacement 1s 1;
+  /** animation: deplacement 1s 1;**/
 }
 
 section ul .descriptif-choix .coche .fa-check-circle {
@@ -529,8 +528,7 @@ section ul .descriptif-choix .coche .fa-check-circle {
   right: 1rem;
   color: #99E2D0;
   border-radius: 50%;
-  -webkit-animation: rotation 1s 1;
-          animation: rotation 1s 1;
+  /**  animation: rotation 1s 1; **/
 }
 
 section ul .descriptif-choix .coche .fa-check-circle::before {
@@ -559,28 +557,19 @@ section ul .descriptif-choix .coche .fa-check-circle::before {
   }
 }
 
-/**** animation prix + coche***/
-@-webkit-keyframes deplacement {
-  0% {
-    -webkit-transform: translatex(0px);
-            transform: translatex(0px);
-  }
-  100% {
-    -webkit-transform: translatex(-50px);
-            transform: translatex(-50px);
-  }
-}
+/** animation prix + coche
 @keyframes deplacement {
-  0% {
-    -webkit-transform: translatex(0px);
-            transform: translatex(0px);
-  }
-  100% {
-    -webkit-transform: translatex(-50px);
-            transform: translatex(-50px);
-  }
-}
+    0% {
+        transform: translatex(0px);
 
+        
+    }
+
+    100% {
+        transform: translatex(-50px);
+        
+    }
+}***/
 .titre-choix {
   font-size: 1rem;
   -webkit-box-shadow: 0 6px 0 #cac8c891;
