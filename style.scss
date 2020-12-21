@@ -457,6 +457,13 @@ aside {
 
 }
 
+.descriptif-menu {
+    .coeur {
+        position: relative;
+        top: -65px;
+
+    }
+}
 figure {
     margin: 0;
     padding-top: 2rem;
@@ -517,12 +524,15 @@ section {
         }
 
         li {
+            list-style-type: none;
             display: inline-flex;
             width: 100% ;
         }
 
 /**conteneur descriptif du plat **/
         .descriptif-choix {
+            display: flex;
+            flex-wrap: nowrap;
             font-size: 1.2rem;
             font-weight: 600;
             width: 100%;
@@ -530,10 +540,13 @@ section {
 
             overflow: hidden;
             
+          
+
            
 
             .choix-detail {
-                display: block;
+                display: flex;
+                flex-direction: column;
                 width: 80%;
                 background-color: rgb(13, 138, 79);
                 height: 3.5rem;
@@ -542,12 +555,13 @@ section {
                 text-overflow: ellipsis;
                 overflow: hidden;
 
- 
-                &:hover {
-                    width: 60%;
-                    
-                   
-                    }
+/**&:hover****/ 
+
+&:active {
+    width: 60%;
+} 
+
+                 
                     
 
                 .accompagnement-plat {
@@ -560,20 +574,24 @@ section {
 
  /** conteneur prix + bouton coche **/
             .prix-coche {
-                position: absolute;
+                position: inherit;
          display: flex;
                 flex-wrap: nowrap;
                 top: 0;
-                right: 0;
-              
+                right: -55px;
+             
+
+
                 &:hover {
-                    transform: translatex(-60px);
+                    transform: translatex(-50px);
                 }
+
+                
                 .prix {
                     font-size: 1.3rem;
                     font-weight: 600;
                     top: 15px;
-                    right: 15px;
+                    right: 10px;
                     position: absolute;
 
                     background-color: rgb(215, 238, 12);
@@ -600,7 +618,7 @@ section {
                         right: 1rem;
                         color: $tertiaire-color;
                         border-radius: 50%;
-                      /**  animation: rotation 1s 1; **/
+                      animation: rotation 1s 1; 
 
                     }
 
