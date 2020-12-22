@@ -297,21 +297,44 @@ aside article {
   right: 0px;
   font-size: 2.5rem;
 }
-.coeur .fas,
+.coeur:hover .fas {
+  display: block;
+}
+.coeur:hover .far {
+  display: none;
+}
 .coeur .far {
   position: absolute;
   top: 0;
   right: 0;
+  background-color: #fff;
 }
 .coeur .fas {
+  position: absolute;
+  top: 0;
+  right: 0;
   color: #9356dc;
-  opacity: 0;
-  font-size: 2.52rem;
-}
-.coeur .fas:hover {
-  opacity: 1;
+  display: none;
+  font-size: 2.5rem;
 }
 
+@-webkit-keyframes invisible {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes invisible {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 /***
     .fas .far {
         font-size: 3rem;
@@ -390,10 +413,13 @@ section .menu-categorie {
   border-bottom: 3px solid #99E2D0;
   width: 3rem;
 }
+section .descriptif-menu {
+  margin-bottom: 75px;
+}
 section .block-menu {
-  margin-top: 100px;
-  -webkit-animation: block-menu 3s forwards;
-          animation: block-menu 3s forwards;
+  margin-top: 20px;
+  -webkit-animation: block-menu 5s forwards;
+          animation: block-menu 5s forwards;
 }
 section ul {
   list-style-type: none;
@@ -428,15 +454,14 @@ section ul .descriptif-choix {
   /** conteneur prix + bouton coche **/
 }
 section ul .descriptif-choix .choix-detail {
-  display: flex;
-  flex-direction: column;
+  display: block;
   width: 80%;
   background-color: #0d8a4f;
   height: 3.5rem;
   white-space: nowrap;
   text-overflow: ellipsis;
   overflow: hidden;
-  /**&:hover****/
+  /**&:hover*****/
 }
 section ul .descriptif-choix .choix-detail:active {
   width: 60%;

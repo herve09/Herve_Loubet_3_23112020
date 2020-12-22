@@ -17,8 +17,7 @@ $shadow-gris: 0 4px 0 #cac8c891;
     width: 100%;
     height: 100%;
     line-height: 100%;
-    animation: delete 0s linear 3s forwards;
-
+   animation: delete 0s linear 3s forwards;
     position: fixed;
     z-index: 100;
     top: 0;
@@ -80,11 +79,13 @@ $shadow-gris: 0 4px 0 #cac8c891;
 @keyframes delete {
     0% {
         transform: translate(0);
+       
+
     }
 
     100% {
         transform: translate(99999px);
-
+      
     }
 }
 
@@ -376,33 +377,59 @@ aside {
     right: 0px;
     font-size: 2.5rem;
 
+    &:hover .fas {
+        display: block;
+    }
+
+    &:hover .far {
+        display: none;
+    }
 
 
-
-    .fas,
     .far {
         position: absolute;
         top: 0;
         right: 0;
+
+        background-color: #fff;
+
+
+
+
+
     }
+
 
     .fas {
+        position: absolute;
+        top: 0;
+        right: 0;
         color: $primary-color;
-        opacity: 0;
-        font-size: 2.52rem;
+        display: none;
+        font-size: 2.5rem;
 
-        &:hover {
-            opacity: 1;
-
-        }
     }
-
-
-
-
 
 
 }
+
+
+
+@keyframes invisible {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+
+
+
+
+
 
 /***
     .fas .far {
@@ -464,6 +491,7 @@ aside {
 
     }
 }
+
 figure {
     margin: 0;
     padding-top: 2rem;
@@ -505,9 +533,13 @@ section {
         width: 3rem;
     }
 
+    .descriptif-menu {
+        margin-bottom: 75px;
+    }
+
     .block-menu {
-        margin-top: 100px;
-        animation: block-menu 3s forwards;
+        margin-top: 20px;
+        animation: block-menu 5s forwards;
     }
 
     ul {
@@ -526,10 +558,10 @@ section {
         li {
             list-style-type: none;
             display: inline-flex;
-            width: 100% ;
+            width: 100%;
         }
 
-/**conteneur descriptif du plat **/
+        /**conteneur descriptif du plat **/
         .descriptif-choix {
             display: flex;
             flex-wrap: nowrap;
@@ -539,14 +571,13 @@ section {
             position: relative;
 
             overflow: hidden;
-            
-          
 
-           
+
+
+
 
             .choix-detail {
-                display: flex;
-                flex-direction: column;
+                display: block;
                 width: 80%;
                 background-color: rgb(13, 138, 79);
                 height: 3.5rem;
@@ -555,14 +586,14 @@ section {
                 text-overflow: ellipsis;
                 overflow: hidden;
 
-/**&:hover****/ 
+                /**&:hover*****/
 
-&:active {
-    width: 60%;
-} 
+                &:active {
+                    width: 60%;
+                }
 
-                 
-                    
+
+
 
                 .accompagnement-plat {
                     font-size: 1.2rem;
@@ -572,21 +603,22 @@ section {
             }
 
 
- /** conteneur prix + bouton coche **/
+            /** conteneur prix + bouton coche **/
             .prix-coche {
                 position: inherit;
-         display: flex;
+                display: flex;
                 flex-wrap: nowrap;
                 top: 0;
                 right: -55px;
-             
+
 
 
                 &:hover {
                     transform: translatex(-50px);
                 }
 
-                
+
+
                 .prix {
                     font-size: 1.3rem;
                     font-weight: 600;
@@ -595,41 +627,41 @@ section {
                     position: absolute;
 
                     background-color: rgb(215, 238, 12);
-                   /** animation: deplacement 1s 1;**/
-                   
-                }
+                    /** animation: deplacement 1s 1;**/
 
                 }
 
-                .coche {
-                    background-color: $tertiaire-color;
+            }
+
+            .coche {
+                background-color: $tertiaire-color;
+                position: absolute;
+                width: 3.5rem;
+                height: 3.5rem;
+                top: 0px;
+                right: -60px;
+                border-radius: 0 1rem 1rem 0;
+                overflow: hidden;
+                /** animation: deplacement 1s 1;**/
+
+                .fa-check-circle {
                     position: absolute;
-                    width: 3.5rem;
-                    height: 3.5rem;
-                    top: 0px;
-                    right: -60px;
-                    border-radius: 0 1rem 1rem 0;
-                    overflow: hidden;
-                   /** animation: deplacement 1s 1;**/
+                    top: 20px;
+                    right: 1rem;
+                    color: $tertiaire-color;
+                    border-radius: 50%;
+                    animation: rotation 1s 1;
 
-                    .fa-check-circle {
-                        position: absolute;
-                        top: 20px;
-                        right: 1rem;
-                        color: $tertiaire-color;
-                        border-radius: 50%;
-                      animation: rotation 1s 1; 
+                }
 
-                    }
+                .fa-check-circle::before {
 
-                    .fa-check-circle::before {
-
-                        color: #ffffff;
-                    }
+                    color: #ffffff;
                 }
             }
         }
     }
+}
 
 /*** animation affichage menu montant ***/
 
@@ -642,6 +674,7 @@ section {
         transform: translatey(-50px);
     }
 }
+
 /** animation prix + coche
 @keyframes deplacement {
     0% {
@@ -797,4 +830,3 @@ footer {
 
     }
 }
-
