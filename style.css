@@ -394,16 +394,27 @@ figure .img-menu {
   overflow: hidden;
   vertical-align: middle;
   height: 10rem;
-  width: 100%;
 }
 figure img {
   width: 100%;
-  height: 10rem;
+}
+
+.bandeau {
+  width: 100%;
+  height: 2rem;
+  border-radius: 2rem 2rem 0 0;
+  background-color: #f6f6f6;
+  position: relative;
+  top: -35px;
 }
 
 /***fin entete page menu ***/
 section {
   margin: 1rem 1rem 1rem 1rem;
+  background-color: #f6f6f6;
+  top: -45px;
+  position: relative;
+  /**fin ul**/
 }
 section .fa-heart {
   margin-left: 60px;
@@ -415,11 +426,11 @@ section .menu-categorie {
 }
 section .descriptif-menu {
   margin-bottom: 75px;
+  font-style: italic;
 }
 section .block-menu {
   margin-top: 20px;
-  -webkit-animation: block-menu 5s forwards;
-          animation: block-menu 5s forwards;
+  /**   animation: block-menu 5s forwards;***/
 }
 section ul {
   list-style-type: none;
@@ -433,17 +444,20 @@ section ul {
           margin-inline-end: 0px;
   -webkit-padding-start: 0;
           padding-inline-start: 0;
-  /**conteneur descriptif du plat **/
+  /**fin li**/
 }
 section ul p {
   height: 5rem;
 }
 section ul li {
   list-style-type: none;
-  display: inline-flex;
+  display: block;
   width: 100%;
+  text-overflow: ellipsis;
+  /**conteneur descriptif du plat **/
+  /**descriptif-choix **/
 }
-section ul .descriptif-choix {
+section ul li .descriptif-choix {
   display: flex;
   flex-wrap: nowrap;
   font-size: 1.2rem;
@@ -451,69 +465,95 @@ section ul .descriptif-choix {
   width: 100%;
   position: relative;
   overflow: hidden;
+  margin-top: 20px;
+  padding-top: 10px;
+  padding-left: 10px;
+  background-color: #fff;
+  border-radius: 1rem;
+  box-shadow: 0px 2px 0px 0px #d0cece;
   /** conteneur prix + bouton coche **/
+  /**fin prix-cohe**/
 }
-section ul .descriptif-choix .choix-detail {
+section ul li .descriptif-choix .choix-detail {
   display: block;
-  width: 80%;
-  background-color: #0d8a4f;
+  width: 85%;
   height: 3.5rem;
   white-space: nowrap;
   text-overflow: ellipsis;
   overflow: hidden;
-  /**&:hover*****/
+  /****************    
+
+                      &:hover {
+                          width: 70%;
+                          .fa-check-circle i {  
+                          animation: rotation 1s 1;
+                      }
+
+                  }
+  ***************************/
 }
-section ul .descriptif-choix .choix-detail:active {
-  width: 60%;
+section ul li .descriptif-choix .choix-detail:hover {
+  width: 65%;
+  text-overflow: ellipsis;
 }
-section ul .descriptif-choix .choix-detail .accompagnement-plat {
-  font-size: 1.2rem;
+section ul li .descriptif-choix .choix-detail:hover .prix-coche {
+  transform: translatex(-30px);
+}
+section ul li .descriptif-choix .choix-detail:hover .fa-check-circle {
+  -webkit-animation: rotation 2s 1;
+          animation: rotation 2s 1;
+}
+section ul li .descriptif-choix .choix-detail .accompagnement-plat {
+  font-size: 1rem;
   font-weight: 100;
-  color: red;
 }
-section ul .descriptif-choix .prix-coche {
+section ul li .descriptif-choix .prix-coche {
   position: inherit;
   display: flex;
   flex-wrap: nowrap;
   top: 0;
-  right: -55px;
+  right: -10px;
+  /**   
+
+  &:hover {
+      transform: translatex(-40px);
+  }
+  **/
+  /**fin coche**/
 }
-section ul .descriptif-choix .prix-coche:hover {
-  transform: translatex(-50px);
-}
-section ul .descriptif-choix .prix-coche .prix {
+section ul li .descriptif-choix .prix-coche .prix {
   font-size: 1.3rem;
   font-weight: 600;
   top: 15px;
-  right: 10px;
+  right: -20px;
   position: absolute;
   background-color: #d7ee0c;
   /** animation: deplacement 1s 1;**/
 }
-section ul .descriptif-choix .coche {
+section ul li .descriptif-choix .prix-coche .coche {
   background-color: #99E2D0;
   position: absolute;
   width: 3.5rem;
   height: 3.5rem;
   top: 0px;
-  right: -60px;
+  left: 35px;
   border-radius: 0 1rem 1rem 0;
   overflow: hidden;
   /** animation: deplacement 1s 1;**/
 }
-section ul .descriptif-choix .coche .fa-check-circle {
+section ul li .descriptif-choix .prix-coche .coche .fa-check-circle {
   position: absolute;
   top: 20px;
   right: 1rem;
   color: #99E2D0;
   border-radius: 50%;
-  -webkit-animation: rotation 1s 1;
-          animation: rotation 1s 1;
+  /***   animation: rotation 1s 1;****/
 }
-section ul .descriptif-choix .coche .fa-check-circle::before {
+section ul li .descriptif-choix .prix-coche .coche .fa-check-circle::before {
   color: #ffffff;
 }
 
+/** fin section**/
 /*** animation affichage menu montant ***/
 @-webkit-keyframes block-menu {
   0% {
