@@ -506,7 +506,7 @@ figure {
         overflow: hidden;
         vertical-align: middle;
         height: 10rem;
-       
+
     }
 
 
@@ -517,6 +517,7 @@ figure {
 
 
 }
+
 .bandeau {
     width: 100%;
     height: 2rem;
@@ -526,34 +527,48 @@ figure {
     top: -35px;
 
 }
+
 /***fin entete page menu ***/
 
 section {
     margin: $marge-base;
     background-color: #f6f6f6;
-    top: -45px;
+
     position: relative;
+
+    .menu {
+        position: relative;
+        top: -50px;
+    }
 
     .fa-heart {
         margin-left: 60px;
     }
 
     .menu-categorie {
+
+        top: 0;
+        position: relative;
+        top: 17px;
+        margin-bottom: 34px;
         font-size: 1.8rem;
-        border-bottom: 3px solid $tertiaire-color;
+        border-bottom: 3px solid #99E2D0;
         width: 3rem;
+
+
     }
 
     .descriptif-menu {
         margin-bottom: 75px;
-        
-            font-style: italic;
-        
+
+        font-style: italic;
+
     }
 
     .block-menu {
-        margin-top: 20px;
-     /**   animation: block-menu 5s forwards;***/
+        position: relative;
+        top: -31px;
+      
     }
 
     ul {
@@ -574,8 +589,8 @@ section {
             display: block;
             width: 100%;
             text-overflow: ellipsis;
-       
-        
+            
+            
 
 
             /**conteneur descriptif du plat **/
@@ -586,68 +601,66 @@ section {
                 font-weight: 600;
                 width: 100%;
                 position: relative;
-
                 overflow: hidden;
                 margin-top: 20px;
                 padding-top: 10px;
                 padding-left: 10px;
-
-                background-color: #fff;
                
+                background-color: #fff;
+
                 border-radius: 1rem;
                 box-shadow: 0px 2px 0px 0px #d0cece;
+            
                
-                               &:hover {
-                
-                  
-                    
-               
-            }
+                &:hover {
 
+                    .choix-detail {
+                    width: 65%;
+                    }
+    
+                    .prix-coche {
+                        transform: fadeinright(-40px);
+                        
+                    }
+    
+                    .fa-check-circle {
+                        animation: rotation 1s 1;
+        
+                    }
+    
+                }
 
                 .choix-detail {
                     display: block;
                     width: 85%;
-                    
-                    height: 3.5rem;
 
+                    height: 3.5rem;
+                    padding-right: 10px;
                     white-space: nowrap;
                     text-overflow: ellipsis;
                     overflow: hidden;
-
-                    &:hover {
                     
+            /**        &:hover {
                         width: 65%;
-                        text-overflow: ellipsis;
-
-
+                       
                         .prix-coche {
-                            transform: translatex(-30px);
+                            transform: fadeinright(-40px);
+                            
                         }
+                             
+
                         .fa-check-circle {
-                            animation: rotation 2s 1;
-        
-                        
+                            animation: rotation 1s 1;
+            
+                        }
+
                     }
 
-                    }  
-
-
-                /****************    
-                  
-                    &:hover {
-                        width: 70%;
-                        .fa-check-circle i {  
-                        animation: rotation 1s 1;
-                    }
-
-                }
-***************************/
-
+                    **/
                     .accompagnement-plat {
                         font-size: 1rem;
                         font-weight: 100;
-                        
+
                     }
                 }
 
@@ -662,15 +675,7 @@ section {
 
 
 
-                 /**   
-
-                &:hover {
-                    transform: translatex(-40px);
-                }
-                **/
-
-
-               
+                  
 
                     .prix {
                         font-size: 1.3rem;
@@ -679,8 +684,8 @@ section {
                         right: -20px;
                         position: absolute;
 
-                        background-color: rgb(215, 238, 12);
-                        /** animation: deplacement 1s 1;**/
+                       
+                       
 
                     }
 
@@ -692,10 +697,10 @@ section {
                         width: 3.5rem;
                         height: 3.5rem;
                         top: 0px;
-                        left: 35px;
+                        left: 25px;
                         border-radius: 0 1rem 1rem 0;
                         overflow: hidden;
-                        /** animation: deplacement 1s 1;**/
+                        
 
                         .fa-check-circle {
                             position: absolute;
@@ -703,7 +708,7 @@ section {
                             right: 1rem;
                             color: $tertiaire-color;
                             border-radius: 50%;
-                        /***   animation: rotation 1s 1;****/
+                           
 
                         }
 
@@ -720,17 +725,33 @@ section {
             }
 
             /**descriptif-choix **/
-        } /**fin li**/
+        }
 
-       
-     
-    }/**fin ul**/
+        /**fin li**/
 
-}/** fin section**/
+
+
+    }
+
+    /**fin ul**/
+
+}
+
+/** fin section**/
 
 
 
 /*** animation affichage menu montant ***/
+
+@keyframes rotation {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
 
 @keyframes block-menu {
     0% {
@@ -742,19 +763,6 @@ section {
     }
 }
 
-/** animation prix + coche
-@keyframes deplacement {
-    0% {
-        transform: translatex(0px);
-
-        
-    }
-
-    100% {
-        transform: translatex(-50px);
-        
-    }
-}***/
 
 .titre-choix {
     font-size: 1rem;

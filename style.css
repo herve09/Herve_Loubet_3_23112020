@@ -412,14 +412,21 @@ figure img {
 section {
   margin: 1rem 1rem 1rem 1rem;
   background-color: #f6f6f6;
-  top: -45px;
   position: relative;
   /**fin ul**/
+}
+section .menu {
+  position: relative;
+  top: -50px;
 }
 section .fa-heart {
   margin-left: 60px;
 }
 section .menu-categorie {
+  top: 0;
+  position: relative;
+  top: 17px;
+  margin-bottom: 34px;
   font-size: 1.8rem;
   border-bottom: 3px solid #99E2D0;
   width: 3rem;
@@ -429,8 +436,8 @@ section .descriptif-menu {
   font-style: italic;
 }
 section .block-menu {
-  margin-top: 20px;
-  /**   animation: block-menu 5s forwards;***/
+  position: relative;
+  top: -31px;
 }
 section ul {
   list-style-type: none;
@@ -474,34 +481,41 @@ section ul li .descriptif-choix {
   /** conteneur prix + bouton coche **/
   /**fin prix-cohe**/
 }
+section ul li .descriptif-choix:hover .choix-detail {
+  width: 65%;
+}
+section ul li .descriptif-choix:hover .prix-coche {
+  transform: fadeinright(-40px);
+}
+section ul li .descriptif-choix:hover .fa-check-circle {
+  -webkit-animation: rotation 1s 1;
+          animation: rotation 1s 1;
+}
 section ul li .descriptif-choix .choix-detail {
   display: block;
   width: 85%;
   height: 3.5rem;
+  padding-right: 10px;
   white-space: nowrap;
   text-overflow: ellipsis;
   overflow: hidden;
-  /****************    
+  /**        &:hover {
+              width: 65%;
 
-                      &:hover {
-                          width: 70%;
-                          .fa-check-circle i {  
-                          animation: rotation 1s 1;
-                      }
+              .prix-coche {
+                  transform: fadeinright(-40px);
 
-                  }
-  ***************************/
-}
-section ul li .descriptif-choix .choix-detail:hover {
-  width: 65%;
-  text-overflow: ellipsis;
-}
-section ul li .descriptif-choix .choix-detail:hover .prix-coche {
-  transform: translatex(-30px);
-}
-section ul li .descriptif-choix .choix-detail:hover .fa-check-circle {
-  -webkit-animation: rotation 2s 1;
-          animation: rotation 2s 1;
+              }
+
+
+              .fa-check-circle {
+                  animation: rotation 1s 1;
+
+              }
+
+          }
+
+          **/
 }
 section ul li .descriptif-choix .choix-detail .accompagnement-plat {
   font-size: 1rem;
@@ -513,12 +527,6 @@ section ul li .descriptif-choix .prix-coche {
   flex-wrap: nowrap;
   top: 0;
   right: -10px;
-  /**   
-
-  &:hover {
-      transform: translatex(-40px);
-  }
-  **/
   /**fin coche**/
 }
 section ul li .descriptif-choix .prix-coche .prix {
@@ -527,8 +535,6 @@ section ul li .descriptif-choix .prix-coche .prix {
   top: 15px;
   right: -20px;
   position: absolute;
-  background-color: #d7ee0c;
-  /** animation: deplacement 1s 1;**/
 }
 section ul li .descriptif-choix .prix-coche .coche {
   background-color: #99E2D0;
@@ -536,10 +542,9 @@ section ul li .descriptif-choix .prix-coche .coche {
   width: 3.5rem;
   height: 3.5rem;
   top: 0px;
-  left: 35px;
+  left: 25px;
   border-radius: 0 1rem 1rem 0;
   overflow: hidden;
-  /** animation: deplacement 1s 1;**/
 }
 section ul li .descriptif-choix .prix-coche .coche .fa-check-circle {
   position: absolute;
@@ -547,7 +552,6 @@ section ul li .descriptif-choix .prix-coche .coche .fa-check-circle {
   right: 1rem;
   color: #99E2D0;
   border-radius: 50%;
-  /***   animation: rotation 1s 1;****/
 }
 section ul li .descriptif-choix .prix-coche .coche .fa-check-circle::before {
   color: #ffffff;
@@ -555,6 +559,14 @@ section ul li .descriptif-choix .prix-coche .coche .fa-check-circle::before {
 
 /** fin section**/
 /*** animation affichage menu montant ***/
+@keyframes rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
 @-webkit-keyframes block-menu {
   0% {
     transform: translatey(0);
@@ -571,19 +583,6 @@ section ul li .descriptif-choix .prix-coche .coche .fa-check-circle::before {
     transform: translatey(-50px);
   }
 }
-/** animation prix + coche
-@keyframes deplacement {
-    0% {
-        transform: translatex(0px);
-
-
-    }
-
-    100% {
-        transform: translatex(-50px);
-
-    }
-}***/
 .titre-choix {
   font-size: 1rem;
   box-shadow: 0 6px 0 #cac8c891;
