@@ -485,7 +485,7 @@ section ul li .descriptif-choix:hover .choix-detail {
   width: 65%;
 }
 section ul li .descriptif-choix:hover .prix-coche {
-  transform: fadeinright(-40px);
+  transform: fadeinright(-30px);
 }
 section ul li .descriptif-choix:hover .fa-check-circle {
   -webkit-animation: rotation 1s 1;
@@ -537,12 +537,13 @@ section ul li .descriptif-choix .prix-coche .prix {
   position: absolute;
 }
 section ul li .descriptif-choix .prix-coche .coche {
-  background-color: #99E2D0;
+  background-color: red;
+  /**tertiaire-color; **/
   position: absolute;
   width: 3.5rem;
   height: 3.5rem;
   top: 0px;
-  left: 25px;
+  left: 30px;
   border-radius: 0 1rem 1rem 0;
   overflow: hidden;
 }
@@ -638,7 +639,7 @@ footer li i {
     height: 20rem;
   }
 }
-/** -fin index 780 **/
+/** -fin index 375 **/
 /**  **/
 /** *********responsive***************** **/
 /** *********responsive***************** **/
