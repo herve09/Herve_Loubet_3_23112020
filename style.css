@@ -1,12 +1,41 @@
+@-webkit-keyframes transition {
+  0% {
+    opacity: 0;
+  }
+  60% {
+    opacity: 0.2;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes transition {
+  0% {
+    opacity: 0;
+  }
+  60% {
+    opacity: 0.2;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.page {
+  position: absolute;
+  top: 0;
+  -webkit-animation: transition 6s forwards;
+          animation: transition 6s forwards;
+}
+
+/**** loader****/
 /** loader***/
-/** loader**/
 .section-loader {
   background-color: #fafcfb;
   width: 100%;
   height: 100%;
   line-height: 100%;
-  -webkit-animation: delete 0s linear 3s forwards;
-          animation: delete 0s linear 3s forwards;
+  -webkit-animation: delete 10s linear 3s forwards;
+  animation: delete 10s linear 3s forwards;
   position: fixed;
   z-index: 100;
   top: 0;
@@ -44,7 +73,7 @@
   border: 8px solid transparent;
   border-top-color: #FF79DA;
   -webkit-animation: rotation 4s linear 0.1s;
-  animation: rotation 4s linear 0.1s;
+  animation: rotation 3s linear 0.1s;
 }
 
 @-webkit-keyframes rotation {
@@ -55,7 +84,6 @@
     transform: rotate(360deg);
   }
 }
-
 @keyframes rotation {
   0% {
     transform: rotate(0deg);
@@ -133,7 +161,6 @@ h6 {
 .logo {
   margin: 1rem 1rem 1rem 1rem;
   position: relative;
-  z-index: 1;
 }
 .logo img {
   display: block;
@@ -288,7 +315,7 @@ aside article {
 }
 .descriptif-restaurant h4 {
   -webkit-margin-after: 0;
-          margin-block-end: 0;
+  margin-block-end: 0;
 }
 
 .coeur {
@@ -326,7 +353,6 @@ aside article {
     opacity: 1;
   }
 }
-
 @keyframes invisible {
   0% {
     opacity: 0;
@@ -442,15 +468,15 @@ section .block-menu {
 section ul {
   list-style-type: none;
   -webkit-margin-before: 0;
-          margin-block-start: 0;
+  margin-block-start: 0;
   -webkit-margin-after: 0;
-          margin-block-end: 0;
+  margin-block-end: 0;
   -webkit-margin-start: 0px;
-          margin-inline-start: 0px;
+  margin-inline-start: 0px;
   -webkit-margin-end: 0px;
-          margin-inline-end: 0px;
+  margin-inline-end: 0px;
   -webkit-padding-start: 0;
-          padding-inline-start: 0;
+  padding-inline-start: 0;
   /**fin li**/
 }
 section ul p {
@@ -471,7 +497,6 @@ section ul li .descriptif-choix {
   font-weight: 600;
   width: 100%;
   position: relative;
-  overflow: hidden;
   margin-top: 20px;
   padding-top: 10px;
   padding-left: 10px;
@@ -489,7 +514,7 @@ section ul li .descriptif-choix:hover .prix-coche {
 }
 section ul li .descriptif-choix:hover .fa-check-circle {
   -webkit-animation: rotation 1s 1;
-          animation: rotation 1s 1;
+  animation: rotation 1s 1;
 }
 section ul li .descriptif-choix .choix-detail {
   display: block;
@@ -522,28 +547,26 @@ section ul li .descriptif-choix .choix-detail .accompagnement-plat {
   font-weight: 100;
 }
 section ul li .descriptif-choix .prix-coche {
-  position: inherit;
-  display: flex;
-  flex-wrap: nowrap;
+  position: relative;
+  display: inline-block;
   top: 0;
-  right: -10px;
+  right: 0;
   /**fin coche**/
 }
 section ul li .descriptif-choix .prix-coche .prix {
   font-size: 1.3rem;
   font-weight: 600;
   top: 15px;
-  right: -20px;
+  right: -30px;
   position: absolute;
 }
 section ul li .descriptif-choix .prix-coche .coche {
-  background-color: red;
-  /**tertiaire-color; **/
+  background-color: #99E2D0;
   position: absolute;
   width: 3.5rem;
   height: 3.5rem;
   top: 0px;
-  left: 30px;
+  left: 42px;
   border-radius: 0 1rem 1rem 0;
   overflow: hidden;
 }
@@ -605,7 +628,7 @@ footer h2 {
 footer ul {
   list-style-type: none;
   -webkit-padding-start: 15px;
-          padding-inline-start: 15px;
+  padding-inline-start: 15px;
 }
 footer li {
   padding-bottom: 2rem;
