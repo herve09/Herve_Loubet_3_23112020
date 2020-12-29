@@ -115,7 +115,8 @@ body {
   padding: 0;
   max-width: 375px;
   width: 100%;
-  background: #ffffff;
+  /**  background: $color-blanc;**/
+  background-color: #fefefefe;
   font-family: Roboto;
   font-size: 1.2rem;
 }
@@ -168,14 +169,12 @@ h6 {
 }
 
 .info {
-  border-top: 3px solid #b4b4b4;
-  /*** *  margin: $marge-base; margin: $marge-base; ne fonctionne pas **/
+  box-shadow: inset 0px 4px 9px -2px #656565;
 }
 
 .titre-geolocalisation {
   margin-top: 0.5rem;
   text-align: center;
-  background-color: #eee6e6;
   padding-top: 10px;
   padding-bottom: 10px;
   /**
@@ -596,7 +595,7 @@ section ul li .descriptif-choix .prix-coche .coche .fa-check-circle::before {
     transform: translatey(0);
   }
   100% {
-    transform: translatey(-50px);
+    transform: translatey(-55px);
   }
 }
 @keyframes block-menu {
@@ -644,7 +643,7 @@ footer li i {
 /***********responsive*******************/
 /***********responsive*******************/
 /***********responsive*******************/
-@media all and (min-width: 375px) and (max-width: 900px) {
+@media all and (min-width: 376px) and (max-width: 900px) {
   body {
     max-width: 100%;
     font-size: 1.5rem;
