@@ -24,7 +24,7 @@
   position: absolute;
   top: 0;
   -webkit-animation: transition 6s forwards;
-          animation: transition 6s forwards;
+  animation: transition 6s forwards;
 }
 
 /**** loader****/
@@ -115,8 +115,7 @@ body {
   padding: 0;
   max-width: 375px;
   width: 100%;
-  /**  background: $color-blanc;**/
-  background-color: #fefefefe;
+  background: #ffffff;
   font-family: Roboto;
   font-size: 1.2rem;
 }
@@ -169,14 +168,16 @@ h6 {
 }
 
 .info {
-  box-shadow: inset 0px 4px 9px -2px #656565;
+  background-color: #f6f6f6;
 }
 
 .titre-geolocalisation {
   margin-top: 0.5rem;
   text-align: center;
   padding-top: 10px;
-  padding-bottom: 10px;
+  padding-bottom: 20px;
+  background-color: #eaeaea;
+  box-shadow: inset 0px 4px 9px -2px #656565;
   /**
       .iconemap {
           margin-left: 70px;
@@ -191,6 +192,7 @@ h6 {
   border: transparent;
   font-size: 1.4rem;
   width: 80%;
+  background-color: #eaeaea;
 }
 
 .titre-reservez {
@@ -230,7 +232,7 @@ h6 {
 }
 .fonctionnement p {
   font-size: 1.3rem;
-  /**  margin-top: 0.5rem;****/
+  background-color: #f6f6f6;
 }
 .fonctionnement .ordre {
   background-color: #9356dc;
@@ -263,6 +265,7 @@ h6 {
   position: relative;
   height: 3.5rem;
   margin-left: 10px;
+  background-color: #f6f6f6;
   box-shadow: 0 3px 0 #e0dfdf;
 }
 
@@ -274,6 +277,7 @@ aside {
 aside article {
   border-radius: 1.5rem;
   margin-bottom: 2rem;
+  background-color: #fff;
 }
 
 .article-restaurant p {
@@ -509,11 +513,12 @@ section ul li .descriptif-choix:hover .choix-detail {
   width: 65%;
 }
 section ul li .descriptif-choix:hover .prix-coche {
-  transform: fadeinright(-30px);
+  -webkit-animation: prix-coche 1s linear 0s forwards;
+  animation: prix-coche 1s linear 0s forwards;
 }
 section ul li .descriptif-choix:hover .fa-check-circle {
-  -webkit-animation: rotation 1s 1;
-  animation: rotation 1s 1;
+  -webkit-animation: rotation 2s 1;
+  animation: rotation 2s 1;
 }
 section ul li .descriptif-choix .choix-detail {
   display: block;
@@ -524,22 +529,22 @@ section ul li .descriptif-choix .choix-detail {
   text-overflow: ellipsis;
   overflow: hidden;
   /**        &:hover {
-              width: 65%;
+      width: 65%;
 
-              .prix-coche {
-                  transform: fadeinright(-40px);
+      .prix-coche {
+          transform: fadeinright(-40px);
 
-              }
+      }
 
 
-              .fa-check-circle {
-                  animation: rotation 1s 1;
+      .fa-check-circle {
+          animation: rotation 1s 1;
 
-              }
+      }
 
-          }
+  }
 
-          **/
+  **/
 }
 section ul li .descriptif-choix .choix-detail .accompagnement-plat {
   font-size: 1rem;
@@ -565,7 +570,7 @@ section ul li .descriptif-choix .prix-coche .coche {
   width: 3.5rem;
   height: 3.5rem;
   top: 0px;
-  left: 45px;
+  left: 55px;
   border-radius: 0 1rem 1rem 0;
   overflow: hidden;
 }
@@ -588,6 +593,22 @@ section ul li .descriptif-choix .prix-coche .coche .fa-check-circle::before {
   }
   100% {
     transform: rotate(360deg);
+  }
+}
+@-webkit-keyframes prix-coche {
+  0% {
+    transform: translatex(60px);
+  }
+  100% {
+    transform: translatex(0px);
+  }
+}
+@keyframes prix-coche {
+  0% {
+    transform: translatex(60px);
+  }
+  100% {
+    transform: translatex(0px);
   }
 }
 @-webkit-keyframes block-menu {
@@ -628,6 +649,7 @@ footer ul {
   list-style-type: none;
   -webkit-padding-start: 15px;
   padding-inline-start: 15px;
+  margin-bottom: 0;
 }
 footer li {
   padding-bottom: 2rem;
@@ -645,7 +667,9 @@ footer li i {
 /***********responsive*******************/
 @media all and (min-width: 376px) and (max-width: 900px) {
   body {
-    max-width: 100%;
+    min-width: 376px;
+    max-width: 900px;
+    /** width: 100% **/
     font-size: 1.5rem;
   }
 
@@ -664,11 +688,15 @@ footer li i {
 /** -fin index 375 **/
 /**  **/
 /** *********responsive***************** **/
-/** *********responsive***************** **/
-@media all and (min-width: 901px) and (max-width: 1280px) {
+/** *********responsive******************* **/
+@media all and (min-width: 901px) and (max-width: 3020px) {
   body {
-    max-width: 1280px;
-    font-size: 1.6rem;
+    min-width: 901px;
+    max-width: 2180px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    font-size: 2rem;
   }
 
   .info .titre-reservez {
@@ -690,10 +718,14 @@ footer li i {
     margin-right: 1rem;
   }
 
-  article {
+  .conteneur-restaurant {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
+  }
+
+  article {
+    width: 45%;
   }
   article a {
     width: 49%;
@@ -703,6 +735,57 @@ footer li i {
   }
   article .img-restaurant img {
     height: 20rem;
+  }
+
+  /**page restaurant**/
+  /*******************/
+  .logo-menu {
+    top: 5px;
+    margin: auto;
+    width: 100%;
+  }
+  .logo-menu .fa-arrow-left {
+    top: 2rem;
+    font-size: 5rem;
+    position: relative;
+    left: 5rem;
+    color: #000000;
+  }
+  .logo-menu .retour {
+    margin-bottom: 2rem;
+  }
+  .logo-menu img {
+    position: absolute;
+    top: 2rem;
+    left: 12rem;
+    height: 5rem;
+  }
+
+  .descriptif-menu h1 {
+    font-size: 3rem;
+  }
+  .descriptif-menu .coeur .fa-heart {
+    font-size: 3.5rem;
+  }
+
+  .block-menu .menu-categorie {
+    font-size: 2rem;
+  }
+  .block-menu .descriptif-choix .choix-detail {
+    height: 5.5rem;
+    width: 95%;
+    font-size: 2rem;
+  }
+  .block-menu .descriptif-choix .choix-detail .accompagnement-plat {
+    font-size: 2rem;
+  }
+  .block-menu .prix-coche .prix {
+    font-size: 2rem;
+  }
+  .block-menu .prix-coche .coche {
+    font-size: 2rem;
+    top: 12px;
+    right: 15px;
   }
 }
 /*# sourceMappingURL=style.css.map */
