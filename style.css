@@ -114,7 +114,7 @@ body {
   margin: 0;
   padding: 0;
   max-width: 375px;
-  width: 100%;
+  /**width: 100%;**/
   background: #ffffff;
   font-family: Roboto;
   font-size: 1.2rem;
@@ -496,6 +496,8 @@ section ul li {
 section ul li .descriptif-choix {
   display: flex;
   flex-wrap: nowrap;
+  justify-content: space-between;
+  /*************3112*****************/
   font-size: 1.2rem;
   font-weight: 600;
   width: 100%;
@@ -554,14 +556,15 @@ section ul li .descriptif-choix .prix-coche {
   position: relative;
   display: inline-block;
   top: 0;
-  right: 0;
+  right: 0px;
   /**fin coche**/
 }
 section ul li .descriptif-choix .prix-coche .prix {
   font-size: 1.3rem;
   font-weight: 600;
   top: 15px;
-  right: -30px;
+  right: 0px;
+  /**-30px;**********3112****/
   position: absolute;
 }
 section ul li .descriptif-choix .prix-coche .coche {
@@ -570,7 +573,7 @@ section ul li .descriptif-choix .prix-coche .coche {
   width: 3.5rem;
   height: 3.5rem;
   top: 0px;
-  left: 55px;
+  left: 10px;
   border-radius: 0 1rem 1rem 0;
   overflow: hidden;
 }
@@ -597,18 +600,18 @@ section ul li .descriptif-choix .prix-coche .coche .fa-check-circle::before {
 }
 @-webkit-keyframes prix-coche {
   0% {
-    transform: translatex(60px);
+    transform: translatex(100px);
   }
   100% {
-    transform: translatex(0px);
+    transform: translatex(-65px);
   }
 }
 @keyframes prix-coche {
   0% {
-    transform: translatex(60px);
+    transform: translatex(0px);
   }
   100% {
-    transform: translatex(0px);
+    transform: translatex(-65px);
   }
 }
 @-webkit-keyframes block-menu {
@@ -664,12 +667,11 @@ footer li i {
 
 /***********responsive*******************/
 /***********responsive*******************/
-/***********responsive*******************/
+/***********responsive***/
 @media all and (min-width: 376px) and (max-width: 900px) {
   body {
     min-width: 376px;
     max-width: 900px;
-    /** width: 100% **/
     font-size: 1.5rem;
   }
 
@@ -689,7 +691,7 @@ footer li i {
 /**  **/
 /** *********responsive***************** **/
 /** *********responsive******************* **/
-@media all and (min-width: 901px) and (max-width: 3020px) {
+@media all and (min-width: 901px) and (max-width: 2180px) {
   body {
     min-width: 901px;
     max-width: 2180px;
@@ -738,7 +740,7 @@ footer li i {
   }
 
   /**page restaurant**/
-  /*******************/
+  /**************/
   .logo-menu {
     top: 5px;
     margin: auto;
