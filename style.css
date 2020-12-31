@@ -511,14 +511,14 @@ section ul li .descriptif-choix {
   /** conteneur prix + bouton coche **/
   /**fin prix-cohe**/
 }
-section ul li .descriptif-choix:hover .choix-detail {
+section ul li .descriptif-choix:active .choix-detail {
   width: 65%;
 }
-section ul li .descriptif-choix:hover .prix-coche {
+section ul li .descriptif-choix:active .prix-coche {
   -webkit-animation: prix-coche 1s linear 0s forwards;
   animation: prix-coche 1s linear 0s forwards;
 }
-section ul li .descriptif-choix:hover .fa-check-circle {
+section ul li .descriptif-choix:active .fa-check-circle {
   -webkit-animation: rotation 2s 1;
   animation: rotation 2s 1;
 }
@@ -530,23 +530,6 @@ section ul li .descriptif-choix .choix-detail {
   white-space: nowrap;
   text-overflow: ellipsis;
   overflow: hidden;
-  /**        &:hover {
-      width: 65%;
-
-      .prix-coche {
-          transform: fadeinright(-40px);
-
-      }
-
-
-      .fa-check-circle {
-          animation: rotation 1s 1;
-
-      }
-
-  }
-
-  **/
 }
 section ul li .descriptif-choix .choix-detail .accompagnement-plat {
   font-size: 1rem;
@@ -556,14 +539,14 @@ section ul li .descriptif-choix .prix-coche {
   position: relative;
   display: inline-block;
   top: 0;
-  right: 0px;
+  right: -15px;
   /**fin coche**/
 }
 section ul li .descriptif-choix .prix-coche .prix {
   font-size: 1.3rem;
   font-weight: 600;
   top: 15px;
-  right: 0px;
+  right: 15px;
   /**-30px;**********3112****/
   position: absolute;
 }
@@ -573,7 +556,7 @@ section ul li .descriptif-choix .prix-coche .coche {
   width: 3.5rem;
   height: 3.5rem;
   top: 0px;
-  left: 10px;
+  left: -5px;
   border-radius: 0 1rem 1rem 0;
   overflow: hidden;
 }
@@ -780,6 +763,17 @@ footer li i {
   }
   .block-menu .descriptif-choix .choix-detail .accompagnement-plat {
     font-size: 2rem;
+  }
+  .block-menu .descriptif-choix:hover .choix-detail {
+    width: 65%;
+  }
+  .block-menu .descriptif-choix:hover .prix-coche {
+    -webkit-animation: prix-coche 1s linear 0s forwards;
+    animation: prix-coche 1s linear 0s forwards;
+  }
+  .block-menu .descriptif-choix:hover .fa-check-circle {
+    -webkit-animation: rotation 2s 1;
+    animation: rotation 2s 1;
   }
   .block-menu .prix-coche .prix {
     font-size: 2rem;
