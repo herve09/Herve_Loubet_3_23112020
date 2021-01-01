@@ -602,14 +602,14 @@ figure {
         bottom: 0;
         overflow: hidden;
         vertical-align: middle;
-        height: 10rem;
+        
 
     }
 
 
     img {
         width: 100%;
-
+height: 10rem;
     }
 
 
@@ -665,6 +665,7 @@ section {
     .block-menu {
         position: relative;
         top: -31px;
+        animation: block-menu 2s forwards;
 
     }
 
@@ -860,17 +861,19 @@ section {
     }
 
     100% {
-        transform: translatey(-55px);
+        transform: translatey(-25px);
     }
 }
 
 @keyframes block-menu {
     0% {
         transform: translatey(0);
+        opacity: 0.2;
     }
 
     100% {
-        transform: translatey(-50px);
+        transform: translatey(-25px);
+        opacity: 1;
     }
 }
 
@@ -890,9 +893,10 @@ section {
 /****************************/
 
 footer {
+    position: relative;
     background-color: #353535;
     color: $color-blanc;
-    top: 0;
+    top: -50px;
     left: 0;
 
     h2 {
