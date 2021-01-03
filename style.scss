@@ -83,15 +83,12 @@ $shadow-gris: 0 4px 0 #cac8c891;
     vertical-align: middle;
     position: relative;
     top: 100px;
-
-
 }
 
 .loader-rond {
     border-radius: 60px;
     border: 8px solid $primary-color;
     margin-left: 3rem;
-
 }
 
 .loader-rond:after {
@@ -111,12 +108,10 @@ $shadow-gris: 0 4px 0 #cac8c891;
 @-webkit-keyframes rotation {
     0% {
         transform: rotate(0deg);
-
     }
 
     100% {
         transform: rotate(360deg);
-
     }
 
 }
@@ -124,12 +119,10 @@ $shadow-gris: 0 4px 0 #cac8c891;
 @keyframes rotation {
     0% {
         transform: rotate(0deg);
-
     }
 
     100% {
         transform: rotate(360deg);
-
     }
 
 }
@@ -137,26 +130,20 @@ $shadow-gris: 0 4px 0 #cac8c891;
 @-webkit-keyframes delete {
     0% {
         transform: translate(0);
-
-
     }
 
     100% {
         transform: translate(99999px);
-
     }
 }
 
 @keyframes delete {
     0% {
         transform: translate(0);
-
-
     }
 
     100% {
         transform: translate(99999px);
-
     }
 }
 
@@ -170,23 +157,13 @@ body {
     max-width: 375px;
     /**width: 100%;**/
     background: $color-blanc;
-
     font-family: Roboto;
-
     font-size: 1.2rem;
-
-
 }
-
-
-
-
-
 
 a {
     text-decoration: none;
 }
-
 
 h1,
 h2,
@@ -199,18 +176,15 @@ h6 {
 }
 
 h1 {
-
     font-size: 2rem;
 }
 
 h2 {
-
     font-size: 1.9rem;
 }
 
 h3 {
     font-size: 1.8rem;
-
 }
 
 h4 {
@@ -219,7 +193,6 @@ h4 {
 
 h5 {
     font-size: 1.2rem;
-
 }
 
 h6 {
@@ -230,46 +203,30 @@ h6 {
     margin: $marge-base;
     position: relative;
 
-
-
-
-
-
     img {
         display: block;
         margin: auto;
 
     }
 
-
 }
 
 .info {
-
     background-color: #f6f6f6;
-
 
 }
 
 .titre-geolocalisation {
     margin-top: 0.5rem;
     text-align: center;
-
     padding-top: 10px;
     padding-bottom: 20px;
     background-color: #eaeaea;
     box-shadow: inset 0px 4px 9px -2px #656565;
 
-
-    /**
-    .iconemap {
-        margin-left: 70px;
-    }
-**/
     span {
         font-weight: bold;
         padding-left: 20px;
-
     }
 
     .site-search {
@@ -285,7 +242,6 @@ h6 {
     font-size: 2rem;
     text-align: center;
     font-weight: bold;
-
 }
 
 .titre-decouvrez {
@@ -301,9 +257,7 @@ h6 {
     height: 3rem;
     border-radius: 3rem;
     background-image: linear-gradient($primary-color, $second-color);
-
     text-align: center;
-    /** vertical-align: middle; **/
     padding-top: 1rem;
     box-shadow: 0 5px 8px grey;
 
@@ -311,8 +265,6 @@ h6 {
         font-size: 2rem;
         color: $color-blanc;
         height: 4.5rem;
-
-
     }
 
 }
@@ -329,12 +281,9 @@ h6 {
     }
 
     .ordre {
-
-
         background-color: $primary-color;
         border-radius: 50%;
         color: $color-blanc;
-
         top: -5px;
         left: -15px;
         height: 30px;
@@ -342,7 +291,6 @@ h6 {
         position: absolute;
         line-height: 30px;
         text-align: center;
-
     }
 
     .fas {
@@ -357,30 +305,25 @@ h6 {
 }
 
 .titre-choix {
-
-    /** box-shadow: 0px 3px 0px rgb(145, 144, 144); 
-   
-    border-bottom: 3px solid transparent; /**voir si utile**/
-    /*** border-radius: 0 0 0 2rem;***/
     padding-bottom: 0.2rem;
     margin-top: 3rem;
     position: relative;
-    height: 3.5rem;
+    height: 2.5rem;
     margin-left: 10px;
+    padding-top: 10px;
     background-color: #f6f6f6;
-    box-shadow: 0 3px 0 rgb(224, 223, 223);
+    border-radius: 1rem;
+    box-shadow: 0 3px 2px rgb(224, 223, 223);
 }
 
-/** aside ilage restaurant **/
+/** aside image restaurant **/
 
 aside {
     margin: $marge-base;
     padding-top: 4rem;
 
 
-
     article {
-
         border-radius: 1.5rem;
         margin-bottom: 2rem;
         background-color: #fff;
@@ -389,58 +332,40 @@ aside {
 
 .article-restaurant {
 
-
-
     p {
-
         padding-bottom: 2rem;
         box-shadow: $shadow-gris;
     }
-
 }
 
 
 .img-restaurant {
-
     position: relative;
 
     img {
         width: 100%;
-        height: 11rem;
+        height: 7rem;
         overflow: hidden;
         border-radius: 1.5rem 1.5rem 0 0;
-
-
     }
 
     .nouveau {
         display: block;
-
-
         background-color: $tertiaire-color;
-
-
-
         position: absolute;
         top: 22px;
-
         right: 18px;
         padding: 5px;
-
-
         color: #39a98d;
         text-align: center;
         /**  vertical-align: middle; **/
         font-size: 1.5rem;
-
     }
 }
 
 
-
 .descriptif-restaurant {
     display: block;
-    /****/
     position: relative;
     color: black;
     margin-right: 2rem;
@@ -450,9 +375,7 @@ aside {
     h4 {
         -webkit-margin-after: 0;
         margin-block-end: 0;
-
     }
-
 
 }
 
@@ -475,14 +398,8 @@ aside {
         position: absolute;
         top: 0;
         right: 0;
-
         background-color: #fff;
-
-
-
-
-
-    }
+ }
 
 
     .fas {
@@ -492,7 +409,7 @@ aside {
         color: $primary-color;
         display: none;
         font-size: 2.5rem;
-
+        transition: color 10.2s linear;
     }
 
 
@@ -523,38 +440,8 @@ aside {
 }
 
 
-
-
-
-
-
-/***
-    .fas .far {
-        font-size: 3rem;
-        float: right;
-        margin-top: -7rem;
-        position: absolute;
-        right: 3rem;
-        background-clip: text;
-        transition: color 1s;
-
-
-
-        &:hover {
-            .fas {display: none;}
-          .far {display: block;}
-
-
-        }
-    }
-}**/
-
-/*******fiin index*****/
+/*******fin index*****/
 /**********************/
-
-
-
-
 
 /***********************/
 /**debut page menu***/
@@ -569,14 +456,12 @@ aside {
         position: relative;
         left: 2rem;
         color: #000000;
-
     }
 
     img {
         position: absolute;
         top: 1rem;
         left: 5rem;
-
     }
 
 }
@@ -593,8 +478,6 @@ figure {
     margin: 0;
     padding-top: 2rem;
 
-
-
     .img-menu {
         top: 0;
         left: 0;
@@ -602,16 +485,13 @@ figure {
         bottom: 0;
         overflow: hidden;
         vertical-align: middle;
-        
-
     }
 
 
     img {
         width: 100%;
-height: 10rem;
+        height: 10rem;
     }
-
 
 }
 
@@ -622,7 +502,6 @@ height: 10rem;
     background-color: #f6f6f6;
     position: relative;
     top: -35px;
-
 }
 
 /***fin entete page menu ***/
@@ -630,7 +509,6 @@ height: 10rem;
 section {
     margin: $marge-base;
     background-color: #f6f6f6;
-
     position: relative;
 
     .menu {
@@ -643,48 +521,35 @@ section {
     }
 
     .menu-categorie {
-
         top: 0;
         position: relative;
-        top: 17px;
         margin-bottom: 34px;
         font-size: 1.8rem;
         border-bottom: 3px solid #99E2D0;
         width: 3rem;
-
-
     }
 
     .descriptif-menu {
         margin-bottom: 75px;
-
         font-style: italic;
-
     }
 
     .block-menu {
         position: relative;
         top: -31px;
-        animation: block-menu 2s forwards;
-
-    }
+        }
 
     ul {
         list-style-type: none;
-        -webkit-margin-before: 0;
-        margin-block-start: 0;
-        -webkit-margin-after: 0;
-        margin-block-end: 0;
-        -webkit-margin-start: 0px;
-        margin-inline-start: 0px;
-        -webkit-margin-end: 0px;
-        margin-inline-end: 0px;
-        -webkit-padding-start: 0;
-        padding-inline-start: 0;
+        
+        margin-top: 0;
+        margin-bottom: 0;
+        padding-top: 0;
+        padding-left: 0;
+        animation: block-menu 2s forwards;
 
         p {
             height: 5rem;
-
         }
 
         li {
@@ -693,26 +558,19 @@ section {
             width: 100%;
             text-overflow: ellipsis;
 
-
-
-
-            /**conteneur descriptif du plat **/
+     /**conteneur descriptif du plat **/
             .descriptif-choix {
                 display: flex;
                 flex-wrap: nowrap;
                 justify-content: space-between;
-                /*************3112*****************/
                 font-size: 1.2rem;
                 font-weight: 600;
-                width: 100%;
+                width: 97%;
                 position: relative;
-
                 margin-top: 20px;
                 padding-top: 10px;
                 padding-left: 10px;
-
                 background-color: #fff;
-
                 border-radius: 1rem;
                 box-shadow: 0px 2px 0px 0px #d0cece;
 
@@ -725,13 +583,11 @@ section {
                     .prix-coche {
                         -webkit-animation: prix-coche 1s linear 0s forwards;
                         animation: prix-coche 1s linear 0s forwards;
-
                     }
 
                     .fa-check-circle {
                         -webkit-animation: rotation 2s 1;
                         animation: rotation 2s 1;
-
                     }
 
                 }
@@ -739,18 +595,15 @@ section {
                 .choix-detail {
                     display: block;
                     width: 85%;
-
                     height: 3.5rem;
                     padding-right: 10px;
                     white-space: nowrap;
                     text-overflow: ellipsis;
                     overflow: hidden;
 
-
                     .accompagnement-plat {
                         font-size: 1rem;
                         font-weight: 100;
-
                     }
                 }
 
@@ -759,7 +612,6 @@ section {
                 .prix-coche {
                     position: relative;
                     display: inline-block;
-
                     top: 0;
                     right: -15px;
 
@@ -781,7 +633,7 @@ section {
                         width: 3.5rem;
                         height: 3.5rem;
                         top: 0px;
-                        left: -5px;
+                        left: 0px;
                         border-radius: 0 1rem 1rem 0;
                         overflow: hidden;
 
@@ -793,11 +645,9 @@ section {
                             color: $tertiaire-color;
                             border-radius: 50%;
 
-
                         }
 
                         .fa-check-circle::before {
-
                             color: #ffffff;
                         }
                     }
@@ -836,7 +686,6 @@ section {
 @-webkit-keyframes prix-coche {
     0% {
         transform: translatex(10px);
-
     }
 
     100% {
@@ -847,7 +696,6 @@ section {
 @keyframes prix-coche {
     0% {
         transform: translatex(10px);
-
     }
 
     100% {
@@ -884,10 +732,6 @@ section {
 }
 
 
-
-
-
-
 /********fin page menu*************/
 /*****************************/
 /****************************/
@@ -900,7 +744,6 @@ footer {
     left: 0;
 
     h2 {
-
         padding-top: 1rem;
         margin-left: 1rem;
     }
@@ -909,14 +752,12 @@ footer {
         list-style-type: none;
         -webkit-padding-start: 15px;
         padding-inline-start: 15px;
-
         margin-bottom: 0;
     }
 
     li {
         padding-bottom: 2rem;
         text-decoration: none;
-
 
 
         a {
@@ -939,13 +780,12 @@ footer {
     body {
         min-width: 376px;
         max-width: 900px;
-
         font-size: 1.5rem;
+        background-color: rgb(10, 56, 124);
     }
 
 
     .info {
-
 
 
         .titre-decouvrez {
@@ -953,7 +793,6 @@ footer {
         }
 
         .bouton-commander {
-
             height: 5rem;
             font-size: 3rem;
         }
@@ -962,209 +801,212 @@ footer {
     .img-restaurant {
 
         img {
-            height: 25rem;
+            height: 15rem;
+        }
+    }
+
+    /**page restaurant **/
+    section {
+
+        ul {
+
+            li {
+
+                .descriptif-choix {
+
+                    .prix-coche {
+
+                        .coche {
+                            left: 10px;
+                        }
+                    }
+                }
+            }
         }
     }
 }
 
-/** -fin index 375 **/
-/**  **/
+/** -fin responsive 375 **/
+    
+    /** *********responsive***************** **/
+    /** *********responsive******************* **/
 
-/** *********responsive***************** **/
-/** *********responsive******************* **/
-
-@media all and (min-width: 901px) and (max-width: 2180px) {
-    body {
-        min-width: 901px;
-        max-width: 2180px;
-        margin-left: auto;
-        margin-right: auto;
-        width: 100%;
-
-        font-size: 2rem;
-
-    }
-
-    .info {
-
-        .titre-reservez {
-            font-size: 2.3rem;
-        }
-
-        .titre-decouvrez {
-            font-size: 1.8rem;
-        }
-
-        .bouton-commander {
-            font-size: 3rem;
-        }
-    }
-
-    .choix {
-        display: flex;
-        justify-content: space-between;
-        margin-right: 2rem;
-
-        .titre-choix {
-            margin-right: 1rem;
-        }
-    }
-
-    .conteneur-restaurant {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-around;
-    }
-
-    article {
-        width: 45%;
-
-
-        a {
-            width: 49%;
-        }
-
-        .img-restaurant {
+    @media all and (min-width: 901px) and (max-width: 2180px) {
+        body {
+            min-width: 901px;
+            max-width: 2180px;
+            margin-left: auto;
+            margin-right: auto;
             width: 100%;
+            font-size: 2rem;
+        }
+
+        .info {
+
+            .titre-reservez {
+                font-size: 2.3rem;
+            }
+
+            .titre-decouvrez {
+                font-size: 1.8rem;
+            }
+
+            .bouton-commander {
+                font-size: 3rem;
+            }
+        }
+
+        .choix {
+            display: flex;
+            justify-content: space-between;
+            margin-right: 2rem;
+
+            .titre-choix {
+                margin-right: 1rem;
+            }
+        }
+
+        .conteneur-restaurant {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+
+        article {
+            width: 45%;
+
+
+            a {
+                width: 49%;
+            }
+
+            .img-restaurant {
+                width: 100%;
+
+                img {
+                    height: 20rem;
+                }
+            }
+
+        }
+
+        /**page restaurant**/
+        /**************/
+        .logo-menu {
+            top: 5px;
+            margin: auto;
+            width: 100%;
+
+            .fa-arrow-left {
+                top: 1rem;
+                font-size: 5rem;
+                position: relative;
+                left: 5rem;
+                color: #000000;
+            }
+
+            .retour {
+                margin-bottom: 2rem;
+            }
+
+            img {
+                position: absolute;
+                top: 2rem;
+                left: 11rem;
+                height: 3rem;
+            }
+
+        }
+
+        .img-menu {
 
             img {
                 height: 20rem;
             }
         }
 
-    }
 
-    /**page restaurant**/
-    /**************/
-    .logo-menu {
-        top: 5px;
-        margin: auto;
-        width: 100%;
+        section {
 
-        .fa-arrow-left {
-            top: 1rem;
-            font-size: 5rem;
-            position: relative;
-            left: 5rem;
-            color: #000000;
+            .menu {
 
-        }
+                .descriptif-menu {
 
-        .retour {
-            margin-bottom: 2rem;
-        }
-
-        img {
-            position: absolute;
-            top: 2rem;
-            left: 11rem;
-            height: 3rem;
-        }
-
-    }
-
-.img-menu {
-
-    img {
-         height: 20rem;
-    }
-}
-/*****/
-
-    section {
-
-        .menu {
-
-            .descriptif-menu {
-
-                h1 {
-                    font-size: 3rem;
-                }
-
-                .coeur {
-                    .fa-heart {
-                        font-size: 3.5rem;
+                    h1 {
+                        font-size: 3rem;
                     }
+
+                    .coeur {
+                        .fa-heart {
+                            font-size: 3.5rem;
+                        }
+                    }
+
+                }
+            }
+
+            .block-menu {
+
+                .menu-categorie {
+                    font-size: 2rem;
                 }
 
-            }
-        }
+                ul {
 
-        .block-menu {
+                    li {
 
-            .menu-categorie {
-                font-size: 2rem;
-            }
+                        .descriptif-choix {
 
-            ul {
+                            &:hover {
 
-                li {
+                                .choix-detail {
+                                    width: 65%;
+                                }
 
-                    .descriptif-choix {
-                       
-                        &:hover {
+                                .prix-coche {
+                                    -webkit-animation: prix-coche 1s linear 0s forwards;
+                                    animation: prix-coche 1s linear 0s forwards;
+
+                                }
+
+                                .fa-check-circle {
+                                    -webkit-animation: rotation 2s 1;
+                                    animation: rotation 2s 1;
+
+                                }
+
+                            }
 
                             .choix-detail {
-                                width: 65%;
+                                height: 4.5rem;
+                                width: 95%;
+
+                               
                             }
 
                             .prix-coche {
-                                -webkit-animation: prix-coche 1s linear 0s forwards;
-                                animation: prix-coche 1s linear 0s forwards;
+                                top: 0;
+                                left: 15px;
+                               
+                                .prix {
+                                    top: 26px;
+                                }
 
-                            }
-
-                            .fa-check-circle {
-                                -webkit-animation: rotation 2s 1;
-                                animation: rotation 2s 1;
-
+                                .coche {
+                                    top: 12px;
+                                    left: 20px;
+                                    height: 3.5rem;
+                                    width: 3.5rem;
+                                }
                             }
 
                         }
-
-                        .choix-detail {
-                            height: 4.5rem;
-                            width: 95%;
-                            
-
-                            .accompagnement-plat {
-                                
-                            }
-                        }
-
-
-
-
-                        .prix-coche {
-
-                            .prix {
-                               /** font-size: 2rem;**/
-                               top: 26px;
-                            }
-
-                            .coche {
-                              /**  font-size: 2rem;**/
-                                top: 12px;
-                                right: 15px;
-                                height: 3.5rem;
-                                width: 3.5rem;
-                            }
-                        }
-
-                       
 
                     }
 
-                    
                 }
 
-               
             }
 
-           
         }
-
-        
-
     }
-}
