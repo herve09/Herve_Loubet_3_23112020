@@ -211,12 +211,16 @@ h6 {
   background-image: linear-gradient(#9356dc, #FF79DA);
   text-align: center;
   padding-top: 1rem;
-  box-shadow: 0 5px 8px grey;
+  box-shadow: 0 5px 8px #7e7d7d;
 }
 .bouton-commander a {
   font-size: 2rem;
   color: #ffffff;
   height: 4.5rem;
+}
+.bouton-commander:hover {
+  opacity: 0.93;
+  box-shadow: 0 5px 8px #383737;
 }
 
 /** fonctionnement***/
@@ -337,7 +341,6 @@ aside article {
   color: #9356dc;
   display: none;
   font-size: 2.5rem;
-  transition: color 10.2s linear;
 }
 
 @-webkit-keyframes invisible {
@@ -625,7 +628,6 @@ footer li i {
     min-width: 376px;
     max-width: 900px;
     font-size: 1.5rem;
-    background-color: #0a387c;
   }
 
   .info .titre-decouvrez {
@@ -642,7 +644,7 @@ footer li i {
 
   /**page restaurant **/
   section ul li .descriptif-choix .prix-coche .coche {
-    left: 10px;
+    left: 15px;
   }
 }
 /** -fin responsive 375 **/

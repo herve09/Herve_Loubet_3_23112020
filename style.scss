@@ -259,14 +259,18 @@ h6 {
     background-image: linear-gradient($primary-color, $second-color);
     text-align: center;
     padding-top: 1rem;
-    box-shadow: 0 5px 8px grey;
+    box-shadow: 0 5px 8px rgb(126, 125, 125);
 
     a {
         font-size: 2rem;
         color: $color-blanc;
         height: 4.5rem;
     }
-
+  
+    &:hover {
+        opacity: 0.93;
+        box-shadow: 0 5px 8px rgb(56, 55, 55, 1.8);
+    }
 }
 
 /** fonctionnement***/
@@ -387,6 +391,7 @@ aside {
 
     &:hover .fas {
         display: block;
+
     }
 
     &:hover .far {
@@ -409,7 +414,7 @@ aside {
         color: $primary-color;
         display: none;
         font-size: 2.5rem;
-        transition: color 10.2s linear;
+        
     }
 
 
@@ -781,7 +786,7 @@ footer {
         min-width: 376px;
         max-width: 900px;
         font-size: 1.5rem;
-        background-color: rgb(10, 56, 124);
+        
     }
 
 
@@ -817,7 +822,7 @@ footer {
                     .prix-coche {
 
                         .coche {
-                            left: 10px;
+                            left: 15px;
                         }
                     }
                 }
