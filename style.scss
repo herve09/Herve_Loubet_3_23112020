@@ -147,8 +147,6 @@ $shadow-gris: 0 4px 0 #cac8c891;
     }
 }
 
-
-
 /** fin loader **/
 /** fin loader **/
 body {
@@ -331,16 +329,6 @@ aside {
     }
 }
 
-/**
-.article-restaurant {
-
-    p {
-       
-        
-    }
-}
-**/
-
 .img-restaurant {
     position: relative;
 
@@ -360,11 +348,9 @@ aside {
         padding: 5px;
         color: #39a98d;
         text-align: center;
-        /**  vertical-align: middle; **/
         font-size: 1.5rem;
     }
 }
-
 
 .descriptif-restaurant {
     display: block;
@@ -415,10 +401,7 @@ aside {
 
     }
 
-
 }
-
-
 
 @-webkit-keyframes invisible {
     0% {
@@ -430,8 +413,6 @@ aside {
     }
 }
 
-
-
 @keyframes invisible {
     0% {
         opacity: 0;
@@ -442,11 +423,7 @@ aside {
     }
 }
 
-
 /*******fin index*****/
-/**********************/
-
-/***********************/
 /**debut page menu***/
 .logo-menu {
     top: 5px;
@@ -490,7 +467,6 @@ figure {
         vertical-align: middle;
     }
 
-
     img {
         width: 100%;
         height: 10rem;
@@ -510,9 +486,11 @@ figure {
 /***fin entete page menu ***/
 
 section {
-    margin: $marge-base;
+
     background-color: #f6f6f6;
     position: relative;
+    margin-left: 10px;
+    margin-right: 10px;
 
     .menu {
         position: relative;
@@ -550,7 +528,6 @@ section {
         padding-top: 0;
         padding-left: 0;
 
-
         p {
             height: 5rem;
         }
@@ -561,16 +538,7 @@ section {
             width: 100%;
             text-overflow: ellipsis;
 
-
-
-            /**
-          
-            &:hover {
-                transition-duration:  1000ms;
-                width: calc(100% - 82px);
-              
-                                }
-     conteneur descriptif du plat **/
+            /**conteneur descriptif du plat **/
 
             .descriptif-choix {
                 display: flex;
@@ -586,20 +554,19 @@ section {
                 border-radius: 1rem;
                 box-shadow: 0px 2px 0px 0px #d0cece;
 
- &:active {
-                .choix-detail:active {
-                    transition-duration: 1000ms;
-                    width: calc(100% - 75px);
-                }
-                    
+                &:active {
+                    .choix-detail:active {
+                        transition-duration: 1000ms;
+                        width: calc(100% - 80px);
+
+                    }
+
                     .fa-check-circle {
                         -webkit-animation: rotation 2s 1;
                         animation: rotation 2s 1;
                     }
-                
-            }
-               
 
+                }
 
                 .choix-detail {
                     display: block;
@@ -619,21 +586,18 @@ section {
 
             }
 
-
             /** conteneur prix + bouton coche **/
             .prix-coche {
                 position: relative;
                 display: inline-block;
                 top: 0;
-                right: -15px;
-
+                right: 0;
 
                 .prix {
                     font-size: 1.3rem;
                     font-weight: 600;
                     top: 15px;
                     right: 10px;
-                    /**-30px;**********3112****/
                     position: absolute;
 
                 }
@@ -673,15 +637,7 @@ section {
     }
 
     /**fin li**/
-
 }
-
-
-/**fin ul**/
-
-
-
-/** fin section**/
 
 /*** animation affichage menu montant ***/
 
@@ -748,15 +704,7 @@ section {
     }
 }
 
-/*******
-
-.titre-choix {
-    font-size: 1rem;
-    
-}
-
-*fin page menu*************/
-/*****************************/
+/**fin page menu*************/
 /****************************/
 
 footer {
@@ -776,27 +724,24 @@ footer {
         -webkit-padding-start: 15px;
         padding-inline-start: 15px;
         margin-bottom: 0;
-    }
 
-    li {
-        padding-bottom: 2rem;
-        text-decoration: none;
+        li {
+            padding-bottom: 2rem;
+            text-decoration: none;
 
+            a {
+                color: #ffffff;
+            }
 
-        a {
-            color: #ffffff;
-        }
-
-        i {
-            padding-right: 1rem;
+            i {
+                padding-right: 1rem;
+            }
         }
     }
 }
 
 
 /***********responsive*******************/
-/***********responsive*******************/
-/***********responsive***/
 
 @media all and (min-width: 376px) and (max-width: 900px) {
 
@@ -807,9 +752,7 @@ footer {
 
     }
 
-
     .info {
-
 
         .titre-decouvrez {
             font-size: 1.8rem;
@@ -824,23 +767,44 @@ footer {
     .img-restaurant {
 
         img {
-            height: 15rem;
+            height: 20rem;
         }
     }
 
-    /**page restaurant **/
+    /**page restaurant ***/
     section {
+
+        margin-left: 20px;
+        margin-right: 20px;
 
         ul {
 
             li {
 
                 .descriptif-choix {
+                    background-color: #fff;
 
-                    .prix-coche {
+                    &:hover {
+                        .choix-detail:hover {
+                            transition-duration: 1000ms;
+                            width: calc(100% - 70px);
+                        }
 
-                        .coche {
-                            left: 15px;
+                        .fa-check-circle {
+                            -webkit-animation: rotation 2s 1;
+                            animation: rotation 2s 1;
+                        }
+
+                        .prix-coche {
+                            right: 20px;
+
+                            .prix {
+                                right: 15px;
+                            }
+
+                            .coche {
+                                left: 15px;
+                            }
                         }
                     }
                 }
@@ -850,14 +814,12 @@ footer {
 }
 
 /** -fin responsive 375 **/
-
-/** *********responsive***************** **/
 /** *********responsive******************* **/
 
-@media all and (min-width: 901px) and (max-width: 2180px) {
+@media all and (min-width: 901px) {
+
     body {
         min-width: 901px;
-        max-width: 2180px;
         margin-left: auto;
         margin-right: auto;
         width: 100%;
@@ -876,6 +838,7 @@ footer {
 
         .bouton-commander {
             font-size: 3rem;
+            height: 4rem;
         }
     }
 
@@ -897,7 +860,6 @@ footer {
 
     article {
         width: 45%;
-
 
         a {
             width: 49%;
@@ -950,6 +912,7 @@ footer {
 
 
     section {
+        margin-left: 30px;
 
         .menu {
 
@@ -979,11 +942,12 @@ footer {
                 li {
 
                     .descriptif-choix {
+                        background-color: #fff;
 
                         &:hover {
                             .choix-detail:hover {
                                 transition-duration: 1000ms;
-                                width: calc(100% - 160px);
+                                width: calc(100% - 220px);
                             }
 
                             .fa-check-circle {
@@ -993,31 +957,10 @@ footer {
 
                         }
 
-                        /**
-                        &:hover {
 
-                            .choix-detail {
-                                width: 65%;
-                            }
-
-                            .prix-coche {
-                                -webkit-animation: prix-coche 1s linear 0s forwards;
-                                animation: prix-coche 1s linear 0s forwards;
-
-                            }
-
-                            .fa-check-circle {
-                                -webkit-animation: rotation 2s 1;
-                                animation: rotation 2s 1;
-
-                            }
-
-                        }
-**/
                         .choix-detail {
                             height: 4.5rem;
                             width: 95%;
-
 
                         }
 
