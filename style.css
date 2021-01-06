@@ -657,12 +657,11 @@ footer ul li i {
 }
 /** -fin responsive 375 **/
 /** *********responsive******************* **/
-@media all and (min-width: 901px) {
+@media all and (min-width: 901px) and (max-width: 1980px) {
   body {
     min-width: 901px;
-    margin-left: auto;
-    margin-right: auto;
     width: 100%;
+    max-width: 1980px;
     font-size: 2rem;
   }
 
@@ -731,6 +730,9 @@ footer ul li i {
 
   .img-menu img {
     height: 30rem;
+    overflow: hidden;
+    -o-object-fit: cover;
+       object-fit: cover;
   }
 
   section {

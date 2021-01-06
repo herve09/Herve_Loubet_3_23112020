@@ -816,13 +816,12 @@ footer {
 /** -fin responsive 375 **/
 /** *********responsive******************* **/
 
-@media all and (min-width: 901px) {
+@media all and (min-width: 901px)  and (max-width: 1980px) {
 
     body {
         min-width: 901px;
-        margin-left: auto;
-        margin-right: auto;
         width: 100%;
+        max-width: 1980px;
         font-size: 2rem;
     }
 
@@ -907,6 +906,8 @@ footer {
 
         img {
             height: 30rem;
+            overflow: hidden;
+            object-fit: cover;
         }
     }
 
