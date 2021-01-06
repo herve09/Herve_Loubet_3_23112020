@@ -256,7 +256,7 @@ h6 {
     width: 60%;
     height: 3rem;
     border-radius: 3rem;
-    background-image: linear-gradient($primary-color, $second-color);
+    background-image: linear-gradient($second-color, $primary-color);
     text-align: center;
     padding-top: 1rem;
     box-shadow: 0 5px 8px rgb(126, 125, 125);
@@ -266,7 +266,7 @@ h6 {
         color: $color-blanc;
         height: 4.5rem;
     }
-  
+
     &:hover {
         opacity: 0.93;
         box-shadow: 0 5px 8px rgb(56, 55, 55, 1.8);
@@ -279,16 +279,11 @@ h6 {
     margin: $marge-base;
     padding-top: 3rem;
 
-    p {
-        font-size: 1.3rem;
-        background-color: #f6f6f6;
-    }
-
     .ordre {
         background-color: $primary-color;
         border-radius: 50%;
         color: $color-blanc;
-        top: -5px;
+        top: 5px;
         left: -15px;
         height: 30px;
         width: 30px;
@@ -315,9 +310,10 @@ h6 {
     height: 2.5rem;
     margin-left: 10px;
     padding-top: 10px;
-    background-color: #f6f6f6;
+    font-size: 1.3rem;
+    background-color: #fff;
     border-radius: 1rem;
-    box-shadow: 0 3px 2px rgb(224, 223, 223);
+    box-shadow: 0 6px 0 #cac8c891;
 }
 
 /** aside image restaurant **/
@@ -331,17 +327,19 @@ aside {
         border-radius: 1.5rem;
         margin-bottom: 2rem;
         background-color: #fff;
+        box-shadow: 0 4px 5px #b9b9b991;
     }
 }
 
+/**
 .article-restaurant {
 
     p {
-        padding-bottom: 2rem;
-        box-shadow: $shadow-gris;
+       
+        
     }
 }
-
+**/
 
 .img-restaurant {
     position: relative;
@@ -404,7 +402,7 @@ aside {
         top: 0;
         right: 0;
         background-color: #fff;
- }
+    }
 
 
     .fas {
@@ -414,7 +412,7 @@ aside {
         color: $primary-color;
         display: none;
         font-size: 2.5rem;
-        
+
     }
 
 
@@ -542,16 +540,16 @@ section {
     .block-menu {
         position: relative;
         top: -31px;
-        }
+    }
 
     ul {
         list-style-type: none;
-        
+
         margin-top: 0;
         margin-bottom: 0;
         padding-top: 0;
         padding-left: 0;
-        animation: block-menu 2s forwards;
+
 
         p {
             height: 5rem;
@@ -563,14 +561,23 @@ section {
             width: 100%;
             text-overflow: ellipsis;
 
-     /**conteneur descriptif du plat **/
+
+
+            /**
+          
+            &:hover {
+                transition-duration:  1000ms;
+                width: calc(100% - 82px);
+              
+                                }
+     conteneur descriptif du plat **/
+
             .descriptif-choix {
                 display: flex;
                 flex-wrap: nowrap;
-                justify-content: space-between;
                 font-size: 1.2rem;
                 font-weight: 600;
-                width: 97%;
+                width: 100%;
                 position: relative;
                 margin-top: 20px;
                 padding-top: 10px;
@@ -579,27 +586,24 @@ section {
                 border-radius: 1rem;
                 box-shadow: 0px 2px 0px 0px #d0cece;
 
-                &:active {
-
-                    .choix-detail {
-                        width: 65%;
-                    }
-
-                    .prix-coche {
-                        -webkit-animation: prix-coche 1s linear 0s forwards;
-                        animation: prix-coche 1s linear 0s forwards;
-                    }
-
+ &:active {
+                .choix-detail:active {
+                    transition-duration: 1000ms;
+                    width: calc(100% - 75px);
+                }
+                    
                     .fa-check-circle {
                         -webkit-animation: rotation 2s 1;
                         animation: rotation 2s 1;
                     }
+                
+            }
+               
 
-                }
 
                 .choix-detail {
                     display: block;
-                    width: 85%;
+                    width: 100%;
                     height: 3.5rem;
                     padding-right: 10px;
                     white-space: nowrap;
@@ -610,73 +614,86 @@ section {
                         font-size: 1rem;
                         font-weight: 100;
                     }
+
                 }
 
-
-                /** conteneur prix + bouton coche **/
-                .prix-coche {
-                    position: relative;
-                    display: inline-block;
-                    top: 0;
-                    right: -15px;
-
-                    .prix {
-                        font-size: 1.3rem;
-                        font-weight: 600;
-                        top: 15px;
-                        right: 15px;
-                        /**-30px;**********3112****/
-                        position: absolute;
-
-                    }
-
-
-
-                    .coche {
-                        background-color: $tertiaire-color;
-                        position: absolute;
-                        width: 3.5rem;
-                        height: 3.5rem;
-                        top: 0px;
-                        left: 0px;
-                        border-radius: 0 1rem 1rem 0;
-                        overflow: hidden;
-
-
-                        .fa-check-circle {
-                            position: absolute;
-                            top: 20px;
-                            right: 1rem;
-                            color: $tertiaire-color;
-                            border-radius: 50%;
-
-                        }
-
-                        .fa-check-circle::before {
-                            color: #ffffff;
-                        }
-                    }
-
-                    /**fin coche**/
-                }
-
-                /**fin prix-cohe**/
             }
 
-            /**descriptif-choix **/
+
+            /** conteneur prix + bouton coche **/
+            .prix-coche {
+                position: relative;
+                display: inline-block;
+                top: 0;
+                right: -15px;
+
+
+                .prix {
+                    font-size: 1.3rem;
+                    font-weight: 600;
+                    top: 15px;
+                    right: 10px;
+                    /**-30px;**********3112****/
+                    position: absolute;
+
+                }
+
+                .coche {
+                    background-color: $tertiaire-color;
+                    position: absolute;
+                    width: 3.5rem;
+                    height: 3.5rem;
+                    top: 0px;
+                    right: -62px;
+                    border-radius: 0 1rem 1rem 0;
+                    overflow: hidden;
+
+
+                    .fa-check-circle {
+                        position: absolute;
+                        top: 20px;
+                        right: 1rem;
+                        color: $tertiaire-color;
+                        border-radius: 50%;
+
+                    }
+
+                    .fa-check-circle::before {
+                        color: #ffffff;
+                    }
+                }
+
+                /**fin coche**/
+            }
+
+            /**fin prix-cohe**/
         }
 
-        /**fin li**/
-
+        /**descriptif-choix **/
     }
 
-    /**fin ul**/
+    /**fin li**/
 
 }
+
+
+/**fin ul**/
+
+
 
 /** fin section**/
 
 /*** animation affichage menu montant ***/
+
+@-webkit-keyframes rotation {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
 
 @keyframes rotation {
     0% {
@@ -688,6 +705,7 @@ section {
     }
 }
 
+/***
 @-webkit-keyframes prix-coche {
     0% {
         transform: translatex(10px);
@@ -707,7 +725,7 @@ section {
         transform: translatex(-65px);
     }
 }
-
+**/
 @-webkit-keyframes block-menu {
     0% {
         transform: translatey(0);
@@ -730,14 +748,14 @@ section {
     }
 }
 
+/*******
 
 .titre-choix {
     font-size: 1rem;
-    box-shadow: 0 6px 0 #cac8c891;
+    
 }
 
-
-/********fin page menu*************/
+*fin page menu*************/
 /*****************************/
 /****************************/
 
@@ -745,7 +763,7 @@ footer {
     position: relative;
     background-color: #353535;
     color: $color-blanc;
-    top: -50px;
+    top: 0;
     left: 0;
 
     h2 {
@@ -786,7 +804,7 @@ footer {
         min-width: 376px;
         max-width: 900px;
         font-size: 1.5rem;
-        
+
     }
 
 
@@ -832,179 +850,191 @@ footer {
 }
 
 /** -fin responsive 375 **/
-    
-    /** *********responsive***************** **/
-    /** *********responsive******************* **/
 
-    @media all and (min-width: 901px) and (max-width: 2180px) {
-        body {
-            min-width: 901px;
-            max-width: 2180px;
-            margin-left: auto;
-            margin-right: auto;
+/** *********responsive***************** **/
+/** *********responsive******************* **/
+
+@media all and (min-width: 901px) and (max-width: 2180px) {
+    body {
+        min-width: 901px;
+        max-width: 2180px;
+        margin-left: auto;
+        margin-right: auto;
+        width: 100%;
+        font-size: 2rem;
+    }
+
+    .info {
+
+        .titre-reservez {
+            font-size: 2.3rem;
+        }
+
+        .titre-decouvrez {
+            font-size: 1.8rem;
+        }
+
+        .bouton-commander {
+            font-size: 3rem;
+        }
+    }
+
+    .choix {
+        display: flex;
+        justify-content: space-between;
+        margin-right: 2rem;
+
+        .titre-choix {
+            margin-right: 1rem;
+        }
+    }
+
+    .conteneur-restaurant {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+
+    article {
+        width: 45%;
+
+
+        a {
+            width: 49%;
+        }
+
+        .img-restaurant {
             width: 100%;
-            font-size: 2rem;
-        }
-
-        .info {
-
-            .titre-reservez {
-                font-size: 2.3rem;
-            }
-
-            .titre-decouvrez {
-                font-size: 1.8rem;
-            }
-
-            .bouton-commander {
-                font-size: 3rem;
-            }
-        }
-
-        .choix {
-            display: flex;
-            justify-content: space-between;
-            margin-right: 2rem;
-
-            .titre-choix {
-                margin-right: 1rem;
-            }
-        }
-
-        .conteneur-restaurant {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-around;
-        }
-
-        article {
-            width: 45%;
-
-
-            a {
-                width: 49%;
-            }
-
-            .img-restaurant {
-                width: 100%;
-
-                img {
-                    height: 20rem;
-                }
-            }
-
-        }
-
-        /**page restaurant**/
-        /**************/
-        .logo-menu {
-            top: 5px;
-            margin: auto;
-            width: 100%;
-
-            .fa-arrow-left {
-                top: 1rem;
-                font-size: 5rem;
-                position: relative;
-                left: 5rem;
-                color: #000000;
-            }
-
-            .retour {
-                margin-bottom: 2rem;
-            }
-
-            img {
-                position: absolute;
-                top: 2rem;
-                left: 11rem;
-                height: 3rem;
-            }
-
-        }
-
-        .img-menu {
 
             img {
                 height: 20rem;
             }
         }
 
+    }
 
-        section {
+    /**page restaurant**/
+    /**************/
+    .logo-menu {
+        top: 5px;
+        margin: auto;
+        width: 100%;
 
-            .menu {
+        .fa-arrow-left {
+            top: 1rem;
+            font-size: 5rem;
+            position: relative;
+            left: 5rem;
+            color: #000000;
+        }
 
-                .descriptif-menu {
+        .retour {
+            margin-bottom: 2rem;
+        }
 
-                    h1 {
-                        font-size: 3rem;
-                    }
+        img {
+            position: absolute;
+            top: 2rem;
+            left: 11rem;
+            height: 3rem;
+        }
 
-                    .coeur {
-                        .fa-heart {
-                            font-size: 3.5rem;
-                        }
-                    }
+    }
 
+    .img-menu {
+
+        img {
+            height: 30rem;
+        }
+    }
+
+
+    section {
+
+        .menu {
+
+            .descriptif-menu {
+
+                h1 {
+                    font-size: 3rem;
                 }
+
+                .coeur {
+                    .fa-heart {
+                        font-size: 3.5rem;
+                    }
+                }
+
+            }
+        }
+
+        .block-menu {
+
+            .menu-categorie {
+                font-size: 2rem;
             }
 
-            .block-menu {
+            ul {
 
-                .menu-categorie {
-                    font-size: 2rem;
-                }
+                li {
 
-                ul {
+                    .descriptif-choix {
 
-                    li {
-
-                        .descriptif-choix {
-
-                            &:hover {
-
-                                .choix-detail {
-                                    width: 65%;
-                                }
-
-                                .prix-coche {
-                                    -webkit-animation: prix-coche 1s linear 0s forwards;
-                                    animation: prix-coche 1s linear 0s forwards;
-
-                                }
-
-                                .fa-check-circle {
-                                    -webkit-animation: rotation 2s 1;
-                                    animation: rotation 2s 1;
-
-                                }
-
+                        &:hover {
+                            .choix-detail:hover {
+                                transition-duration: 1000ms;
+                                width: calc(100% - 160px);
                             }
 
-                            .choix-detail {
-                                height: 4.5rem;
-                                width: 95%;
+                            .fa-check-circle {
+                                -webkit-animation: rotation 2s 1;
+                                animation: rotation 2s 1;
+                            }
 
-                               
+                        }
+
+                        /**
+                        &:hover {
+
+                            .choix-detail {
+                                width: 65%;
                             }
 
                             .prix-coche {
-                                top: 0;
-                                left: 15px;
-                               
-                                .prix {
-                                    top: 26px;
-                                }
+                                -webkit-animation: prix-coche 1s linear 0s forwards;
+                                animation: prix-coche 1s linear 0s forwards;
 
-                                .coche {
-                                    top: 12px;
-                                    left: 20px;
-                                    height: 3.5rem;
-                                    width: 3.5rem;
-                                }
                             }
 
+                            .fa-check-circle {
+                                -webkit-animation: rotation 2s 1;
+                                animation: rotation 2s 1;
+
+                            }
+
+                        }
+**/
+                        .choix-detail {
+                            height: 4.5rem;
+                            width: 95%;
+
+
+                        }
+
+                        .prix-coche {
+                            top: 0;
+                            left: 15px;
+
+                            .prix {
+                                top: 26px;
+                            }
+
+                            .coche {
+                                top: 12px;
+                                left: 50px;
+                                height: 3.5rem;
+                                width: 3.5rem;
+                            }
                         }
 
                     }
@@ -1014,4 +1044,6 @@ footer {
             }
 
         }
+
     }
+}

@@ -208,7 +208,7 @@ h6 {
   width: 60%;
   height: 3rem;
   border-radius: 3rem;
-  background-image: linear-gradient(#9356dc, #FF79DA);
+  background-image: linear-gradient(#FF79DA, #9356dc);
   text-align: center;
   padding-top: 1rem;
   box-shadow: 0 5px 8px #7e7d7d;
@@ -228,15 +228,11 @@ h6 {
   margin: 1rem 1rem 1rem 1rem;
   padding-top: 3rem;
 }
-.fonctionnement p {
-  font-size: 1.3rem;
-  background-color: #f6f6f6;
-}
 .fonctionnement .ordre {
   background-color: #9356dc;
   border-radius: 50%;
   color: #ffffff;
-  top: -5px;
+  top: 5px;
   left: -15px;
   height: 30px;
   width: 30px;
@@ -260,9 +256,10 @@ h6 {
   height: 2.5rem;
   margin-left: 10px;
   padding-top: 10px;
-  background-color: #f6f6f6;
+  font-size: 1.3rem;
+  background-color: #fff;
   border-radius: 1rem;
-  box-shadow: 0 3px 2px #e0dfdf;
+  box-shadow: 0 6px 0 #cac8c891;
 }
 
 /** aside image restaurant **/
@@ -274,13 +271,18 @@ aside article {
   border-radius: 1.5rem;
   margin-bottom: 2rem;
   background-color: #fff;
+  box-shadow: 0 4px 5px #b9b9b991;
 }
 
-.article-restaurant p {
-  padding-bottom: 2rem;
-  box-shadow: 0 4px 0 #cac8c891;
-}
+/**
+.article-restaurant {
 
+    p {
+
+
+    }
+}
+**/
 .img-restaurant {
   position: relative;
 }
@@ -417,7 +419,7 @@ section {
   margin: 1rem 1rem 1rem 1rem;
   background-color: #f6f6f6;
   position: relative;
-  /**fin ul**/
+  /**fin li**/
 }
 section .menu {
   position: relative;
@@ -448,9 +450,7 @@ section ul {
   margin-bottom: 0;
   padding-top: 0;
   padding-left: 0;
-  -webkit-animation: block-menu 2s forwards;
-          animation: block-menu 2s forwards;
-  /**fin li**/
+  /**descriptif-choix **/
 }
 section ul p {
   height: 5rem;
@@ -460,16 +460,23 @@ section ul li {
   display: block;
   width: 100%;
   text-overflow: ellipsis;
-  /**conteneur descriptif du plat **/
-  /**descriptif-choix **/
+  /**
+
+         &:hover {
+             transition-duration:  1000ms;
+             width: calc(100% - 82px);
+
+                             }
+  conteneur descriptif du plat **/
+  /** conteneur prix + bouton coche **/
+  /**fin prix-cohe**/
 }
 section ul li .descriptif-choix {
   display: flex;
   flex-wrap: nowrap;
-  justify-content: space-between;
   font-size: 1.2rem;
   font-weight: 600;
-  width: 97%;
+  width: 100%;
   position: relative;
   margin-top: 20px;
   padding-top: 10px;
@@ -477,15 +484,10 @@ section ul li .descriptif-choix {
   background-color: #fff;
   border-radius: 1rem;
   box-shadow: 0px 2px 0px 0px #d0cece;
-  /** conteneur prix + bouton coche **/
-  /**fin prix-cohe**/
 }
-section ul li .descriptif-choix:active .choix-detail {
-  width: 65%;
-}
-section ul li .descriptif-choix:active .prix-coche {
-  -webkit-animation: prix-coche 1s linear 0s forwards;
-  animation: prix-coche 1s linear 0s forwards;
+section ul li .descriptif-choix:active .choix-detail:active {
+  transition-duration: 1000ms;
+  width: calc(100% - 75px);
 }
 section ul li .descriptif-choix:active .fa-check-circle {
   -webkit-animation: rotation 2s 1;
@@ -493,7 +495,7 @@ section ul li .descriptif-choix:active .fa-check-circle {
 }
 section ul li .descriptif-choix .choix-detail {
   display: block;
-  width: 85%;
+  width: 100%;
   height: 3.5rem;
   padding-right: 10px;
   white-space: nowrap;
@@ -504,44 +506,53 @@ section ul li .descriptif-choix .choix-detail .accompagnement-plat {
   font-size: 1rem;
   font-weight: 100;
 }
-section ul li .descriptif-choix .prix-coche {
+section ul li .prix-coche {
   position: relative;
   display: inline-block;
   top: 0;
   right: -15px;
   /**fin coche**/
 }
-section ul li .descriptif-choix .prix-coche .prix {
+section ul li .prix-coche .prix {
   font-size: 1.3rem;
   font-weight: 600;
   top: 15px;
-  right: 15px;
+  right: 10px;
   /**-30px;**********3112****/
   position: absolute;
 }
-section ul li .descriptif-choix .prix-coche .coche {
+section ul li .prix-coche .coche {
   background-color: #99E2D0;
   position: absolute;
   width: 3.5rem;
   height: 3.5rem;
   top: 0px;
-  left: 0px;
+  right: -62px;
   border-radius: 0 1rem 1rem 0;
   overflow: hidden;
 }
-section ul li .descriptif-choix .prix-coche .coche .fa-check-circle {
+section ul li .prix-coche .coche .fa-check-circle {
   position: absolute;
   top: 20px;
   right: 1rem;
   color: #99E2D0;
   border-radius: 50%;
 }
-section ul li .descriptif-choix .prix-coche .coche .fa-check-circle::before {
+section ul li .prix-coche .coche .fa-check-circle::before {
   color: #ffffff;
 }
 
+/**fin ul**/
 /** fin section**/
 /*** animation affichage menu montant ***/
+@-webkit-keyframes rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
 @keyframes rotation {
   0% {
     transform: rotate(0deg);
@@ -550,22 +561,27 @@ section ul li .descriptif-choix .prix-coche .coche .fa-check-circle::before {
     transform: rotate(360deg);
   }
 }
+/***
 @-webkit-keyframes prix-coche {
-  0% {
-    transform: translatex(10px);
-  }
-  100% {
-    transform: translatex(-65px);
-  }
+    0% {
+        transform: translatex(10px);
+    }
+
+    100% {
+        transform: translatex(-65px);
+    }
 }
+
 @keyframes prix-coche {
-  0% {
-    transform: translatex(10px);
-  }
-  100% {
-    transform: translatex(-65px);
-  }
+    0% {
+        transform: translatex(10px);
+    }
+
+    100% {
+        transform: translatex(-65px);
+    }
 }
+**/
 @-webkit-keyframes block-menu {
   0% {
     transform: translatey(0);
@@ -584,19 +600,21 @@ section ul li .descriptif-choix .prix-coche .coche .fa-check-circle::before {
     opacity: 1;
   }
 }
+/*******
+
 .titre-choix {
-  font-size: 1rem;
-  box-shadow: 0 6px 0 #cac8c891;
+    font-size: 1rem;
+
 }
 
-/********fin page menu*************/
+*fin page menu*************/
 /*****************************/
 /****************************/
 footer {
   position: relative;
   background-color: #353535;
   color: #ffffff;
-  top: -50px;
+  top: 0;
   left: 0;
 }
 footer h2 {
@@ -723,7 +741,7 @@ footer li i {
   }
 
   .img-menu img {
-    height: 20rem;
+    height: 30rem;
   }
 
   section .menu .descriptif-menu h1 {
@@ -735,12 +753,32 @@ footer li i {
   section .block-menu .menu-categorie {
     font-size: 2rem;
   }
-  section .block-menu ul li .descriptif-choix:hover .choix-detail {
-    width: 65%;
+  section .block-menu ul li .descriptif-choix {
+    /**
+                            &:hover {
+
+                                .choix-detail {
+                                    width: 65%;
+                                }
+
+                                .prix-coche {
+                                    -webkit-animation: prix-coche 1s linear 0s forwards;
+                                    animation: prix-coche 1s linear 0s forwards;
+
+                                }
+
+                                .fa-check-circle {
+                                    -webkit-animation: rotation 2s 1;
+                                    animation: rotation 2s 1;
+
+                                }
+
+                            }
+    **/
   }
-  section .block-menu ul li .descriptif-choix:hover .prix-coche {
-    -webkit-animation: prix-coche 1s linear 0s forwards;
-    animation: prix-coche 1s linear 0s forwards;
+  section .block-menu ul li .descriptif-choix:hover .choix-detail:hover {
+    transition-duration: 1000ms;
+    width: calc(100% - 160px);
   }
   section .block-menu ul li .descriptif-choix:hover .fa-check-circle {
     -webkit-animation: rotation 2s 1;
@@ -759,7 +797,7 @@ footer li i {
   }
   section .block-menu ul li .descriptif-choix .prix-coche .coche {
     top: 12px;
-    left: 20px;
+    left: 50px;
     height: 3.5rem;
     width: 3.5rem;
   }
