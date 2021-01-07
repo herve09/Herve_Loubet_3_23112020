@@ -391,6 +391,8 @@ figure .img-menu {
 figure img {
   width: 100%;
   height: 10rem;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .bandeau {
@@ -439,6 +441,8 @@ section ul {
   margin-bottom: 0;
   padding-top: 0;
   padding-left: 0;
+  -webkit-animation: block-menu 2s 0.2s forwards;
+          animation: block-menu 2s 0.2s forwards;
   /**descriptif-choix **/
 }
 section ul p {
@@ -466,6 +470,7 @@ section ul li .descriptif-choix {
   background-color: #fff;
   border-radius: 1rem;
   box-shadow: 0px 2px 0px 0px #d0cece;
+  overflow: hidden;
 }
 section ul li .descriptif-choix:active .choix-detail:active {
   transition-duration: 1000ms;
@@ -564,9 +569,11 @@ section ul li .prix-coche .coche .fa-check-circle::before {
 @-webkit-keyframes block-menu {
   0% {
     transform: translatey(0);
+    opacity: 0.2;
   }
   100% {
     transform: translatey(-25px);
+    opacity: 1;
   }
 }
 @keyframes block-menu {
@@ -639,25 +646,25 @@ footer ul li i {
   }
   section ul li .descriptif-choix:hover .choix-detail:hover {
     transition-duration: 1000ms;
-    width: calc(100% - 70px);
+    width: calc(100% - 75px);
   }
   section ul li .descriptif-choix:hover .fa-check-circle {
     -webkit-animation: rotation 2s 1;
     animation: rotation 2s 1;
   }
-  section ul li .descriptif-choix:hover .prix-coche {
+  section ul li .descriptif-choix .prix-coche {
     right: 20px;
   }
-  section ul li .descriptif-choix:hover .prix-coche .prix {
-    right: 15px;
+  section ul li .descriptif-choix .prix-coche .prix {
+    right: 0px;
   }
-  section ul li .descriptif-choix:hover .prix-coche .coche {
-    left: 15px;
+  section ul li .descriptif-choix .prix-coche .coche {
+    left: 20px;
   }
 }
 /** -fin responsive 375 **/
 /** *********responsive******************* **/
-@media all and (min-width: 901px) and (max-width: 1980px) {
+@media all and (min-width: 901px) and (max-width: 2180px) {
   body {
     min-width: 901px;
     width: 100%;
@@ -678,11 +685,11 @@ footer ul li i {
 
   .choix {
     display: flex;
-    justify-content: space-between;
-    margin-right: 2rem;
+    justify-content: space-around;
   }
   .choix .titre-choix {
     margin-right: 1rem;
+    padding-right: 15px;
   }
 
   .conteneur-restaurant {
@@ -712,8 +719,8 @@ footer ul li i {
     width: 100%;
   }
   .logo-menu .fa-arrow-left {
-    top: 1rem;
-    font-size: 5rem;
+    top: 40px;
+    font-size: 2rem;
     position: relative;
     left: 5rem;
     color: #000000;
@@ -729,7 +736,7 @@ footer ul li i {
   }
 
   .img-menu img {
-    height: 30rem;
+    height: 25rem;
     overflow: hidden;
     -o-object-fit: cover;
        object-fit: cover;
@@ -743,35 +750,46 @@ footer ul li i {
   }
   section .menu .descriptif-menu .coeur .fa-heart {
     font-size: 3.5rem;
+    right: 100px;
   }
-  section .block-menu .menu-categorie {
+  section .plats {
+    display: flex;
+    flex-wrap: nowrap;
+    width: 100%;
+    justify-content: space-around;
+  }
+  section .plats .block-menu {
+    width: 30%;
+  }
+  section .plats .block-menu .menu-categorie {
     font-size: 2rem;
   }
-  section .block-menu ul li .descriptif-choix {
+  section .plats .block-menu ul li .descriptif-choix {
     background-color: #fff;
+    overflow: hidden;
   }
-  section .block-menu ul li .descriptif-choix:hover .choix-detail:hover {
+  section .plats .block-menu ul li .descriptif-choix:hover .choix-detail:hover {
     transition-duration: 1000ms;
-    width: calc(100% - 220px);
+    width: calc(100% - 90px);
   }
-  section .block-menu ul li .descriptif-choix:hover .fa-check-circle {
+  section .plats .block-menu ul li .descriptif-choix:hover .fa-check-circle {
     -webkit-animation: rotation 2s 1;
     animation: rotation 2s 1;
   }
-  section .block-menu ul li .descriptif-choix .choix-detail {
+  section .plats .block-menu ul li .descriptif-choix .choix-detail {
     height: 4.5rem;
     width: 95%;
   }
-  section .block-menu ul li .descriptif-choix .prix-coche {
+  section .plats .block-menu ul li .descriptif-choix .prix-coche {
     top: 0;
     left: 15px;
   }
-  section .block-menu ul li .descriptif-choix .prix-coche .prix {
+  section .plats .block-menu ul li .descriptif-choix .prix-coche .prix {
     top: 26px;
   }
-  section .block-menu ul li .descriptif-choix .prix-coche .coche {
+  section .plats .block-menu ul li .descriptif-choix .prix-coche .coche {
     top: 12px;
-    left: 50px;
+    left: 0px;
     height: 3.5rem;
     width: 3.5rem;
   }
