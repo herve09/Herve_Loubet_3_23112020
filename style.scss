@@ -274,7 +274,7 @@ h6 {
 /** fonctionnement***/
 
 .fonctionnement {
-    margin: $marge-base;
+
     padding-top: 3rem;
 
     .ordre {
@@ -360,10 +360,23 @@ aside {
     padding-bottom: 0.5rem;
     margin-left: 1rem;
 
+
     h4 {
         -webkit-margin-after: 0;
         margin-block-end: 0;
     }
+
+
+    &:hover .fas {
+        display: block;
+
+    }
+
+    &:hover .far {
+        display: none;
+    }
+
+
 
 }
 
@@ -372,6 +385,8 @@ aside {
     top: 10px;
     right: 0px;
     font-size: 2.5rem;
+
+
 
     &:hover .fas {
         display: block;
@@ -388,6 +403,7 @@ aside {
         top: 0;
         right: 0;
         background-color: #fff;
+
     }
 
 
@@ -395,7 +411,7 @@ aside {
         position: absolute;
         top: 0;
         right: 0;
-        color: $primary-color;
+        color: #9356DC;
         display: none;
         font-size: 2.5rem;
 
@@ -446,13 +462,14 @@ aside {
 
 }
 
-.descriptif-menu {
-    .coeur {
-        position: relative;
-        top: -65px;
 
-    }
+
+.coeur {
+    position: relative;
+    top: -65px;
+
 }
+
 
 figure {
     margin: 0;
@@ -498,6 +515,25 @@ section {
         top: -50px;
     }
 
+    .descriptif-menu {
+
+        margin-bottom: 75px;
+        font-style: italic;
+
+        &:hover .fas {
+            display: block;
+    
+        }
+    
+        &:hover .far {
+            display: none;
+        }
+    
+
+    }
+
+
+
     .fa-heart {
         margin-left: 60px;
     }
@@ -511,10 +547,7 @@ section {
         width: 3rem;
     }
 
-    .descriptif-menu {
-        margin-bottom: 75px;
-        font-style: italic;
-    }
+    
 
     .block-menu {
         position: relative;
@@ -538,8 +571,15 @@ section {
             list-style-type: none;
             display: block;
             width: 100%;
+            border: transparent;
+            border-radius: 1rem;
+            box-shadow: 0px 3px 2px 0px #dddddd;
             text-overflow: ellipsis;
-           
+            
+white-space: nowrap;/********************************/
+overflow: hidden;/********************************/
+
+
             /**conteneur descriptif du plat **/
 
             .descriptif-choix {
@@ -554,7 +594,7 @@ section {
                 padding-left: 10px;
                 background-color: #fff;
                 border-radius: 1rem;
-                box-shadow: 0px 2px 0px 0px #d0cece;
+               
                 overflow: hidden;
 
                 &:active {
@@ -563,7 +603,9 @@ section {
                         width: calc(100% - 80px);
 
                     }
+                }
 
+                &:hover {
                     .fa-check-circle {
                         -webkit-animation: rotation 2s 1;
                         animation: rotation 2s 1;
@@ -572,7 +614,7 @@ section {
                 }
 
                 .choix-detail {
-                    display: block;
+                    display: inline-block;
                     width: 100%;
                     height: 3.5rem;
                     padding-right: 10px;
@@ -580,9 +622,11 @@ section {
                     text-overflow: ellipsis;
                     overflow: hidden;
 
+
                     .accompagnement-plat {
                         font-size: 1rem;
                         font-weight: 100;
+                        text-overflow: ellipsis;
                     }
 
                 }
@@ -593,7 +637,7 @@ section {
             .prix-coche {
                 position: relative;
                 display: inline-block;
-                top: 0;
+                top: -15px;
                 right: 0;
 
 
@@ -612,7 +656,7 @@ section {
                     width: 3.5rem;
                     height: 3.5rem;
                     top: 0px;
-                    right: -62px;
+                    right: -55px;
                     border-radius: 0 1rem 1rem 0;
                     overflow: hidden;
 
@@ -851,7 +895,7 @@ footer {
     .choix {
         display: flex;
         justify-content: space-around;
-        
+
 
         .titre-choix {
             margin-right: 1rem;

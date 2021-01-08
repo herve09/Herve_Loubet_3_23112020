@@ -225,7 +225,6 @@ h6 {
 
 /** fonctionnement***/
 .fonctionnement {
-  margin: 1rem 1rem 1rem 1rem;
   padding-top: 3rem;
 }
 .fonctionnement .ordre {
@@ -307,6 +306,12 @@ aside article {
   -webkit-margin-after: 0;
   margin-block-end: 0;
 }
+.descriptif-restaurant:hover .fas {
+  display: block;
+}
+.descriptif-restaurant:hover .far {
+  display: none;
+}
 
 .coeur {
   position: absolute;
@@ -330,7 +335,7 @@ aside article {
   position: absolute;
   top: 0;
   right: 0;
-  color: #9356dc;
+  color: #9356DC;
   display: none;
   font-size: 2.5rem;
 }
@@ -371,7 +376,7 @@ aside article {
   left: 5rem;
 }
 
-.descriptif-menu .coeur {
+.coeur {
   position: relative;
   top: -65px;
 }
@@ -416,6 +421,16 @@ section .menu {
   position: relative;
   top: -50px;
 }
+section .descriptif-menu {
+  margin-bottom: 75px;
+  font-style: italic;
+}
+section .descriptif-menu:hover .fas {
+  display: block;
+}
+section .descriptif-menu:hover .far {
+  display: none;
+}
 section .fa-heart {
   margin-left: 60px;
 }
@@ -426,10 +441,6 @@ section .menu-categorie {
   font-size: 1.8rem;
   border-bottom: 3px solid #99E2D0;
   width: 3rem;
-}
-section .descriptif-menu {
-  margin-bottom: 75px;
-  font-style: italic;
 }
 section .block-menu {
   position: relative;
@@ -452,7 +463,14 @@ section ul li {
   list-style-type: none;
   display: block;
   width: 100%;
+  border: transparent;
+  border-radius: 1rem;
+  box-shadow: 0px 3px 2px 0px #dddddd;
   text-overflow: ellipsis;
+  white-space: nowrap;
+  /********************************/
+  overflow: hidden;
+  /********************************/
   /**conteneur descriptif du plat **/
   /** conteneur prix + bouton coche **/
   /**fin prix-cohe**/
@@ -469,19 +487,18 @@ section ul li .descriptif-choix {
   padding-left: 10px;
   background-color: #fff;
   border-radius: 1rem;
-  box-shadow: 0px 2px 0px 0px #d0cece;
   overflow: hidden;
 }
 section ul li .descriptif-choix:active .choix-detail:active {
   transition-duration: 1000ms;
   width: calc(100% - 80px);
 }
-section ul li .descriptif-choix:active .fa-check-circle {
+section ul li .descriptif-choix:hover .fa-check-circle {
   -webkit-animation: rotation 2s 1;
   animation: rotation 2s 1;
 }
 section ul li .descriptif-choix .choix-detail {
-  display: block;
+  display: inline-block;
   width: 100%;
   height: 3.5rem;
   padding-right: 10px;
@@ -492,11 +509,12 @@ section ul li .descriptif-choix .choix-detail {
 section ul li .descriptif-choix .choix-detail .accompagnement-plat {
   font-size: 1rem;
   font-weight: 100;
+  text-overflow: ellipsis;
 }
 section ul li .prix-coche {
   position: relative;
   display: inline-block;
-  top: 0;
+  top: -15px;
   right: 0;
   /**fin coche**/
 }
@@ -513,7 +531,7 @@ section ul li .prix-coche .coche {
   width: 3.5rem;
   height: 3.5rem;
   top: 0px;
-  right: -62px;
+  right: -55px;
   border-radius: 0 1rem 1rem 0;
   overflow: hidden;
 }
