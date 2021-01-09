@@ -280,6 +280,8 @@ aside article {
   width: 100%;
   height: 7rem;
   overflow: hidden;
+  -o-object-fit: cover;
+     object-fit: cover;
   border-radius: 1.5rem 1.5rem 0 0;
 }
 .img-restaurant .nouveau {
@@ -651,7 +653,7 @@ footer ul li i {
   }
 
   .img-restaurant img {
-    height: 20rem;
+    height: 15rem;
   }
 
   /**page restaurant ***/

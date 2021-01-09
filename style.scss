@@ -336,6 +336,7 @@ aside {
         width: 100%;
         height: 7rem;
         overflow: hidden;
+        object-fit: cover;
         border-radius: 1.5rem 1.5rem 0 0;
     }
 
@@ -817,11 +818,11 @@ footer {
     .img-restaurant {
 
         img {
-            height: 20rem;
+            height: 15rem;
         }
     }
 
-    /**page restaurant ***/
+    /**page  restaurant ***/
     section {
 
         margin-left: 20px;
