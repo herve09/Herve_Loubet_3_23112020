@@ -257,7 +257,8 @@ h6 {
     background-image: linear-gradient($second-color, $primary-color);
     text-align: center;
     padding-top: 1rem;
-    box-shadow: 0 5px 8px rgb(126, 125, 125);
+    margin-bottom: 10px;
+    box-shadow: 2px 3px 1px 2px #bdbbbb91;
 
     a {
         font-size: 2rem;
@@ -994,7 +995,7 @@ footer {
             justify-content: space-around;
 
             .block-menu {
-                width: 30%;
+                width: 33%;
 
                 .menu-categorie {
                     font-size: 2rem;
@@ -1032,7 +1033,7 @@ footer {
 
                             .prix-coche {
                                 top: 0;
-                                left: 15px;
+                                left: 0;
 
                                 .prix {
                                     top: 26px;

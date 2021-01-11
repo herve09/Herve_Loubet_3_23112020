@@ -211,7 +211,8 @@ h6 {
   background-image: linear-gradient(#FF79DA, #9356dc);
   text-align: center;
   padding-top: 1rem;
-  box-shadow: 0 5px 8px #7e7d7d;
+  margin-bottom: 10px;
+  box-shadow: 2px 3px 1px 2px #bdbbbb91;
 }
 .bouton-commander a {
   font-size: 2rem;
@@ -656,7 +657,7 @@ footer ul li i {
     height: 15rem;
   }
 
-  /**page restaurant ***/
+  /**page  restaurant ***/
   section {
     margin-left: 20px;
     margin-right: 20px;
@@ -779,7 +780,7 @@ footer ul li i {
     justify-content: space-around;
   }
   section .plats .block-menu {
-    width: 30%;
+    width: 33%;
   }
   section .plats .block-menu .menu-categorie {
     font-size: 2rem;
@@ -802,7 +803,7 @@ footer ul li i {
   }
   section .plats .block-menu ul li .descriptif-choix .prix-coche {
     top: 0;
-    left: 15px;
+    left: 0;
   }
   section .plats .block-menu ul li .descriptif-choix .prix-coche .prix {
     top: 26px;
