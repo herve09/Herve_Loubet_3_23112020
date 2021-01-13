@@ -28,7 +28,6 @@
 }
 
 /**** loader****/
-/** loader***/
 .section-loader {
   background-color: #fafcfb;
   width: 100%;
@@ -109,12 +108,10 @@
   }
 }
 /** fin loader **/
-/** fin loader **/
 body {
   margin: 0;
   padding: 0;
   max-width: 375px;
-  /**width: 100%;**/
   background: #fff;
   font-family: Roboto;
   font-size: 1.2rem;
@@ -225,7 +222,6 @@ h6 {
   box-shadow: 0 5px 8px #383737;
 }
 
-/** fonctionnement***/
 .fonctionnement {
   padding-left: 1rem;
   padding-right: 1rem;
@@ -266,12 +262,9 @@ h6 {
   box-shadow: 0 6px 5px #cac8c891;
 }
 
-/** aside image restaurant **/
 aside {
   padding: 1rem 1rem 1rem 1rem;
-  /** padding-top: 4rem;**/
   background-color: #eae9e9;
-  /********************************/
 }
 aside article {
   border-radius: 1.5rem;
@@ -308,12 +301,6 @@ aside .descriptif-restaurant {
   margin-right: 2rem;
   padding-bottom: 0.5rem;
   margin-left: 1rem;
-  /**
-      h4 {
-          -webkit-margin-after: 0;
-          margin-block-end: 0;
-      }
-  **/
 }
 aside .descriptif-restaurant:hover .fas {
   display: block;
@@ -324,8 +311,6 @@ aside .descriptif-restaurant:hover .far {
 aside .coeur {
   position: absolute;
   top: 10px;
-  /**   position: relative;
-     top: -110px;**/
   right: 0px;
   font-size: 2.5rem;
 }
@@ -387,7 +372,6 @@ aside .coeur .fas {
 
 figure {
   margin: 0;
-  /***ttttttttttttttttttttttt**/
   position: relative;
   top: 0;
   left: 0;
@@ -423,7 +407,6 @@ section {
   background-color: #e4e4e4;
   position: relative;
   top: 30px;
-  /**tttttttttt**/
   /**fin li**/
 }
 section .menu {
@@ -447,8 +430,6 @@ section .descriptif-menu:hover .far {
 section .coeur {
   position: absolute;
   top: 0px;
-  /**   position: relative;
-     top: -110px;**/
   right: 15px;
   font-size: 2.5rem;
 }
@@ -507,10 +488,7 @@ section ul li {
   box-shadow: 0px 3px 2px 0px #dddddd;
   text-overflow: ellipsis;
   white-space: nowrap;
-  /********************************/
   overflow: hidden;
-  /********************************/
-  /**conteneur descriptif du plat **/
   /** conteneur prix + bouton coche **/
   /**fin prix-cohe**/
 }
@@ -565,7 +543,6 @@ section ul li .prix-coche .prix {
   right: 25px;
   padding-left: 10px;
   position: relative;
-  /*******************************/
 }
 section ul li .prix-coche .coche {
   background-color: #99E2D0;
@@ -612,27 +589,22 @@ section ul li .prix-coche .coche .fa-check-circle::before {
     transform: rotate(360deg);
   }
 }
-/***
 @-webkit-keyframes prix-coche {
-    0% {
-        transform: translatex(10px);
-    }
-
-    100% {
-        transform: translatex(-65px);
-    }
+  0% {
+    transform: translatex(10px);
+  }
+  100% {
+    transform: translatex(-65px);
+  }
 }
-
 @keyframes prix-coche {
-    0% {
-        transform: translatex(10px);
-    }
-
-    100% {
-        transform: translatex(-65px);
-    }
+  0% {
+    transform: translatex(10px);
+  }
+  100% {
+    transform: translatex(-65px);
+  }
 }
-**/
 @-webkit-keyframes block-menu {
   0% {
     transform: translatey(0);
@@ -654,7 +626,6 @@ section ul li .prix-coche .coche .fa-check-circle::before {
   }
 }
 /**fin page menu*************/
-/****************************/
 footer {
   position: relative;
   background-color: #353535;
@@ -729,7 +700,7 @@ footer ul li i {
   }
 }
 /** -fin responsive 375 **/
-/** *********responsive******************* **/
+/** *********responsive 900 **/
 @media all and (min-width: 901px) and (max-width: 2180px) {
   body {
     min-width: 901px;
@@ -859,7 +830,6 @@ footer ul li i {
   }
   section .plats .block-menu ul li .descriptif-choix .prix-coche .prix {
     top: 26px;
-    /** right: 11px;**/
     padding-left: 10px;
   }
   section .plats .block-menu ul li .descriptif-choix .prix-coche .coche {

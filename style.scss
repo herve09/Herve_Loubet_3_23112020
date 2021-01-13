@@ -53,7 +53,6 @@ $shadow-gris: 0 4px 0 #cac8c891;
 }
 
 /**** loader****/
-/** loader***/
 
 .section-loader {
 
@@ -148,12 +147,11 @@ $shadow-gris: 0 4px 0 #cac8c891;
 }
 
 /** fin loader **/
-/** fin loader **/
+
 body {
     margin: 0;
     padding: 0;
     max-width: 375px;
-    /**width: 100%;**/
     background: #fff;
     font-family: Roboto;
     font-size: 1.2rem;
@@ -273,7 +271,6 @@ h6 {
     }
 }
 
-/** fonctionnement***/
 
 .fonctionnement {
     padding-left: 1rem;
@@ -318,11 +315,8 @@ h6 {
     box-shadow: 0 6px 5px #cac8c891;
 }
 
-/** aside image restaurant **/
-
 aside {
     padding: $marge-base;
-    /** padding-top: 4rem;**/
     background-color: #eae9e9;
 
     article {
@@ -332,8 +326,7 @@ aside {
         box-shadow: 0 4px 5px #b9b9b991;
     }
 
-    /********************************/
-
+    
     .img-restaurant {
         position: relative;
 
@@ -367,13 +360,7 @@ aside {
         padding-bottom: 0.5rem;
         margin-left: 1rem;
 
-        /**
-    h4 {
-        -webkit-margin-after: 0;
-        margin-block-end: 0;
-    }
-**/
-
+       
         &:hover .fas {
             display: block;
 
@@ -389,13 +376,9 @@ aside {
 
     .coeur {
         position: absolute;
-    top: 10px;
-     /**   position: relative;
-        top: -110px;**/
+        top: 10px;
         right: 0px;
         font-size: 2.5rem;
-
-
 
         &:hover .fas {
             display: block;
@@ -411,7 +394,6 @@ aside {
             position: absolute;
             top: 0;
             right: 0;
-
 
         }
 
@@ -472,14 +454,8 @@ aside {
 
 }
 
-
-
-
-
-
 figure {
     margin: 0;
-    /***ttttttttttttttttttttttt**/
     position: relative;
     top: 0;
     left: 0;
@@ -521,8 +497,6 @@ section {
     background-color: #e4e4e4;
     position: relative;
     top: 30px;
-    /**tttttttttt**/
-
     .menu {
         position: relative;
         top: -4px;
@@ -552,13 +526,9 @@ section {
 
     .coeur {
         position: absolute;
-    top: 0px;
-     /**   position: relative;
-        top: -110px;**/
+        top: 0px;
         right: 15px;
         font-size: 2.5rem;
-
-
 
         &:hover .fas {
             display: block;
@@ -591,7 +561,7 @@ section {
 
     }
 
-  
+
 
     .menu-categorie {
         top: 0;
@@ -601,7 +571,6 @@ section {
         border-bottom: 3px solid #99E2D0;
         width: 3rem;
     }
-
 
 
     .block-menu {
@@ -632,15 +601,9 @@ section {
             border-radius: 1rem;
             box-shadow: 0px 3px 2px 0px #dddddd;
             text-overflow: ellipsis;
-
             white-space: nowrap;
-            /********************************/
             overflow: hidden;
-            /********************************/
-
-
-            /**conteneur descriptif du plat **/
-
+         
             .descriptif-choix {
                 display: flex;
                 flex-wrap: nowrap;
@@ -710,7 +673,7 @@ section {
                     right: 25px;
                     padding-left: 10px;
                     position: relative;
-                    /*******************************/
+              
 
                 }
 
@@ -781,16 +744,6 @@ section {
     }
 }
 
-/***
-@-webkit-keyframes prix-coche {
-    0% {
-        transform: translatex(10px);
-    }
-
-    100% {
-        transform: translatex(-65px);
-    }
-}
 
 @keyframes prix-coche {
     0% {
@@ -801,7 +754,7 @@ section {
         transform: translatex(-65px);
     }
 }
-**/
+
 @-webkit-keyframes block-menu {
     0% {
         transform: translatey(0);
@@ -827,7 +780,6 @@ section {
 }
 
 /**fin page menu*************/
-/****************************/
 
 footer {
     position: relative;
@@ -937,7 +889,7 @@ footer {
 }
 
 /** -fin responsive 375 **/
-/** *********responsive******************* **/
+/** *********responsive 900 **/
 
 @media all and (min-width: 901px) and (max-width: 2180px) {
 
@@ -1102,11 +1054,9 @@ footer {
 
                             }
 
-
                             .choix-detail {
                                 height: 3rem;
                                 width: 95%;
-
                             }
 
                             .prix-coche {
@@ -1115,7 +1065,6 @@ footer {
 
                                 .prix {
                                     top: 26px;
-                                    /** right: 11px;**/
                                     padding-left: 10px;
                                 }
 
