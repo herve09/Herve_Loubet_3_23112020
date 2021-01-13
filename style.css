@@ -229,6 +229,8 @@ h6 {
 .fonctionnement {
   padding-left: 1rem;
   padding-right: 1rem;
+  padding-bottom: 2rem;
+  background-color: #fff;
 }
 .fonctionnement .ordre {
   background-color: #9356dc;
@@ -269,6 +271,7 @@ aside {
   padding: 1rem 1rem 1rem 1rem;
   /** padding-top: 4rem;**/
   background-color: #eae9e9;
+  /********************************/
 }
 aside article {
   border-radius: 1.5rem;
@@ -276,11 +279,10 @@ aside article {
   background-color: #fff;
   box-shadow: 0 4px 5px #b9b9b991;
 }
-
-.img-restaurant {
+aside .img-restaurant {
   position: relative;
 }
-.img-restaurant img {
+aside .img-restaurant img {
   width: 100%;
   height: 7rem;
   overflow: hidden;
@@ -288,7 +290,7 @@ aside article {
   object-fit: cover;
   border-radius: 1.5rem 1.5rem 0 0;
 }
-.img-restaurant .nouveau {
+aside .img-restaurant .nouveau {
   display: block;
   background-color: #99E2D0;
   position: absolute;
@@ -299,44 +301,46 @@ aside article {
   text-align: center;
   font-size: 1.5rem;
 }
-
-.descriptif-restaurant {
+aside .descriptif-restaurant {
   display: block;
   position: relative;
   color: black;
   margin-right: 2rem;
   padding-bottom: 0.5rem;
   margin-left: 1rem;
+  /**
+      h4 {
+          -webkit-margin-after: 0;
+          margin-block-end: 0;
+      }
+  **/
 }
-.descriptif-restaurant h4 {
-  -webkit-margin-after: 0;
-  margin-block-end: 0;
-}
-.descriptif-restaurant:hover .fas {
+aside .descriptif-restaurant:hover .fas {
   display: block;
 }
-.descriptif-restaurant:hover .far {
+aside .descriptif-restaurant:hover .far {
   display: none;
 }
-
-.coeur {
+aside .coeur {
   position: absolute;
   top: 10px;
+  /**   position: relative;
+     top: -110px;**/
   right: 0px;
   font-size: 2.5rem;
 }
-.coeur:hover .fas {
+aside .coeur:hover .fas {
   display: block;
 }
-.coeur:hover .far {
+aside .coeur:hover .far {
   display: none;
 }
-.coeur .far {
+aside .coeur .far {
   position: absolute;
   top: 0;
   right: 0;
 }
-.coeur .fas {
+aside .coeur .fas {
   position: absolute;
   top: 0;
   right: 0;
@@ -379,11 +383,6 @@ aside article {
   position: absolute;
   top: 1rem;
   left: 5rem;
-}
-
-.coeur {
-  position: relative;
-  top: -65px;
 }
 
 figure {
@@ -445,8 +444,32 @@ section .descriptif-menu:hover .fas {
 section .descriptif-menu:hover .far {
   display: none;
 }
-section .fa-heart {
-  margin-left: 60px;
+section .coeur {
+  position: absolute;
+  top: 0px;
+  /**   position: relative;
+     top: -110px;**/
+  right: 15px;
+  font-size: 2.5rem;
+}
+section .coeur:hover .fas {
+  display: block;
+}
+section .coeur:hover .far {
+  display: none;
+}
+section .coeur .far {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+section .coeur .fas {
+  position: absolute;
+  top: 0;
+  right: 0;
+  color: #9356DC;
+  display: none;
+  font-size: 2.5rem;
 }
 section .menu-categorie {
   top: 0;
@@ -644,8 +667,8 @@ footer h2 {
 }
 footer ul {
   list-style-type: none;
-  -webkit-padding-start: 15px;
-  padding-inline-start: 15px;
+  position: relative;
+  left: -20px;
   margin-bottom: 0;
 }
 footer ul li {
