@@ -507,7 +507,7 @@ section ul li .descriptif-choix {
 }
 section ul li .descriptif-choix:active .choix-detail:active {
   transition-duration: 1000ms;
-  width: calc(100% - 122px);
+  width: calc(100% - 125px);
 }
 section ul li .descriptif-choix:hover .fa-check-circle {
   -webkit-animation: rotation 2s 1;
@@ -636,7 +636,6 @@ footer {
   position: relative;
   background-color: #353535;
   color: #ffffff;
-  top: -15px;
   left: 0;
 }
 footer h2 {
@@ -650,7 +649,7 @@ footer ul {
   margin-bottom: 0;
 }
 footer ul li {
-  padding-bottom: 2rem;
+  padding-bottom: 1.5rem;
   text-decoration: none;
 }
 footer ul li a {
@@ -677,13 +676,13 @@ footer ul li i {
   }
 
   .img-restaurant img {
-    height: 15rem;
+    height: 11rem;
   }
 
   /**page  restaurant ***/
   section {
-    margin-left: 20px;
-    margin-right: 20px;
+    margin-left: 0;
+    margin-right: 0;
   }
   section ul li .descriptif-choix {
     background-color: #fff;
@@ -786,15 +785,17 @@ footer ul li i {
     object-fit: cover;
   }
 
-  section {
-    margin-left: 30px;
+  .bandeau {
+    top: 355px;
   }
+
   section .menu .descriptif-menu h1 {
     font-size: 3rem;
   }
   section .menu .descriptif-menu .coeur .fa-heart {
     font-size: 3.5rem;
     right: 100px;
+    top: -15px;
   }
   section .plats {
     display: flex;
@@ -808,29 +809,34 @@ footer ul li i {
   section .plats .block-menu .menu-categorie {
     font-size: 2rem;
   }
+  section .plats .block-menu ul li {
+    margin-bottom: 20px;
+    width: 96%;
+  }
   section .plats .block-menu ul li .descriptif-choix {
     background-color: #fff;
     overflow: hidden;
+    font-size: 1.1rem;
   }
   section .plats .block-menu ul li .descriptif-choix:hover .choix-detail:hover {
     transition-duration: 1000ms;
-    width: calc(100% - 90px);
+    width: calc(100% - 120px);
   }
   section .plats .block-menu ul li .descriptif-choix:hover .fa-check-circle {
     -webkit-animation: rotation 2s 1;
     animation: rotation 2s 1;
   }
   section .plats .block-menu ul li .descriptif-choix .choix-detail {
-    height: 4.5rem;
+    height: 3rem;
     width: 95%;
   }
   section .plats .block-menu ul li .descriptif-choix .prix-coche {
-    top: 10px;
-    right: 0;
+    top: -21px;
+    right: -9px;
   }
   section .plats .block-menu ul li .descriptif-choix .prix-coche .prix {
     top: 26px;
-    right: 11px;
+    /** right: 11px;**/
     padding-left: 10px;
   }
   section .plats .block-menu ul li .descriptif-choix .prix-coche .coche {
