@@ -260,7 +260,7 @@ h6 {
     box-shadow: 2px 3px 1px 2px #bdbbbb91;
 
     a {
-        font-size: 2rem;
+        font-size: 1.3rem;
         color: $color-blanc;
         height: 4.5rem;
     }
@@ -650,7 +650,7 @@ section {
 
                     .accompagnement-plat {
                         font-size: 1rem;
-                        font-weight: 100;
+                        font-weight: 300;
                         text-overflow: ellipsis;
                     }
 
@@ -911,8 +911,12 @@ footer {
         }
 
         .bouton-commander {
-            font-size: 3rem;
+            
             height: 4rem;
+
+            a {
+                font-size: 3rem;
+            }
         }
     }
 
@@ -1084,6 +1088,12 @@ footer {
 
             }
 
+        }
+    }
+    .bouton-commander {
+height: 5.5rem;
+        a {
+            font-size: 3rem;
         }
     }
 }

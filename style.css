@@ -213,7 +213,7 @@ h6 {
   box-shadow: 2px 3px 1px 2px #bdbbbb91;
 }
 .bouton-commander a {
-  font-size: 2rem;
+  font-size: 1.3rem;
   color: #ffffff;
   height: 4.5rem;
 }
@@ -526,7 +526,7 @@ section ul li .descriptif-choix .choix-detail {
 }
 section ul li .descriptif-choix .choix-detail .accompagnement-plat {
   font-size: 1rem;
-  font-weight: 100;
+  font-weight: 300;
   text-overflow: ellipsis;
 }
 section ul li .prix-coche {
@@ -716,8 +716,10 @@ footer ul li i {
     font-size: 1.8rem;
   }
   .info .bouton-commander {
-    font-size: 3rem;
     height: 4rem;
+  }
+  .info .bouton-commander a {
+    font-size: 3rem;
   }
 
   .choix {
@@ -837,6 +839,13 @@ footer ul li i {
     left: 33px;
     height: 3.5rem;
     width: 3.5rem;
+  }
+
+  .bouton-commander {
+    height: 5.5rem;
+  }
+  .bouton-commander a {
+    font-size: 3rem;
   }
 }
 /*# sourceMappingURL=style.css.map */
