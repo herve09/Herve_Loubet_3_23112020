@@ -319,7 +319,8 @@ h6 {
 }
 
 aside {
-    padding: $marge-base;
+    margin-bottom: -25px;
+    padding-bottom: 40px;
     background-color: #eae9e9;
 
     article {
@@ -363,12 +364,18 @@ aside {
         padding-bottom: 0.5rem;
         margin-left: 1rem;
 /****** modif apres envoie validation **/
+
 h4 {
     font-size: 1.25rem;
+    margin-bottom: 0;
+    margin-top: 1rem;
 }
 
        
-       
+       p {
+           margin-top: 0;
+           margin-bottom: 10px;
+       }
 
 
 
@@ -378,7 +385,7 @@ h4 {
         position: absolute;
         top: 0px;
         right: -10px;
-        font-size: 2.5rem;
+        font-size: 2.2rem;
 
         &:active .fas {
             display: block;
@@ -598,12 +605,37 @@ h1 {
         margin-bottom: 0;
         padding-top: 0;
         padding-left: 0;
-  /**      -webkit-animation: block-menu 2s 0.2s forwards;
-        animation: block-menu 2s 0.2s forwards; **/
+  /**     -webkit-animation: block-menu 2s 0.2s forwards;
+        animation: block-menu 2s 0.2s forwards;**/  
 
         p {
             height: 5rem;
         }
+
+
+        .choix1 {
+            
+            -webkit-animation: block-menu 2s 0.2s forwards;
+            animation: block-menu 2s 0.2s forwards;  
+          } 
+
+          .choix2 {
+              
+            -webkit-animation: block-menu 2s 0.5s forwards;
+            animation: block-menu 2s 0.5s forwards;
+          }
+
+          .choix3 {
+              
+            -webkit-animation: block-menu 2s 1s forwards;
+            animation: block-menu 2s 1s forwards;
+          }
+
+          .choix4 {
+              
+            -webkit-animation: block-menu 2s 1.5s forwards;
+            animation: block-menu 2s 1.5s forwards;
+          }
 
         li {
             list-style-type: none;
@@ -616,10 +648,7 @@ h1 {
             text-overflow: ellipsis;
             white-space: nowrap;
             overflow: hidden;
-            -webkit-animation: block-menu 2s 0.2s forwards;
-            animation: block-menu 2s 0.2s forwards;
-         
-         
+    
             .descriptif-choix {
                 display: flex;
                 flex-wrap: nowrap;
@@ -636,6 +665,9 @@ h1 {
 
 
                 overflow: hidden;
+
+
+                
 
                 &:active {
                     .choix-detail:active {
@@ -685,7 +717,7 @@ h1 {
                 .prix {
                     font-size: 1.3rem;
                     font-weight: 600;
-                    top: 15px;
+                    top: 22px;
                     right: 28px;
                     padding-left: 10px;
                     position: relative;
@@ -706,7 +738,7 @@ h1 {
 
                     .fa-check-circle {
                         position: absolute;
-                        top: 20px;
+                        top: 24px;
                         right: 1rem;
                         color: $tertiaire-color;
                         border-radius: 50%;
@@ -794,9 +826,7 @@ h1 {
         opacity: 1;
     }
 }
-
-/**fin page menu*************/
-
+/**fooooooooooter**/
 footer {
     position: relative;
     background-color: #353535;
@@ -874,7 +904,7 @@ footer {
                 .descriptif-choix {
                     background-color: #fff;
 
-                    &:activate {
+                    &:hover {
                         .choix-detail:hover {
                             transition-duration: 1000ms;
                             width: calc(100% - 120px);
@@ -1013,7 +1043,7 @@ footer {
     }
 
     section {
-
+        padding-bottom: 68px;
 
         .menu {
 
@@ -1029,6 +1059,21 @@ footer {
                         right: 100px;
                         top: -15px;
                     }
+/*****/
+                    &:hover .fas {
+                        display: block;
+            
+                       animation: coeur-opacite 1s linear;
+                        
+                    }
+            
+                    
+            
+                    &:active .far {
+                        display: none;
+                    }
+
+                    
                 }
 
             }
@@ -1109,6 +1154,7 @@ footer {
     .bouton-commander {
 height: 4.5rem;
 width: 40%;
+margin-top: 30px;
 
         a {
             font-size: 3rem;

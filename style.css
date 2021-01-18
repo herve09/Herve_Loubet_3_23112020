@@ -264,7 +264,8 @@ h6 {
 }
 
 aside {
-  padding: 1rem 1rem 1rem 1rem;
+  margin-bottom: -25px;
+  padding-bottom: 40px;
   background-color: #eae9e9;
 }
 aside article {
@@ -306,12 +307,18 @@ aside .descriptif-restaurant {
 }
 aside .descriptif-restaurant h4 {
   font-size: 1.25rem;
+  margin-bottom: 0;
+  margin-top: 1rem;
+}
+aside .descriptif-restaurant p {
+  margin-top: 0;
+  margin-bottom: 10px;
 }
 aside .coeur {
   position: absolute;
   top: 0px;
   right: -10px;
-  font-size: 2.5rem;
+  font-size: 2.2rem;
 }
 aside .coeur:active .fas {
   display: block;
@@ -487,12 +494,28 @@ section ul {
   margin-bottom: 0;
   padding-top: 0;
   padding-left: 0;
-  /**      -webkit-animation: block-menu 2s 0.2s forwards;
-        animation: block-menu 2s 0.2s forwards; **/
+  /**     -webkit-animation: block-menu 2s 0.2s forwards;
+        animation: block-menu 2s 0.2s forwards;**/
   /**descriptif-choix **/
 }
 section ul p {
   height: 5rem;
+}
+section ul .choix1 {
+  -webkit-animation: block-menu 2s 0.2s forwards;
+  animation: block-menu 2s 0.2s forwards;
+}
+section ul .choix2 {
+  -webkit-animation: block-menu 2s 0.5s forwards;
+  animation: block-menu 2s 0.5s forwards;
+}
+section ul .choix3 {
+  -webkit-animation: block-menu 2s 1s forwards;
+  animation: block-menu 2s 1s forwards;
+}
+section ul .choix4 {
+  -webkit-animation: block-menu 2s 1.5s forwards;
+  animation: block-menu 2s 1.5s forwards;
 }
 section ul li {
   list-style-type: none;
@@ -505,8 +528,6 @@ section ul li {
   text-overflow: ellipsis;
   white-space: nowrap;
   overflow: hidden;
-  -webkit-animation: block-menu 2s 0.2s forwards;
-  animation: block-menu 2s 0.2s forwards;
   /** conteneur prix + bouton coche **/
   /**fin prix-cohe**/
 }
@@ -557,7 +578,7 @@ section ul li .prix-coche {
 section ul li .prix-coche .prix {
   font-size: 1.3rem;
   font-weight: 600;
-  top: 15px;
+  top: 22px;
   right: 28px;
   padding-left: 10px;
   position: relative;
@@ -574,7 +595,7 @@ section ul li .prix-coche .coche {
 }
 section ul li .prix-coche .coche .fa-check-circle {
   position: absolute;
-  top: 20px;
+  top: 24px;
   right: 1rem;
   color: #99E2D0;
   border-radius: 50%;
@@ -643,7 +664,7 @@ section ul li .prix-coche .coche .fa-check-circle::before {
     opacity: 1;
   }
 }
-/**fin page menu*************/
+/**fooooooooooter**/
 footer {
   position: relative;
   background-color: #353535;
@@ -699,11 +720,11 @@ footer ul li i {
   section ul li .descriptif-choix {
     background-color: #fff;
   }
-  section ul li .descriptif-choix:activate .choix-detail:hover {
+  section ul li .descriptif-choix:hover .choix-detail:hover {
     transition-duration: 1000ms;
     width: calc(100% - 120px);
   }
-  section ul li .descriptif-choix:activate .fa-check-circle {
+  section ul li .descriptif-choix:hover .fa-check-circle {
     -webkit-animation: rotation 2s 1;
     animation: rotation 2s 1;
   }
@@ -803,13 +824,27 @@ footer ul li i {
     top: 355px;
   }
 
+  section {
+    padding-bottom: 68px;
+  }
   section .menu .descriptif-menu h1 {
     font-size: 3rem;
+  }
+  section .menu .descriptif-menu .coeur {
+    /*****/
   }
   section .menu .descriptif-menu .coeur .fa-heart {
     font-size: 3.5rem;
     right: 100px;
     top: -15px;
+  }
+  section .menu .descriptif-menu .coeur:hover .fas {
+    display: block;
+    -webkit-animation: coeur-opacite 1s linear;
+            animation: coeur-opacite 1s linear;
+  }
+  section .menu .descriptif-menu .coeur:active .far {
+    display: none;
   }
   section .plats {
     display: flex;
@@ -862,6 +897,7 @@ footer ul li i {
   .bouton-commander {
     height: 4.5rem;
     width: 40%;
+    margin-top: 30px;
   }
   .bouton-commander a {
     font-size: 3rem;
