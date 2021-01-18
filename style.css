@@ -203,8 +203,8 @@ h6 {
 .bouton-commander {
   display: block;
   margin: auto;
-  width: 60%;
-  height: 3rem;
+  width: 65%;
+  height: 2.5rem;
   border-radius: 3rem;
   background-image: linear-gradient(#FF79DA, #9356dc);
   text-align: center;
@@ -213,7 +213,7 @@ h6 {
   box-shadow: 2px 3px 1px 2px #bdbbbb91;
 }
 .bouton-commander a {
-  font-size: 1.3rem;
+  font-size: 1.1rem;
   color: #ffffff;
   height: 4.5rem;
 }
@@ -232,7 +232,7 @@ h6 {
   background-color: #9356dc;
   border-radius: 50%;
   color: #ffffff;
-  top: 10px;
+  top: 14px;
   left: -15px;
   height: 30px;
   width: 30px;
@@ -244,6 +244,7 @@ h6 {
   margin-right: 15px;
   margin-left: 25px;
   font-size: 1.5rem;
+  margin-top: 6px;
 }
 .fonctionnement .fas:hover {
   color: #9356dc;
@@ -306,22 +307,18 @@ aside .descriptif-restaurant {
 aside .descriptif-restaurant h4 {
   font-size: 1.25rem;
 }
-aside .descriptif-restaurant:hover .fas {
-  display: block;
-}
-aside .descriptif-restaurant:hover .far {
-  display: none;
-}
 aside .coeur {
   position: absolute;
   top: 0px;
   right: -10px;
   font-size: 2.5rem;
 }
-aside .coeur:hover .fas {
+aside .coeur:active .fas {
   display: block;
+  -webkit-animation: coeur-opacite 1s linear;
+          animation: coeur-opacite 1s linear;
 }
-aside .coeur:hover .far {
+aside .coeur:active .far {
   display: none;
 }
 aside .coeur .far {
@@ -347,6 +344,22 @@ aside .coeur .fas {
   }
 }
 @keyframes invisible {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@-webkit-keyframes coeur-opacite {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes coeur-opacite {
   0% {
     opacity: 0;
   }
@@ -425,12 +438,6 @@ section .descriptif-menu {
   font-style: italic;
   background-color: #e4e4e4;
 }
-section .descriptif-menu:hover .fas {
-  display: block;
-}
-section .descriptif-menu:hover .far {
-  display: none;
-}
 section .descriptif-menu h1 {
   font-size: 1.7rem;
 }
@@ -440,10 +447,12 @@ section .coeur {
   right: 15px;
   font-size: 2.5rem;
 }
-section .coeur:hover .fas {
+section .coeur:active .fas {
   display: block;
+  -webkit-animation: coeur-opacite 1s linear;
+          animation: coeur-opacite 1s linear;
 }
-section .coeur:hover .far {
+section .coeur:active .far {
   display: none;
 }
 section .coeur .far {
@@ -478,8 +487,8 @@ section ul {
   margin-bottom: 0;
   padding-top: 0;
   padding-left: 0;
-  -webkit-animation: block-menu 2s 0.2s forwards;
-  animation: block-menu 2s 0.2s forwards;
+  /**      -webkit-animation: block-menu 2s 0.2s forwards;
+        animation: block-menu 2s 0.2s forwards; **/
   /**descriptif-choix **/
 }
 section ul p {
@@ -496,6 +505,8 @@ section ul li {
   text-overflow: ellipsis;
   white-space: nowrap;
   overflow: hidden;
+  -webkit-animation: block-menu 2s 0.2s forwards;
+  animation: block-menu 2s 0.2s forwards;
   /** conteneur prix + bouton coche **/
   /**fin prix-cohe**/
 }
@@ -517,7 +528,7 @@ section ul li .descriptif-choix:active .choix-detail:active {
   transition-duration: 1000ms;
   width: calc(100% - 125px);
 }
-section ul li .descriptif-choix:hover .fa-check-circle {
+section ul li .descriptif-choix:active .fa-check-circle {
   -webkit-animation: rotation 2s 1;
   animation: rotation 2s 1;
 }
@@ -540,14 +551,14 @@ section ul li .prix-coche {
   position: relative;
   display: inline-block;
   top: -10px;
-  right: -21px;
+  right: -23px;
   /**fin coche**/
 }
 section ul li .prix-coche .prix {
   font-size: 1.3rem;
   font-weight: 600;
   top: 15px;
-  right: 25px;
+  right: 28px;
   padding-left: 10px;
   position: relative;
 }
@@ -688,11 +699,11 @@ footer ul li i {
   section ul li .descriptif-choix {
     background-color: #fff;
   }
-  section ul li .descriptif-choix:hover .choix-detail:hover {
+  section ul li .descriptif-choix:activate .choix-detail:hover {
     transition-duration: 1000ms;
-    width: calc(100% - 130px);
+    width: calc(100% - 120px);
   }
-  section ul li .descriptif-choix:hover .fa-check-circle {
+  section ul li .descriptif-choix:activate .fa-check-circle {
     -webkit-animation: rotation 2s 1;
     animation: rotation 2s 1;
   }
@@ -835,21 +846,22 @@ footer ul li i {
   }
   section .plats .block-menu ul li .descriptif-choix .prix-coche {
     top: -21px;
-    right: -9px;
+    right: -11px;
   }
   section .plats .block-menu ul li .descriptif-choix .prix-coche .prix {
     top: 26px;
     padding-left: 10px;
   }
   section .plats .block-menu ul li .descriptif-choix .prix-coche .coche {
-    top: 12px;
+    top: 11px;
     left: 33px;
-    height: 3.5rem;
+    height: 3.6rem;
     width: 3.5rem;
   }
 
   .bouton-commander {
-    height: 5.5rem;
+    height: 4.5rem;
+    width: 40%;
   }
   .bouton-commander a {
     font-size: 3rem;

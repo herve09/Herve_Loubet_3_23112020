@@ -250,8 +250,8 @@ h6 {
 .bouton-commander {
     display: block;
     margin: auto;
-    width: 60%;
-    height: 3rem;
+    width: 65%;
+    height: 2.5rem;
     border-radius: 3rem;
     background-image: linear-gradient($second-color, $primary-color);
     text-align: center;
@@ -260,7 +260,7 @@ h6 {
     box-shadow: 2px 3px 1px 2px #bdbbbb91;
 
     a {
-        font-size: 1.3rem;
+        font-size: 1.1rem;
         color: $color-blanc;
         height: 4.5rem;
     }
@@ -282,7 +282,7 @@ h6 {
         background-color: $primary-color;
         border-radius: 50%;
         color: $color-blanc;
-        top: 10px;
+        top: 14px;
         left: -15px;
         height: 30px;
         width: 30px;
@@ -292,9 +292,12 @@ h6 {
     }
 
     .fas {
+        
         margin-right: 15px;
         margin-left: 25px;
         font-size: 1.5rem;
+        margin-top: 6px;
+
 
         &:hover {
             color: $primary-color;
@@ -365,14 +368,7 @@ h4 {
 }
 
        
-        &:hover .fas {
-            display: block;
-
-        }
-
-        &:hover .far {
-            display: none;
-        }
+       
 
 
 
@@ -384,12 +380,14 @@ h4 {
         right: -10px;
         font-size: 2.5rem;
 
-        &:hover .fas {
+        &:active .fas {
             display: block;
 
+           animation: coeur-opacite 1s linear;
+            
         }
 
-        &:hover .far {
+        &:active .far {
             display: none;
         }
 
@@ -431,6 +429,18 @@ h4 {
     }
 
     100% {
+        opacity: 1;
+    }
+}
+
+@keyframes coeur-opacite {
+    0% {
+        
+        opacity: 0;
+    }
+
+    100% {
+        
         opacity: 1;
     }
 }
@@ -516,14 +526,7 @@ section {
         font-style: italic;
         background-color: #e4e4e4;
 
-        &:hover .fas {
-            display: block;
-
-        }
-
-        &:hover .far {
-            display: none;
-        }
+       
 h1 {
     font-size: 1.7rem;
 }
@@ -536,12 +539,16 @@ h1 {
         right: 15px;
         font-size: 2.5rem;
 
-        &:hover .fas {
+        &:active .fas {
             display: block;
 
+           animation: coeur-opacite 1s linear;
+            
         }
 
-        &:hover .far {
+        
+
+        &:active .far {
             display: none;
         }
 
@@ -591,8 +598,8 @@ h1 {
         margin-bottom: 0;
         padding-top: 0;
         padding-left: 0;
-        -webkit-animation: block-menu 2s 0.2s forwards;
-        animation: block-menu 2s 0.2s forwards;
+  /**      -webkit-animation: block-menu 2s 0.2s forwards;
+        animation: block-menu 2s 0.2s forwards; **/
 
         p {
             height: 5rem;
@@ -609,6 +616,9 @@ h1 {
             text-overflow: ellipsis;
             white-space: nowrap;
             overflow: hidden;
+            -webkit-animation: block-menu 2s 0.2s forwards;
+            animation: block-menu 2s 0.2s forwards;
+         
          
             .descriptif-choix {
                 display: flex;
@@ -635,7 +645,7 @@ h1 {
                     }
                 }
 
-                &:hover {
+                &:active {
                     .fa-check-circle {
                         -webkit-animation: rotation 2s 1;
                         animation: rotation 2s 1;
@@ -669,14 +679,14 @@ h1 {
                 position: relative;
                 display: inline-block;
                 top: -10px;
-                right: -21px;
+                right: -23px;
 
 
                 .prix {
                     font-size: 1.3rem;
                     font-weight: 600;
                     top: 15px;
-                    right: 25px;
+                    right: 28px;
                     padding-left: 10px;
                     position: relative;
               
@@ -864,10 +874,10 @@ footer {
                 .descriptif-choix {
                     background-color: #fff;
 
-                    &:hover {
+                    &:activate {
                         .choix-detail:hover {
                             transition-duration: 1000ms;
-                            width: calc(100% - 130px);
+                            width: calc(100% - 120px);
                         }
 
                         .fa-check-circle {
@@ -1071,7 +1081,7 @@ footer {
 
                             .prix-coche {
                                 top: -21px;
-                                right: -9px;
+                                right: -11px;
 
                                 .prix {
                                     top: 26px;
@@ -1079,9 +1089,9 @@ footer {
                                 }
 
                                 .coche {
-                                    top: 12px;
+                                    top: 11px;
                                     left: 33px;
-                                    height: 3.5rem;
+                                    height: 3.6rem;
                                     width: 3.5rem;
                                 }
                             }
@@ -1097,7 +1107,9 @@ footer {
         }
     }
     .bouton-commander {
-height: 5.5rem;
+height: 4.5rem;
+width: 40%;
+
         a {
             font-size: 3rem;
         }
