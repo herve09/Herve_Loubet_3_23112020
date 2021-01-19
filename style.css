@@ -502,19 +502,19 @@ section ul p {
   height: 5rem;
 }
 section ul .choix1 {
+  -webkit-animation: block-menu 2s 0s forwards;
+  animation: block-menu 2s 0s forwards;
+}
+section ul .choix2 {
   -webkit-animation: block-menu 2s 0.2s forwards;
   animation: block-menu 2s 0.2s forwards;
 }
-section ul .choix2 {
-  -webkit-animation: block-menu 2s 0.5s forwards;
-  animation: block-menu 2s 0.5s forwards;
-}
 section ul .choix3 {
-  -webkit-animation: block-menu 2s 1s forwards;
+  -webkit-animation: block-menu 2s 0.4s forwards;
   animation: block-menu 2s 1s forwards;
 }
 section ul .choix4 {
-  -webkit-animation: block-menu 2s 1.5s forwards;
+  -webkit-animation: block-menu 2s 0.6s forwards;
   animation: block-menu 2s 1.5s forwards;
 }
 section ul li {
@@ -647,7 +647,7 @@ section ul li .prix-coche .coche .fa-check-circle::before {
 @-webkit-keyframes block-menu {
   0% {
     transform: translatey(0);
-    opacity: 0.2;
+    opacity: 0;
   }
   100% {
     transform: translatey(-25px);
@@ -657,7 +657,7 @@ section ul li .prix-coche .coche .fa-check-circle::before {
 @keyframes block-menu {
   0% {
     transform: translatey(0);
-    opacity: 0.2;
+    opacity: 0;
   }
   100% {
     transform: translatey(-25px);
@@ -843,7 +843,7 @@ footer ul li i {
     -webkit-animation: coeur-opacite 1s linear;
             animation: coeur-opacite 1s linear;
   }
-  section .menu .descriptif-menu .coeur:active .far {
+  section .menu .descriptif-menu .coeur:hover .far {
     display: none;
   }
   section .plats {
@@ -902,5 +902,4 @@ footer ul li i {
   .bouton-commander a {
     font-size: 3rem;
   }
-}
-/*# sourceMappingURL=style.css.map */
+}/*# sourceMappingURL=style.css.map */

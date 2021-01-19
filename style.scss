@@ -615,25 +615,25 @@ h1 {
 
         .choix1 {
             
-            -webkit-animation: block-menu 2s 0.2s forwards;
-            animation: block-menu 2s 0.2s forwards;  
+            -webkit-animation: block-menu 2s 0s forwards;
+            animation: block-menu 2s 0s forwards;  
           } 
 
           .choix2 {
               
-            -webkit-animation: block-menu 2s 0.5s forwards;
-            animation: block-menu 2s 0.5s forwards;
+            -webkit-animation: block-menu 2s 0.2s forwards;
+            animation: block-menu 2s 0.2s forwards;
           }
 
           .choix3 {
               
-            -webkit-animation: block-menu 2s 1s forwards;
+            -webkit-animation: block-menu 2s 0.4s forwards;
             animation: block-menu 2s 1s forwards;
           }
 
           .choix4 {
               
-            -webkit-animation: block-menu 2s 1.5s forwards;
+            -webkit-animation: block-menu 2s 0.6s forwards;
             animation: block-menu 2s 1.5s forwards;
           }
 
@@ -806,7 +806,7 @@ h1 {
 @-webkit-keyframes block-menu {
     0% {
         transform: translatey(0);
-        opacity: 0.2;
+        opacity: 0;
     }
 
     100% {
@@ -818,7 +818,7 @@ h1 {
 @keyframes block-menu {
     0% {
         transform: translatey(0);
-        opacity: 0.2;
+        opacity: 0;
     }
 
     100% {
@@ -1069,7 +1069,7 @@ footer {
             
                     
             
-                    &:active .far {
+                    &:hover .far {
                         display: none;
                     }
 
