@@ -241,6 +241,7 @@ h6 {
   text-align: center;
 }
 .fonctionnement .fas {
+  color: #8f8e8e;
   margin-right: 15px;
   margin-left: 25px;
   font-size: 1.5rem;
@@ -257,7 +258,8 @@ h6 {
   height: 2.5rem;
   margin-left: 10px;
   padding-top: 10px;
-  font-size: 1.3rem;
+  font-size: 1.2rem;
+  font-weight: 700;
   background-color: #eae9e9;
   border-radius: 1rem;
   box-shadow: 0 6px 5px #cac8c891;
@@ -303,7 +305,6 @@ aside .descriptif-restaurant {
   margin-right: 2rem;
   padding-bottom: 0.5rem;
   margin-left: 1rem;
-  /****** modif apres envoie validation **/
 }
 aside .descriptif-restaurant h4 {
   font-size: 1.25rem;
@@ -320,12 +321,12 @@ aside .coeur {
   right: -10px;
   font-size: 2.2rem;
 }
-aside .coeur:active .fas {
+aside .coeur:active .fas, aside .coeur:hover .fas {
   display: block;
   -webkit-animation: coeur-opacite 1s linear;
           animation: coeur-opacite 1s linear;
 }
-aside .coeur:active .far {
+aside .coeur:active .far, aside .coeur:hover .far {
   display: none;
 }
 aside .coeur .far {
@@ -829,9 +830,6 @@ footer ul li i {
   }
   section .menu .descriptif-menu h1 {
     font-size: 3rem;
-  }
-  section .menu .descriptif-menu .coeur {
-    /*****/
   }
   section .menu .descriptif-menu .coeur .fa-heart {
     font-size: 3.5rem;
