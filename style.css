@@ -113,7 +113,7 @@ body {
   padding: 0;
   max-width: 375px;
   background: #fff;
-  font-family: Roboto;
+  font-family: Roboto, sans-serif;
   font-size: 1.2rem;
 }
 
@@ -204,6 +204,7 @@ h6 {
   display: block;
   margin: auto;
   width: 65%;
+  max-width: 220px;
   height: 2.5rem;
   border-radius: 3rem;
   background-image: linear-gradient(#FF79DA, #9356dc);
@@ -266,9 +267,13 @@ h6 {
 }
 
 aside {
+  padding-top: 60px;
   margin-bottom: -25px;
   padding-bottom: 40px;
   background-color: #eae9e9;
+}
+aside h2 {
+  padding-left: 20px;
 }
 aside article {
   border-radius: 1.5rem;
@@ -281,7 +286,7 @@ aside .img-restaurant {
 }
 aside .img-restaurant img {
   width: 100%;
-  height: 7rem;
+  height: 11rem;
   overflow: hidden;
   -o-object-fit: cover;
   object-fit: cover;
@@ -293,7 +298,11 @@ aside .img-restaurant .nouveau {
   position: absolute;
   top: 22px;
   right: 18px;
-  padding: 5px;
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border-radius: 5px;
   color: #39a98d;
   text-align: center;
   font-size: 1.5rem;
@@ -672,6 +681,11 @@ footer {
   color: #ffffff;
   left: 0;
 }
+footer img {
+  filter: invert(100%);
+  padding-top: 20px;
+  padding-left: 20px;
+}
 footer h2 {
   padding-top: 1rem;
   margin-left: 1rem;
@@ -698,15 +712,14 @@ footer ul li i {
   body {
     min-width: 376px;
     max-width: 900px;
-    font-size: 1.5rem;
+    /**   font-size: 1.5rem; **/
   }
 
   .info .titre-decouvrez {
     font-size: 1.8rem;
   }
   .info .bouton-commander {
-    height: 5rem;
-    font-size: 3rem;
+    height: 3rem;
   }
 
   .img-restaurant img {
@@ -738,6 +751,10 @@ footer ul li i {
   section ul li .descriptif-choix .prix-coche .coche {
     left: 45px;
   }
+
+  aside .img-restaurant img {
+    height: 15rem;
+  }
 }
 /** -fin responsive 375 **/
 /** *********responsive 900 **/
@@ -745,8 +762,7 @@ footer ul li i {
   body {
     min-width: 901px;
     width: 100%;
-    max-width: 1980px;
-    font-size: 2rem;
+    max-width: 2180px;
   }
 
   .info .titre-reservez {
@@ -756,10 +772,11 @@ footer ul li i {
     font-size: 1.8rem;
   }
   .info .bouton-commander {
-    height: 4rem;
+    height: 3rem;
+    max-width: 400px;
   }
   .info .bouton-commander a {
-    font-size: 3rem;
+    font-size: 2rem;
   }
 
   .choix {
@@ -767,8 +784,8 @@ footer ul li i {
     justify-content: space-around;
   }
   .choix .titre-choix {
-    margin-right: 1rem;
-    padding-right: 15px;
+    padding-right: 30px;
+    font-size: 1rem;
   }
 
   .conteneur-restaurant {
@@ -894,10 +911,17 @@ footer ul li i {
 
   .bouton-commander {
     height: 4.5rem;
-    width: 40%;
+    width: 50%;
     margin-top: 30px;
+    max-width: 350px;
   }
   .bouton-commander a {
-    font-size: 3rem;
+    font-size: 2.5rem;
+  }
+}
+@media all and (min-width: 1180px) {
+  .choix .titre-choix {
+    padding-right: 70px;
+    font-size: 1.2rem;
   }
 }/*# sourceMappingURL=style.css.map */
