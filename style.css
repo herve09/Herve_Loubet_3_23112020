@@ -127,7 +127,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: Shrikhand, sans-serif;
+  font-family: Shrikhand, cursive;
   font-weight: bold;
 }
 
@@ -165,7 +165,7 @@ h6 {
 }
 
 .info {
-  background-color: #eae9e9;
+  background-color: #f6f6f6;
   padding-bottom: 30px;
 }
 
@@ -211,7 +211,7 @@ h6 {
   text-align: center;
   padding-top: 1rem;
   margin-bottom: 10px;
-  box-shadow: 2px 3px 1px 2px #bdbbbb91;
+  box-shadow: 2px 3px 6px 2px #bdbbbb91;
 }
 .bouton-commander a {
   font-size: 1.1rem;
