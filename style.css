@@ -128,8 +128,8 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: Shrikhand;
-  font-weight: bold;
+  font-family: Roboto, sans-serif;
+  font-weight: 900;
 }
 
 h1 {
@@ -458,6 +458,7 @@ section .descriptif-menu {
 }
 section .descriptif-menu h1 {
   font-size: 1.7rem;
+  font-family: Shrikhand, sans-serif;
 }
 section .coeur {
   position: absolute;
